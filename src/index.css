@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-main-bg: #F4F7FA;
+  --color-alt-bg: #FFFFFF;
+  --color-deep-navy: #081C3A;
+  --color-light-accent: #EEF5FF;
+  
+  --color-card-bg: #FFFFFF;
+  --color-card-hover: #F8FAFC;
+  --color-border: #E2E8F0;
+  
+  --color-primary-heading: #081C3A;
+  --color-body-text: #4B5563;
+  --color-accent-gold: #D4AF37;
+  
+  --color-cta-primary: #FF6B00;
+  --color-cta-hover: #E65A00;
+
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --shadow-premium: 0 10px 30px -15px rgba(8, 28, 58, 0.15);
+  --shadow-glow: 0 4px 14px 0 rgba(255, 107, 0, 0.30);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-body);
+    background-color: var(--color-main-bg);
+    color: var(--color-body-text);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-primary-heading);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block px-8 py-4 bg-[#FF6B00] text-[#FFFFFF] rounded-xl font-heading font-semibold shadow-glow transition-all duration-300 hover:bg-[#E65A00] hover:-translate-y-1;
+  }
+  
+  .btn-outline {
+    @apply inline-block px-8 py-4 bg-transparent text-[#081C3A] rounded-xl font-heading font-semibold border border-[#FF6B00] transition-all duration-300 hover:bg-[#FF6B00]/10 hover:-translate-y-1;
+  }
+
+  .glass-card {
+    @apply bg-[#FFFFFF] border border-[#E2E8F0] shadow-premium rounded-2xl;
+  }
+}
