@@ -210,14 +210,7 @@ export default function Sustainability() {
             ))}
           </div>
 
-          <div className="bg-gradient-to-r from-[#171a29] to-[#081C3A] rounded-3xl p-12 border border-white/10 text-center shadow-2xl relative overflow-hidden">
-            <div className="absolute inset-0 bg-[#34D399] blur-[150px] opacity-10"></div>
-            <h3 className="text-3xl font-bold text-white mb-6 relative z-10">Partner with a Responsible Manufacturer</h3>
-            <p className="text-gray-400 max-w-2xl mx-auto mb-8 relative z-10">Join hands with Shakshi Group to build products that are not only world-class in quality but also meticulously engineered to protect our environment.</p>
-            <button className="relative z-10 bg-[#34D399] text-[#081C3A] font-bold px-8 py-4 rounded hover:bg-white transition-colors flex items-center gap-2 mx-auto">
-              Download Full ESG Report 2025 <ArrowRight size={20} />
-            </button>
-          </div>
+
 
         </div>
       </section>

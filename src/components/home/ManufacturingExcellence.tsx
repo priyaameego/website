@@ -1,85 +1,58 @@
 import { motion } from 'framer-motion';
 
 export default function ManufacturingExcellence() {
-  const processes = [
-    { num: '01', title: 'Raw Material Processing', desc: 'Sourcing premium polymers with automated mixing algorithms.' },
-    { num: '02', title: 'Precision Molding', desc: 'High-pressure injection and vacuum foaming for exact densities.' },
-    { num: '03', title: 'CNC Profiling', desc: '5-axis automated cutting for complex geometries.' },
-    { num: '04', title: 'Automated Assembly', desc: 'Robotic integration ensuring zero-defect product assembly.' }
-  ];
-
   return (
-    <section className="py-24 bg-[#FFFFFF]">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-block border border-[#FF6B00]/30 rounded-full px-6 py-2 bg-[#FF6B00]/5 mb-6"
-          >
-            <span className="text-[#FF6B00] font-bold tracking-widest uppercase text-xs">Manufacturing Excellence</span>
-          </motion.div>
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-bold text-[#081C3A] font-heading leading-tight mb-6"
-          >
-            Inside Our Facility
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-lg text-[#4B5563]"
-          >
-            Explore our state-of-the-art production workflow designed for massive scale and uncompromised precision.
-          </motion.p>
-        </div>
-
-        {/* Process Timeline */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {processes.map((proc, idx) => (
-            <motion.div 
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.15 }}
-              className="relative bg-[#F4F7FA] p-8 rounded-2xl border border-[#E2E8F0] hover:-translate-y-2 hover:bg-[#FFFFFF] hover:shadow-[0_15px_35px_-10px_rgba(8,28,58,0.1)] transition-all duration-300 group"
-            >
-              <div className="text-6xl font-heading font-black text-[#E2E8F0] mb-4 group-hover:text-[#FF6B00]/20 transition-colors">
-                {proc.num}
-              </div>
-              <h4 className="text-xl font-bold text-[#081C3A] mb-3">{proc.title}</h4>
-              <p className="text-[#4B5563] text-sm leading-relaxed">{proc.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Big Industrial Image */}
+    <section className="py-24 bg-[#0F172A] relative overflow-hidden text-center">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
+        
         <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12"
+        >
+          <span className="text-xs font-bold tracking-[0.2em] text-[#E63946] uppercase mb-4 block">
+            INSIDE OUR FACILITY
+          </span>
+          <h2 className="text-4xl md:text-5xl font-black font-heading text-white">
+            Factory Overview
+          </h2>
+        </motion.div>
+
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="w-full h-[500px] rounded-3xl overflow-hidden relative shadow-premium group"
+          className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[21/9] group cursor-pointer"
         >
+          {/* Main Background Image */}
           <img 
-            src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop" 
-            alt="CNC Machinery" 
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+            src="https://images.unsplash.com/photo-1565439390118-9fc12c40c839?q=80&w=2070&auto=format&fit=crop" 
+            alt="Factory Overview" 
+            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#081C3A]/90 via-[#081C3A]/40 to-transparent flex items-end p-10">
-            <div className="max-w-2xl">
-              <h3 className="text-3xl font-bold text-white font-heading mb-4">Precision CNC Machinery</h3>
-              <p className="text-gray-200">Our massive fleet of 5-axis CNC routers ensures complex foam profiles are cut with millimeter accuracy, catering specifically to automotive and technical acoustics.</p>
+          
+          {/* Overlay to darken image slightly for better contrast */}
+          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500"></div>
+
+          {/* Play Button */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <div className="w-20 h-20 bg-[#E63946] rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(230,57,70,0.6)] transition-all duration-300">
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                className="h-8 w-8 text-white ml-1" 
+                fill="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
             </div>
+            <span className="text-white font-medium tracking-wide drop-shadow-md">Watch Our Story</span>
           </div>
+
         </motion.div>
+        
       </div>
     </section>
   );

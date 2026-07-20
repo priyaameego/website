@@ -6,9 +6,7 @@ export default function TrustedBrands() {
   return (
     <section className="py-16 bg-[#FFFFFF] border-b border-[#E2E8F0]">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
-        <h3 className="text-center text-[#4B5563] text-sm font-semibold uppercase tracking-widest mb-10">
-          Trusted by Global Industrial Leaders
-        </h3>
+
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-70">
           {brands.map((brand, idx) => (
             <motion.div 

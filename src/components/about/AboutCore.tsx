@@ -11,7 +11,7 @@ export default function AboutCore() {
   ];
 
   const milestones = [
-    { year: "1980", event: "Company Founded" },
+    { year: "2001", event: "Company Founded" },
     { year: "1995", event: "First Automated Facility" },
     { year: "2008", event: "ISO 9001 Certification" },
     { year: "2015", event: "Global Export Expansion" },
@@ -22,53 +22,38 @@ export default function AboutCore() {
     <>
       <section id="vision" className="py-24 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-            
-            {/* Vision */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-[#081C3A] rounded-3xl p-12 text-white relative overflow-hidden group"
             >
-              <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
-                <Eye size={120} />
-              </div>
-              <div className="relative z-10">
-                <h3 className="text-3xl font-bold font-heading mb-6 flex items-center gap-4">
-                  <span className="w-12 h-12 bg-[#FF6B00] rounded-lg flex items-center justify-center">
-                    <Eye size={24} className="text-white" />
-                  </span>
-                  Our Vision
-                </h3>
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  To be the global benchmark in innovative foam manufacturing, delivering sustainable, high-performance solutions that enhance comfort and industrial efficiency worldwide.
-                </p>
-              </div>
+              <h4 className="text-xs font-black tracking-[0.2em] text-[#E63946] uppercase mb-4">
+                OUR VISION
+              </h4>
+              <h2 className="text-4xl md:text-5xl font-black text-[#081C3A] mb-8 leading-tight font-heading">
+                A Mattress for Every Indian
+              </h2>
+              <p className="text-lg text-[#6B7280] leading-relaxed mb-8">
+                Our vision is to be India's most trusted foam and mattress manufacturer, known for quality, innovation, and customer satisfaction. We strive to bring comfort to every home and every industry.
+              </p>
+              <p className="text-lg text-[#6B7280] leading-relaxed">
+                We believe that quality sleep is not a luxury — it's a necessity. Our mission is to make premium comfort accessible to all, through innovative products, fair pricing, and an expanding dealer network.
+              </p>
             </motion.div>
 
-            {/* Mission */}
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-[#F4F7FA] border border-[#E2E8F0] rounded-3xl p-12 relative overflow-hidden group"
+              className="relative rounded-3xl overflow-hidden shadow-xl"
             >
-              <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
-                <Target size={120} className="text-[#081C3A]" />
-              </div>
-              <div className="relative z-10">
-                <h3 className="text-3xl font-bold text-[#081C3A] font-heading mb-6 flex items-center gap-4">
-                  <span className="w-12 h-12 bg-[#D4AF37] rounded-lg flex items-center justify-center">
-                    <Target size={24} className="text-white" />
-                  </span>
-                  Our Mission
-                </h3>
-                <p className="text-[#4B5563] text-lg leading-relaxed">
-                  To engineer and deliver premium-grade OEM products through continuous technological advancement, rigid quality assurance, and a steadfast commitment to our clients and the environment.
-                </p>
-              </div>
+              <img 
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" 
+                alt="Our Vision" 
+                className="w-full h-full object-cover aspect-[4/3] hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 border border-black/5 rounded-3xl pointer-events-none"></div>
             </motion.div>
           </div>
 
@@ -100,16 +85,16 @@ export default function AboutCore() {
       </section>
 
       {/* Our Journey */}
-      <section id="timeline" className="py-24 bg-[#06152D] text-white">
+      <section id="timeline" className="py-24 bg-white text-[#081C3A]">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6">Our Journey</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto text-lg">Four decades of engineering milestones, transforming from a local manufacturer to a global OEM powerhouse.</p>
+            <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6 text-[#081C3A]">Our Journey</h2>
+            <p className="text-gray-500 max-w-2xl mx-auto text-lg">Four decades of engineering milestones, transforming from a local manufacturer to a global OEM powerhouse.</p>
           </div>
 
           <div className="relative">
             {/* Horizontal Line */}
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-[#282d43] -translate-y-1/2"></div>
+            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-[#E5E7EB] -translate-y-1/2"></div>
             
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
               {milestones.map((m, idx) => (
@@ -122,9 +107,9 @@ export default function AboutCore() {
                   className="relative text-center"
                 >
                   <div className="hidden md:flex w-6 h-6 bg-[#FF6B00] rounded-full mx-auto mb-6 relative z-10 shadow-[0_0_15px_rgba(255,107,0,0.5)]"></div>
-                  <div className="bg-[#171a29] border border-white/10 p-6 rounded-xl hover:bg-[#1a1e30] transition-colors">
-                    <div className="text-[#D4AF37] font-bold text-3xl font-heading mb-2">{m.year}</div>
-                    <div className="text-gray-300 font-semibold">{m.event}</div>
+                  <div className="bg-[#F9FAFB] border border-[#E5E7EB] p-6 rounded-xl hover:bg-[#F3F4F6] transition-colors shadow-sm">
+                    <div className="text-[#FF6B00] font-bold text-3xl font-heading mb-2">{m.year}</div>
+                    <div className="text-[#081C3A] font-semibold">{m.event}</div>
                   </div>
                 </motion.div>
               ))}

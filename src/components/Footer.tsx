@@ -30,9 +30,9 @@ const MessageCircleIcon = () => (
 
 export default function Footer() {
   return (
-    <footer className="bg-[#081C3A] text-[#9498a9] py-16">
+    <footer className="bg-[#051124] text-[#9498a9] py-16 border-t border-white/5">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-24 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
           
           {/* Brand & Socials */}
           <div className="space-y-6">
@@ -71,11 +71,10 @@ export default function Footer() {
             <h4 className="text-white text-xs font-bold tracking-widest uppercase mb-8">COMPANY</h4>
             <ul className="space-y-5 text-sm">
               <li><Link to="/about/overview" className="hover:text-[#D4AF37] transition-colors">About Us</Link></li>
-              <li><Link to="/brands" className="hover:text-[#D4AF37] transition-colors">Our Brands</Link></li>
+              <li><Link to="/brands/shakshi" className="hover:text-[#D4AF37] transition-colors">Our Brands</Link></li>
               <li><Link to="/industries" className="hover:text-[#D4AF37] transition-colors">Industries</Link></li>
               <li><Link to="/about/sustainability" className="hover:text-[#D4AF37] transition-colors">Sustainability</Link></li>
               <li><Link to="/careers" className="hover:text-[#D4AF37] transition-colors">Careers</Link></li>
-              <li><Link to="/investors" className="hover:text-[#D4AF37] transition-colors">For Investors</Link></li>
               <li><Link to="/about/values" className="hover:text-[#D4AF37] transition-colors">Our Foundation</Link></li>
             </ul>
           </div>
@@ -85,8 +84,8 @@ export default function Footer() {
             <h4 className="text-white text-xs font-bold tracking-widest uppercase mb-8">QUICK LINKS</h4>
             <ul className="space-y-5 text-sm">
               <li><Link to="/contact" className="hover:text-[#D4AF37] transition-colors">Contact Us</Link></li>
-              <li><Link to="/b2b" className="hover:text-[#D4AF37] transition-colors">B2B Enquiry</Link></li>
-              <li><Link to="/products" className="hover:text-[#D4AF37] transition-colors">Products</Link></li>
+              <li><Link to="/industrial-enquiry" className="hover:text-[#D4AF37] transition-colors">Industrial Enquiry</Link></li>
+              <li><Link to="/about/manufacturing" className="hover:text-[#D4AF37] transition-colors">Manufacturing</Link></li>
               <li><Link to="/about/timeline" className="hover:text-[#D4AF37] transition-colors">Our Journey</Link></li>
             </ul>
           </div>

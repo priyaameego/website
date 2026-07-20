@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+
+const MotionLink = motion(Link);
 
 export default function InnovationRND() {
   return (
@@ -40,16 +43,16 @@ export default function InnovationRND() {
               We don't just manufacture foam; we engineer solutions. Our dedicated R&D laboratories continuously develop proprietary polymer blends designed to withstand extreme environments, improve thermal regulation, and enhance acoustic dampening.
             </motion.p>
             
-            <motion.a 
+            <MotionLink 
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              href="#rnd" 
-              className="inline-flex justify-center items-center px-8 py-4 bg-[#D4AF37] text-[#081C3A] rounded font-bold tracking-wide transition-all duration-300 hover:bg-[#F2C94C] text-sm"
+              to="/about/manufacturing" 
+              className="inline-flex justify-center items-center px-8 py-4 bg-[#D4AF37] text-[#081C3A] rounded font-bold tracking-wide transition-all duration-300 hover:bg-[#F2C94C] text-sm w-full sm:w-auto text-center"
             >
               EXPLORE OUR LABS
-            </motion.a>
+            </MotionLink>
           </div>
 
           <div className="w-full lg:w-7/12">

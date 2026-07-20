@@ -1,15 +1,19 @@
 import { motion } from 'framer-motion';
+import hImg from '../../assets/h.png';
+import healthImg from '../../assets/healthcare.png';
+import autoImg from '../../assets/automative.png';
+import furImg from '../../assets/fur.png';
+import acousImg from '../../assets/Acoustics.png';
+import customImg from '../../assets/custome.png';
 
 export default function IndustryApplications() {
   const industries = [
-    { name: 'Automotive', img: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop' },
-    { name: 'Furniture & Bedding', img: 'https://images.unsplash.com/photo-1541123437800-1413158c30c5?q=80&w=800&auto=format&fit=crop' },
-    { name: 'Healthcare', img: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=800&auto=format&fit=crop' },
-    { name: 'Hospitality', img: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=800&auto=format&fit=crop' },
-    { name: 'Construction', img: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop' },
-    { name: 'Packaging', img: 'https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=800&auto=format&fit=crop' },
-    { name: 'OEM Manufacturing', img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop' },
-    { name: 'Industrial Applications', img: 'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?q=80&w=800&auto=format&fit=crop' }
+    { name: 'Automotive', img: autoImg },
+    { name: 'Furniture & Bedding', img: furImg },
+    { name: 'Healthcare', img: healthImg },
+    { name: 'Hospitality', img: hImg },
+    { name: 'Acoustics & Insulation', img: acousImg },
+    { name: 'Custom OEM', img: customImg }
   ];
 
   return (

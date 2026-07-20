@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export default function PremiumCTA() {
   return (
@@ -26,12 +27,12 @@ export default function PremiumCTA() {
             Contact our engineering team today to discuss your specific OEM requirements, request a quote, or schedule a facility tour.
           </p>
           <div className="flex flex-col sm:flex-row gap-5 justify-center">
-            <a href="#contact" className="inline-flex justify-center items-center bg-[#FF6B00] hover:bg-[#E65A00] text-white font-bold text-sm tracking-widest px-10 py-4 rounded transition-colors shadow-[0_4px_20px_rgba(255,107,0,0.4)]">
+            <Link to="/contact" className="w-full sm:w-auto inline-flex justify-center items-center bg-[#FF6B00] hover:bg-[#E65A00] text-white font-bold text-sm tracking-widest px-10 py-4 rounded transition-colors shadow-[0_4px_20px_rgba(255,107,0,0.4)]">
               CONTACT SALES
-            </a>
-            <a href="#facilities" className="inline-flex justify-center items-center bg-transparent border border-white/60 hover:bg-white/10 text-white font-bold text-sm tracking-widest px-10 py-4 rounded transition-colors backdrop-blur-sm">
+            </Link>
+            <Link to="/about/infrastructure" className="w-full sm:w-auto inline-flex justify-center items-center bg-transparent border border-white/60 hover:bg-white/10 text-white font-bold text-sm tracking-widest px-10 py-4 rounded transition-colors backdrop-blur-sm">
               VIEW FACILITIES
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

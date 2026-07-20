@@ -1,12 +1,14 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import easyImg from '../../assets/easy.png';
 
 export default function OurBrands() {
   const brands = [
-    { name: 'SHAKSHI', type: 'Industrial & Tech Foam', img: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=1000&auto=format&fit=crop' },
-    { name: 'EASYLIFE', type: 'Premium Mattresses', img: 'https://images.unsplash.com/photo-1541123437800-1413158c30c5?q=80&w=1000&auto=format&fit=crop' },
-    { name: 'SOFTLINE', type: 'Comfort Solutions', img: 'https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=1000&auto=format&fit=crop' },
-    { name: 'INTIMACY', type: 'Luxury Sleep', img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000&auto=format&fit=crop' }
+    { name: 'SHAKSHI', type: 'Industrial & Tech Foam', img: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=1000&auto=format&fit=crop', path: '/brands/shakshi' },
+    { name: 'EASYLIFE', type: 'Premium Mattresses', img: easyImg, path: '/brands/easylife' },
+    { name: 'SOFTLINE', type: 'Comfort Solutions', img: 'https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=1000&auto=format&fit=crop', path: '/brands/softline' },
+    { name: 'INTIMACY', type: 'Luxury Sleep', img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000&auto=format&fit=crop', path: '/brands/intimacy' }
   ];
 
   return (
@@ -49,14 +51,17 @@ export default function OurBrands() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.15 }}
-              className="relative h-[400px] rounded-2xl overflow-hidden group cursor-pointer shadow-md hover:shadow-premium transition-shadow duration-500"
+              className="relative h-[400px] rounded-2xl overflow-hidden group shadow-md hover:shadow-premium transition-shadow duration-500"
             >
+              <Link to={brand.path} className="absolute inset-0 z-10 w-full h-full cursor-pointer">
+                <span className="sr-only">Visit {brand.name}</span>
+              </Link>
               <img 
                 src={brand.img} 
                 alt={brand.name} 
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#081C3A]/90 via-[#081C3A]/40 to-transparent flex flex-col justify-end p-8">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#081C3A]/90 via-[#081C3A]/40 to-transparent flex flex-col justify-end p-8 pointer-events-none">
                 <h3 className="text-2xl font-bold text-white font-heading tracking-wider mb-1">{brand.name}</h3>
                 <p className="text-[#D4AF37] text-sm font-medium mb-4 uppercase tracking-widest">{brand.type}</p>
                 <div className="flex items-center text-white text-sm font-bold opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">

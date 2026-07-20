@@ -98,7 +98,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative h-screen min-h-[900px] flex items-center overflow-hidden bg-[#081C3A]" id="home">
+    <section className="relative h-[90vh] min-h-[750px] flex items-center overflow-hidden bg-[#081C3A]" id="home">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -205,32 +205,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Floating Stats */}
-      <motion.div 
-        style={{ y: yStats }}
-        className="absolute bottom-0 left-0 w-full z-20 translate-y-1/2"
-      >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {stats.map((stat, idx) => (
-              <motion.div 
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1 + (idx * 0.1) }}
-                className="bg-[#FFFFFF] text-[#081C3A] border border-[#E2E8F0] shadow-md rounded-2xl p-6 md:p-8 text-center"
-              >
-                <div className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-[#D4AF37] mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-xs md:text-sm font-semibold text-[#4B5563] uppercase tracking-wider">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
     </section>
   );
 }

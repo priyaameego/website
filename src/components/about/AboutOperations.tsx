@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import rdImg from '../../assets/r&d.png';
 
 export default function AboutOperations() {
   return (
@@ -71,7 +72,7 @@ export default function AboutOperations() {
               viewport={{ once: true }}
               className="order-2 lg:order-1 rounded-3xl overflow-hidden shadow-2xl h-[500px]"
             >
-              <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=1200&auto=format&fit=crop" alt="R&D Lab" className="w-full h-full object-cover" />
+              <img src={rdImg} alt="R&D Lab" className="w-full h-full object-cover" />
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, x: 40 }}
@@ -106,7 +107,7 @@ export default function AboutOperations() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold font-heading mb-6"
+            className="text-4xl font-bold font-heading mb-6 text-white"
           >
             Uncompromising Quality Assurance
           </motion.h2>

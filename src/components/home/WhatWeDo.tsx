@@ -1,26 +1,29 @@
 import { motion } from 'framer-motion';
+import foamImg from '../../assets/foam.png';
+import custImg from '../../assets/cust.jpeg';
+import pillowImg from '../../assets/pillow.jpeg';
 
 export default function WhatWeDo() {
   const offerings = [
     {
       title: 'Foam',
       desc: 'Premium industrial and consumer foam manufacturing with advanced technology.',
-      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop'
+      image: foamImg
     },
     {
       title: 'Mattress',
       desc: 'High-quality orthopedic, memory foam, and pocket spring mattresses.',
-      image: 'https://images.unsplash.com/photo-1505693314120-0d443867891c?q=80&w=800&auto=format&fit=crop'
+      image: 'https://shakshigroup.com/cdn/shop/t/2/assets/sg-img-mattress.png?v=19813383410274590221777797443'
     },
     {
       title: 'Pillows',
       desc: 'Ergonomic and supportive pillows designed for optimal neck alignment.',
-      image: 'https://images.unsplash.com/photo-1629949009765-40fc8d844111?q=80&w=800&auto=format&fit=crop'
+      image: pillowImg
     },
     {
       title: 'Customisation',
       desc: 'Tailor-made dimensions and specifications for B2B and industrial needs.',
-      image: 'https://images.unsplash.com/photo-1586528116311-ad8ed7c50800?q=80&w=800&auto=format&fit=crop'
+      image: custImg
     }
   ];
 

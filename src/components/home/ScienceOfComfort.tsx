@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import scImg from '../../assets/sc.png';
 
 export default function ScienceOfComfort() {
   return (
@@ -51,7 +52,7 @@ export default function ScienceOfComfort() {
           >
             <div className="rounded-3xl overflow-hidden shadow-2xl relative h-[500px]">
               <img 
-                src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=1200&auto=format&fit=crop" 
+                src={scImg} 
                 alt="Science of Comfort Lab" 
                 className="w-full h-full object-cover"
               />

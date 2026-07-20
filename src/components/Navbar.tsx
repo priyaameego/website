@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X, Building2, Factory, Truck, User, 
-  History, Eye, Users, Heart, HardHat, Award, Leaf 
+  History, Eye, Users, Heart, HardHat, Award, Leaf, ChevronDown
 } from 'lucide-react';
 
 export default function Navbar() {
@@ -23,7 +23,7 @@ export default function Navbar() {
     { name: 'HOME', path: '/' },
     { 
       name: 'ABOUT', 
-      path: '/about/manufacturing',
+      path: '/about',
       dropdown: [
         { name: 'MANUFACTURING', path: '/about/manufacturing' },
         { name: 'DISTRIBUTION', path: '/about/distribution' },
@@ -44,17 +44,7 @@ export default function Navbar() {
     },
     { name: 'INDUSTRIES', path: '/industries' },
     { name: 'CAREERS', path: '/careers' },
-    { 
-      name: 'SUSTAINABILITY', 
-      path: '/about/sustainability',
-      dropdown: [
-        { name: 'RESPONSIBLE MAKING', path: '/about/sustainability#responsible-making' },
-        { name: 'INITIATIVES', path: '/about/sustainability#initiatives' },
-        { name: 'ESG COMMITMENT', path: '/about/sustainability#esg-commitment' },
-        { name: 'JOURNEY & INNOVATION', path: '/about/sustainability#journey' },
-        { name: 'GALLERY', path: '/about/sustainability#gallery' }
-      ]
-    },
+    { name: 'SUSTAINABILITY', path: '/about/sustainability' },
   ];
 
   return (
@@ -113,9 +103,9 @@ export default function Navbar() {
 
         {/* Desktop Actions */}
         <div className="hidden xl:flex items-center">
-          <a href="#quote" className="bg-[#FF6B00] text-[#FFFFFF] font-bold text-sm tracking-wide px-6 py-3 rounded hover:bg-[#E65A00] transition-colors shadow-[0_4px_14px_0_rgba(255,107,0,0.30)]">
+          <Link to="/industrial-enquiry" className="bg-[#FF6B00] text-[#FFFFFF] font-bold text-sm tracking-wide px-6 py-3 rounded hover:bg-[#E65A00] transition-colors shadow-[0_4px_14px_0_rgba(255,107,0,0.30)]">
             ENQUIRE INDUSTRIAL FOAMS
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Hamburger */}
@@ -134,35 +124,60 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: '100vh' }}
             exit={{ opacity: 0, height: 0 }}
-            className="fixed inset-0 bg-[#081C3A] z-40 xl:hidden flex flex-col pt-24 px-6 overflow-y-auto pb-10"
+            className="fixed inset-0 bg-[#081C3A] z-40 xl:hidden flex flex-col pt-32 px-6 overflow-y-auto pb-10"
           >
             <ul className="flex flex-col gap-6">
               {navLinks.map((link) => (
                 <li key={link.name} className="border-b border-white/10 pb-4">
-                  <Link to={link.path} className="text-xl font-bold tracking-wide text-[#FFFFFF] hover:text-[#D4AF37] transition-colors flex items-center justify-between" onClick={() => !link.dropdown && setMobileMenuOpen(false)}>
-                    {link.name}
-                  </Link>
-                  {link.dropdown && (
-                    <div className="mt-2 flex flex-col p-2 bg-[#FFFFFF] rounded-md border-l-4 border-[#D4AF37]">
-                      {link.dropdown.map((item, idx) => (
-                        <Link 
-                          key={idx} 
-                          to={item.path} 
-                          className="py-2 px-2 text-sm font-bold text-[#1F2937] hover:bg-[#EEF5FF] hover:text-[#081C3A] transition-colors rounded" 
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
+                  <div className="flex items-center justify-between">
+                    <Link 
+                      to={link.path} 
+                      className="text-xl font-bold tracking-wide text-[#FFFFFF] hover:text-[#D4AF37] transition-colors" 
+                      onClick={() => !link.dropdown && setMobileMenuOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                    {link.dropdown && (
+                      <button 
+                        onClick={() => setActiveDropdown(activeDropdown === link.name ? null : link.name)}
+                        className="p-2 text-white hover:text-[#D4AF37]"
+                      >
+                        <ChevronDown 
+                          size={24} 
+                          className={`transition-transform duration-300 ${activeDropdown === link.name ? 'rotate-180' : ''}`} 
+                        />
+                      </button>
+                    )}
+                  </div>
+                  
+                  <AnimatePresence>
+                    {link.dropdown && activeDropdown === link.name && (
+                      <motion.div 
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="mt-4 flex flex-col p-2 bg-[#FFFFFF] rounded-md border-l-4 border-[#D4AF37] overflow-hidden"
+                      >
+                        {link.dropdown.map((item, idx) => (
+                          <Link 
+                            key={idx} 
+                            to={item.path} 
+                            className="py-3 px-3 text-sm font-bold text-[#1F2937] hover:bg-[#EEF5FF] hover:text-[#081C3A] transition-colors rounded" 
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </li>
               ))}
             </ul>
             <div className="mt-8 flex flex-col gap-4">
-              <a href="#quote" className="bg-[#FF6B00] text-[#FFFFFF] font-bold text-sm tracking-wide px-6 py-3 rounded hover:bg-[#E65A00] transition-colors text-center w-full shadow-[0_4px_14px_0_rgba(255,107,0,0.30)]">
+              <Link to="/industrial-enquiry" className="bg-[#FF6B00] text-[#FFFFFF] font-bold text-sm tracking-wide px-6 py-3 rounded hover:bg-[#E65A00] transition-colors text-center w-full shadow-[0_4px_14px_0_rgba(255,107,0,0.30)]">
                 ENQUIRE INDUSTRIAL FOAMS
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}
