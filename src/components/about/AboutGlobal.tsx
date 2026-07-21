@@ -12,49 +12,42 @@ export default function AboutGlobal() {
         
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-[#081C3A] font-heading mb-6">
-                Global Presence & <br/>Distribution Network
-              </h2>
-              <div className="w-20 h-1 bg-[#FF6B00] mb-8"></div>
-              <p className="text-[#4B5563] text-lg leading-relaxed mb-8">
-                Shakshi Group operates a robust global distribution network, supplying premium foam and mattress solutions to over 30 countries. Our strategically located warehouses and automated logistics ensure rapid, reliable delivery to our OEM partners worldwide.
-              </p>
-              
-              <div className="grid grid-cols-2 gap-8 mb-8">
-                <div className="flex items-start gap-4">
-                  <MapPin className="text-[#D4AF37] mt-1 shrink-0" size={24} />
-                  <div>
-                    <h4 className="font-bold text-[#081C3A] text-xl mb-1">500+</h4>
-                    <p className="text-sm text-gray-500 uppercase font-semibold">Global Dealers</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <Globe className="text-[#D4AF37] mt-1 shrink-0" size={24} />
-                  <div>
-                    <h4 className="font-bold text-[#081C3A] text-xl mb-1">30+</h4>
-                    <p className="text-sm text-gray-500 uppercase font-semibold">Countries</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
             
             <motion.div 
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="rounded-3xl overflow-hidden shadow-2xl border border-[#E2E8F0]"
+              className="order-2 lg:order-1 rounded-3xl overflow-hidden shadow-2xl h-[550px]"
             >
               <img 
-                src="https://images.unsplash.com/photo-1524522173746-f628baad3644?q=80&w=1200&auto=format&fit=crop" 
-                alt="Global Network" 
-                className="w-full h-[500px] object-cover"
+                src="https://images.unsplash.com/photo-1586528116311-ad8ed7c50800?q=80&w=1200&auto=format&fit=crop" 
+                alt="Distribution Network" 
+                className="w-full h-full object-cover"
               />
             </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="order-1 lg:order-2"
+            >
+              <span className="text-[#FF2A2A] font-bold tracking-[0.2em] uppercase text-xs mb-4 block">
+                ON MOVING
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#081C3A] font-heading mb-8">
+                Fast, Reliable Distribution
+              </h2>
+              
+              <p className="text-[#4B5563] text-lg leading-relaxed mb-6">
+                24 hours — that is the most any Shakshi product will travel before it reaches the dealer. Our optimized network of 2 manufacturing plants and 500+ distribution points ensures rapid delivery across North India.
+              </p>
+              
+              <p className="text-[#4B5563] text-lg leading-relaxed">
+                Our strategically located facilities in Lucknow and Kanpur allow us to serve Uttar Pradesh and surrounding states with unmatched speed and reliability.
+              </p>
+            </motion.div>
+            
           </div>
         </div>
       </section>
