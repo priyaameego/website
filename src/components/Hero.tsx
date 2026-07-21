@@ -14,7 +14,7 @@ export default function Hero() {
       tag: "SHAKSHI GROUP",
       title: (
         <>
-          <span className="text-[#FF6B00]">Premium Brands</span> for Every Need
+          <span className="text-[#D4AF37]">Premium Brands</span> for Every Need
         </>
       ),
       description: "Discover our comprehensive portfolio of foam and mattress brands designed for ultimate comfort and industrial excellence.",
@@ -59,7 +59,7 @@ export default function Hero() {
       tag: "AUTOMOTIVE SEATING",
       title: (
         <>
-          <span className="text-[#FF6B00]">Advanced Foam</span> for Automotive
+          <span className="text-[#D4AF37]">Advanced Foam</span> for Automotive
         </>
       ),
       description: "Engineered for maximum resilience and comfort, delivering premium seating experiences for leading global automakers.",
@@ -137,8 +137,8 @@ export default function Hero() {
               className="flex flex-col items-center"
             >
               {/* Tag / Pill */}
-              <div className="inline-block border border-[#FF6B00]/40 rounded-full px-6 py-2 mb-8 backdrop-blur-sm bg-black/20">
-                <span className="text-[#FF6B00] font-bold tracking-[0.2em] uppercase text-xs">
+              <div className="inline-block border border-[#D4AF37]/40 rounded-full px-6 py-2 mb-8 backdrop-blur-sm bg-black/20">
+                <span className="text-[#D4AF37] font-bold tracking-[0.2em] uppercase text-xs">
                   {slides[currentSlide].tag}
                 </span>
               </div>
@@ -157,7 +157,7 @@ export default function Hero() {
               <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto justify-center">
                 <Link 
                   to={slides[currentSlide].primaryLink}
-                  className="w-full sm:w-auto inline-flex justify-center items-center px-10 py-4 bg-[#FF6B00] text-white rounded font-bold tracking-wide transition-all duration-300 hover:bg-[#E65A00] hover:shadow-[0_4px_20px_rgba(255,107,0,0.4)] text-sm"
+                  className="w-full sm:w-auto inline-flex justify-center items-center px-10 py-4 bg-[#D4AF37] text-white rounded font-bold tracking-wide transition-all duration-300 hover:bg-[#B08D2D] hover:shadow-[0_4px_20px_rgba(255,107,0,0.4)] text-sm"
                 >
                   {slides[currentSlide].primaryBtn}
                 </Link>
@@ -198,7 +198,7 @@ export default function Hero() {
                 onClick={() => setCurrentSlide(idx)}
                 className={`transition-all duration-300 rounded-full ${
                   currentSlide === idx 
-                    ? 'w-12 h-2 bg-[#FF6B00]' 
+                    ? 'w-12 h-2 bg-[#D4AF37]' 
                     : 'w-2 h-2 bg-white/40 hover:bg-white/60'
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}

@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { Leaf, Recycle, HeartHandshake, ArrowRight, TreePine, } from 'lucide-react';
+import sciImg from '../../assets/sci.png';
+import solarImg from '../../assets/solar.jpeg';
 import PageLayout from '../../components/PageLayout';
 import PageHero from '../../components/PageHero';
 
@@ -49,13 +51,13 @@ export default function Sustainability() {
               <span className="text-[#f13a3a] font-bold tracking-[0.2em] uppercase text-xs mb-4 block">
                 Responsible Making
               </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#081C3A] mb-8 font-heading">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#0f172a] mb-8 font-heading">
                 Technology for a Healthier Planet
               </h2>
-              <p className="text-[#4B5563] text-lg leading-relaxed mb-6">
+              <p className="text-[#64748b] text-lg leading-relaxed mb-6">
                 Everything on Earth is connected. At Shakshi Group, we believe in a world where we can make a real difference in the planet's health and lives of others.
               </p>
-              <p className="text-[#4B5563] text-lg leading-relaxed">
+              <p className="text-[#64748b] text-lg leading-relaxed">
                 Our sustainability and social responsibility initiatives are part of a larger conscience-driven approach to the well-being of the environment, people, and communities we engage with.
               </p>
             </motion.div>
@@ -68,7 +70,7 @@ export default function Sustainability() {
             >
               <div className="absolute inset-0 bg-green-500 rounded-3xl blur-[80px] opacity-20 -translate-x-10"></div>
               <img 
-                src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=1200&auto=format&fit=crop" 
+                src={solarImg} 
                 alt="Eco-Manufacturing Facility" 
                 className="relative z-10 w-full rounded-3xl shadow-2xl border border-[#E2E8F0]"
               />
@@ -88,13 +90,13 @@ export default function Sustainability() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-white p-10 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-[#E2E8F0] hover:-translate-y-2 transition-transform duration-300 text-center flex flex-col items-center"
+                className="bg-white p-10 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 border border-[#E2E8F0] hover:-translate-y-2 transition-transform duration-300 text-center flex flex-col items-center"
               >
                 <div className="w-16 h-16 rounded-2xl bg-[#EEF5FF] flex items-center justify-center mb-6">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold text-[#081C3A] mb-4">{item.title}</h3>
-                <p className="text-[#4B5563] leading-relaxed text-sm">{item.desc}</p>
+                <h3 className="text-xl font-bold text-[#0f172a] mb-4">{item.title}</h3>
+                <p className="text-[#64748b] leading-relaxed text-sm">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -104,24 +106,24 @@ export default function Sustainability() {
       {/* 3. ESG Commitment & Green Initiatives */}
       <section id="esg-commitment" className="py-24 bg-[#081C3A] text-white">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 text-center">
-          <span className="text-[#D4AF37] font-bold tracking-widest uppercase text-xs mb-4 block">Our Pledge</span>
-          <h2 className="text-4xl md:text-5xl font-bold font-heading mb-16">ESG Commitment</h2>
+          <span className="text-white font-bold tracking-widest uppercase text-xs mb-4 block">Our Pledge</span>
+          <h2 className="text-4xl md:text-5xl font-bold font-heading mb-16 text-white">ESG Commitment</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="border border-white/10 rounded-2xl p-8 bg-[#171a29]">
-              <div className="text-5xl font-bold text-[#34D399] mb-4">40%</div>
-              <h4 className="text-xl font-bold mb-2">Carbon Reduction</h4>
-              <p className="text-gray-400 text-sm">Achieved a massive reduction in our carbon footprint by implementing off-grid solar power and heat recovery systems.</p>
+              <div className="text-5xl font-bold text-white mb-4">40%</div>
+              <h4 className="text-xl font-bold text-white mb-2">Carbon Reduction</h4>
+              <p className="text-white text-sm">Achieved a massive reduction in our carbon footprint by implementing off-grid solar power and heat recovery systems.</p>
             </div>
             <div className="border border-white/10 rounded-2xl p-8 bg-[#171a29]">
-              <div className="text-5xl font-bold text-[#34D399] mb-4">98%</div>
-              <h4 className="text-xl font-bold mb-2">Zero Waste to Landfill</h4>
-              <p className="text-gray-400 text-sm">Our advanced closed-loop recycling processes ensure almost all manufacturing scrap is repurposed into new products.</p>
+              <div className="text-5xl font-bold text-white mb-4">98%</div>
+              <h4 className="text-xl font-bold text-white mb-2">Zero Waste to Landfill</h4>
+              <p className="text-white text-sm">Our advanced closed-loop recycling processes ensure almost all manufacturing scrap is repurposed into new products.</p>
             </div>
             <div className="border border-white/10 rounded-2xl p-8 bg-[#171a29]">
-              <div className="text-5xl font-bold text-[#34D399] mb-4">100%</div>
-              <h4 className="text-xl font-bold mb-2">Eco-Polyol Usage</h4>
-              <p className="text-gray-400 text-sm">We are rapidly transitioning to bio-based and renewable polyols, drastically reducing dependence on petrochemicals.</p>
+              <div className="text-5xl font-bold text-white mb-4">100%</div>
+              <h4 className="text-xl font-bold text-white mb-2">Eco-Polyol Usage</h4>
+              <p className="text-white text-sm">We are rapidly transitioning to bio-based and renewable polyols, drastically reducing dependence on petrochemicals.</p>
             </div>
           </div>
         </div>
@@ -134,7 +136,7 @@ export default function Sustainability() {
             
             {/* Timeline */}
             <div>
-              <h2 className="text-3xl font-bold text-[#081C3A] font-heading mb-10">Our Sustainability Journey</h2>
+              <h2 className="text-3xl font-bold text-[#0f172a] font-heading mb-10">Our Sustainability Journey</h2>
               <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-[#E2E8F0] before:to-transparent">
                 {[
                   { year: '2010', title: 'First Solar Array Installed', desc: 'Transitioned 10% of our primary facility to renewable energy.' },
@@ -155,10 +157,10 @@ export default function Sustainability() {
                     </div>
                     <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-[#F4F7FA] p-6 rounded border border-[#E2E8F0]">
                       <div className="flex items-center justify-between mb-1">
-                        <h4 className="font-bold text-[#081C3A]">{item.title}</h4>
+                        <h4 className="font-bold text-[#0f172a]">{item.title}</h4>
                         <span className="text-sm text-[#D4AF37] font-bold">{item.year}</span>
                       </div>
-                      <p className="text-sm text-[#4B5563]">{item.desc}</p>
+                      <p className="text-sm text-[#64748b]">{item.desc}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -167,9 +169,9 @@ export default function Sustainability() {
 
             {/* Innovation */}
             <div>
-              <h2 className="text-3xl font-bold text-[#081C3A] font-heading mb-10">Innovation for Sustainability</h2>
+              <h2 className="text-3xl font-bold text-[#0f172a] font-heading mb-10">Innovation for Sustainability</h2>
               <div className="rounded-3xl overflow-hidden relative shadow-2xl group">
-                <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=800&auto=format&fit=crop" alt="R&D" className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src={sciImg} alt="R&D" className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#081C3A] via-[#081C3A]/50 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-10">
                   <h4 className="text-2xl font-bold text-white mb-4">Biodegradable Foams</h4>
@@ -202,9 +204,9 @@ export default function Sustainability() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="overflow-hidden rounded-xl h-64"
+                className="overflow-hidden rounded-2xl h-64"
               >
-                <img src={img} alt="Gallery" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                <img src={img} alt="Gallery" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 hover:scale-110 transition-transform duration-500" />
               </motion.div>
             ))}
           </div>

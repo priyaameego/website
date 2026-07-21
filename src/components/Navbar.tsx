@@ -45,7 +45,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 border-b border-[#D4AF37] ${scrolled ? 'bg-[#06152D] shadow-lg py-4' : 'bg-[#081C3A] py-5'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 border-b border-[#D4AF37] ${scrolled ? 'bg-[#06152D] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 py-4' : 'bg-[#081C3A] py-5'}`}>
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center z-50">
@@ -84,7 +84,7 @@ export default function Navbar() {
                         <Link 
                           key={idx} 
                           to={item.path} 
-                          className="px-4 py-3 text-xs font-bold text-[#1F2937] tracking-wide hover:bg-[#EEF5FF] hover:text-[#081C3A] border-l-2 border-transparent hover:border-[#D4AF37] rounded transition-all"
+                          className="px-4 py-3 text-xs font-bold text-[#1F2937] tracking-wide hover:bg-[#EEF5FF] hover:text-[#0f172a] border-l-2 border-transparent hover:border-[#D4AF37] rounded transition-all"
                           onClick={() => setActiveDropdown(null)}
                         >
                           {item.name}
@@ -100,7 +100,7 @@ export default function Navbar() {
 
         {/* Desktop Actions */}
         <div className="hidden xl:flex items-center">
-          <Link to="/industrial-enquiry" className="bg-[#FF6B00] text-[#FFFFFF] font-bold text-sm tracking-wide px-6 py-3 rounded hover:bg-[#E65A00] transition-colors shadow-[0_4px_14px_0_rgba(255,107,0,0.30)]">
+          <Link to="/industrial-enquiry" className="bg-[#0f172a] text-white hover:bg-[#D4AF37] shadow-lg hover:shadow-[0_4px_20px_rgba(212,175,55,0.4)] transition-all duration-500 uppercase tracking-widest text-xs font-bold font-bold text-sm tracking-wide px-6 py-3 rounded hover:bg-[#B08D2D] transition-colors shadow-[0_4px_14px_0_rgba(255,107,0,0.30)]">
             ENQUIRE INDUSTRIAL FOAMS
           </Link>
         </div>
@@ -159,7 +159,7 @@ export default function Navbar() {
                           <Link 
                             key={idx} 
                             to={item.path} 
-                            className="py-3 px-3 text-sm font-bold text-[#1F2937] hover:bg-[#EEF5FF] hover:text-[#081C3A] transition-colors rounded" 
+                            className="py-3 px-3 text-sm font-bold text-[#1F2937] hover:bg-[#EEF5FF] hover:text-[#0f172a] transition-colors rounded" 
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             {item.name}
@@ -172,7 +172,7 @@ export default function Navbar() {
               ))}
             </ul>
             <div className="mt-8 flex flex-col gap-4">
-              <Link to="/industrial-enquiry" className="bg-[#FF6B00] text-[#FFFFFF] font-bold text-sm tracking-wide px-6 py-3 rounded hover:bg-[#E65A00] transition-colors text-center w-full shadow-[0_4px_14px_0_rgba(255,107,0,0.30)]">
+              <Link to="/industrial-enquiry" className="bg-[#0f172a] text-white hover:bg-[#D4AF37] shadow-lg hover:shadow-[0_4px_20px_rgba(212,175,55,0.4)] transition-all duration-500 uppercase tracking-widest text-xs font-bold font-bold text-sm tracking-wide px-6 py-3 rounded hover:bg-[#B08D2D] transition-colors text-center w-full shadow-[0_4px_14px_0_rgba(255,107,0,0.30)]">
                 ENQUIRE INDUSTRIAL FOAMS
               </Link>
             </div>

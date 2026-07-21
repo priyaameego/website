@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import scImg from '../../assets/sc.png';
+import scImg from '../../assets/sci.png';
 
 export default function ScienceOfComfort() {
   return (
@@ -17,26 +17,26 @@ export default function ScienceOfComfort() {
             className="w-full lg:w-1/2"
           >
             <div className="mb-6">
-              <span className="text-[#FF6B00] font-bold tracking-widest uppercase text-xs">
+              <span className="text-white font-bold tracking-widest uppercase text-xs">
                 OUR TECHNOLOGY DNA
               </span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-bold text-[#081C3A] font-heading leading-tight mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0f172a] font-heading leading-tight mb-8">
               The Science of Comfort
             </h2>
             
-            <p className="text-[#4B5563] text-lg leading-relaxed mb-8">
+            <p className="text-[#64748b] text-lg leading-relaxed mb-8">
               Comfort science is at the core of our innovative drive. We develop and use the latest manufacturing technology to produce premium foam and mattress products that set industry standards.
             </p>
             
-            <p className="text-[#4B5563] text-lg leading-relaxed mb-10">
+            <p className="text-[#64748b] text-lg leading-relaxed mb-10">
               Shakshi Group manufactures 100+ types of foam across our state-of-the-art facilities, serving diverse industrial and consumer needs.
             </p>
             
             <Link 
               to="/about/manufacturing" 
-              className="inline-flex items-center justify-center bg-[#081C3A] hover:bg-[#06152D] text-white font-bold text-xs tracking-widest uppercase px-8 py-4 rounded transition-colors shadow-lg hover:shadow-xl duration-300"
+              className="inline-flex items-center justify-center bg-[#081C3A] hover:bg-[#06152D] text-white font-bold text-xs tracking-widest uppercase px-8 py-4 rounded transition-colors shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 hover:shadow-xl duration-300"
             >
               FOAM R&D &nbsp; &rarr;
             </Link>

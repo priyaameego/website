@@ -26,10 +26,7 @@ export default function ShakshiBrand() {
         <BrandCTA />
       */}
       
-      <div className="py-24 text-center">
-        <h2 className="text-3xl font-bold text-[#081C3A]">Shakshi Flagship Page Under Construction</h2>
-        <p className="text-[#4B5563] mt-4">We are currently building this Fortune 500 premium brand experience. Stay tuned!</p>
-      </div>
+
     </div>
   );
 }

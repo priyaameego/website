@@ -47,7 +47,7 @@ export default function CareersCTA() {
         <motion.div
           animate={{ x: ['-100%', '100%'] }}
           transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
-          className="w-1/4 h-full bg-[#FF6B00]"
+          className="w-1/4 h-full bg-[#D4AF37]"
         />
       </div>
 
@@ -68,9 +68,9 @@ export default function CareersCTA() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block border border-[#FF6B00]/30 rounded-full px-6 py-2 bg-[#FF6B00]/10 mb-8 backdrop-blur-sm"
+            className="inline-block border border-[#D4AF37]/30 rounded-full px-6 py-2 bg-[#D4AF37]/10 mb-8 backdrop-blur-sm"
           >
-            <span className="text-[#FF6B00] font-bold tracking-widest uppercase text-xs">
+            <span className="text-[#D4AF37] font-bold tracking-widest uppercase text-xs">
               Interested in joining us?
             </span>
           </motion.div>
@@ -106,7 +106,7 @@ export default function CareersCTA() {
               <motion.button 
                 whileHover={{ scale: 1.05, boxShadow: "0px 10px 30px rgba(255, 107, 0, 0.4)" }}
                 whileTap={{ scale: 0.95 }}
-                className="group flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-[#FF6B00] text-white rounded-[14px] font-bold tracking-wide transition-colors hover:bg-[#E65A00]"
+                className="group flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-[#D4AF37] text-white rounded-[14px] font-bold tracking-wide transition-colors hover:bg-[#B08D2D]"
               >
                 <MailIcon />
                 View Contact Page

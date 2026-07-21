@@ -44,7 +44,7 @@ export default function OurCapabilities() {
           viewport={{ once: true }}
           className="text-center mb-16 max-w-3xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl font-black font-heading text-[#081C3A] mb-6">
+          <h2 className="text-4xl md:text-5xl font-black font-heading text-[#0f172a] mb-6">
             Our Capabilities
           </h2>
           <p className="text-[#6B7280] text-lg">
@@ -62,7 +62,7 @@ export default function OurCapabilities() {
               transition={{ delay: idx * 0.1, duration: 0.6 }}
               className="bg-white border border-[#E5E7EB] rounded-[20px] p-6 flex flex-col md:flex-row items-center gap-6 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_40px_-15px_rgba(8,28,58,0.15)] hover:-translate-y-2 transition-all duration-300 cursor-pointer group"
             >
-              <div className="w-24 h-24 rounded-[16px] overflow-hidden flex-shrink-0 relative shadow-md">
+              <div className="w-24 h-24 rounded-[16px] overflow-hidden flex-shrink-0 relative shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2">
                 <img 
                   src={cap.image} 
                   alt={cap.title} 
@@ -70,7 +70,7 @@ export default function OurCapabilities() {
                 />
               </div>
               <div className="text-center md:text-left">
-                <h3 className="text-[#081C3A] font-bold text-xl mb-1 group-hover:text-[#E63946] transition-colors">
+                <h3 className="text-[#0f172a] font-bold text-xl mb-1 group-hover:text-[#E63946] transition-colors">
                   {cap.title}
                 </h3>
                 <p className="text-[#6B7280] text-sm font-medium">

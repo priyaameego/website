@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import foamImg from '../../assets/foam.png';
+import foamImg from '../../assets/fo.png';
 import custImg from '../../assets/cust.jpeg';
 import pillowImg from '../../assets/pillow.jpeg';
 
@@ -35,7 +35,7 @@ export default function WhatWeDo() {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold font-heading text-[#081C3A] mb-4"
+            className="text-4xl md:text-5xl font-bold font-heading text-[#0f172a] mb-4"
           >
             What We Do
           </motion.h2>
@@ -43,7 +43,7 @@ export default function WhatWeDo() {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="w-24 h-1 bg-[#FF6B00] mx-auto rounded-full"
+            className="w-24 h-1 bg-[#D4AF37] mx-auto rounded-full"
           />
         </div>
 
@@ -66,11 +66,11 @@ export default function WhatWeDo() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#081C3A]/20 to-transparent"></div>
               </div>
               <div className="p-8 text-center flex flex-col items-center">
-                <h3 className="text-2xl font-bold font-heading text-[#081C3A] mb-4 relative inline-block">
+                <h3 className="text-2xl font-bold font-heading text-[#0f172a] mb-4 relative inline-block">
                   {item.title}
                   <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-[2px] bg-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 </h3>
-                <p className="text-[#4B5563] text-sm leading-relaxed max-w-[250px]">
+                <p className="text-[#64748b] text-sm leading-relaxed max-w-[250px]">
                   {item.desc}
                 </p>
               </div>

@@ -51,7 +51,7 @@ export default function CoreValues() {
               <h4 className="text-xs font-black tracking-[0.2em] text-[#E63946] uppercase mb-4">
                 CSR INITIATIVES
               </h4>
-              <h2 className="text-4xl md:text-5xl font-black font-heading text-[#081C3A] mb-8 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-black font-heading text-[#0f172a] mb-8 leading-tight">
                 Empowering Communities
               </h2>
               <p className="text-lg text-[#6B7280] leading-relaxed mb-6">
@@ -92,12 +92,12 @@ export default function CoreValues() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-white p-12 rounded-3xl border border-[#E5E7EB] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group flex flex-col items-center text-center"
+                className="bg-white p-12 rounded-3xl border border-[#E5E7EB] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group flex flex-col items-center text-center"
               >
                 <div className={`w-20 h-20 rounded-2xl flex items-center justify-center mb-8 ${item.bg} group-hover:scale-110 transition-transform duration-300`}>
                   <item.icon size={36} className={item.color} />
                 </div>
-                <h3 className="text-2xl font-black text-[#081C3A] mb-4">{item.title}</h3>
+                <h3 className="text-2xl font-black text-[#0f172a] mb-4">{item.title}</h3>
                 <p className="text-[#6B7280] leading-relaxed">
                   {item.desc}
                 </p>

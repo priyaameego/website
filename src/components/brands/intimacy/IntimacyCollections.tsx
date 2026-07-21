@@ -1,5 +1,9 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import bedImg from '../../../assets/bed.jpeg';
+import orthoImg from '../../../assets/ortho.png';
+import maImg from '../../../assets/ma.png';
+import pillowImg from '../../../assets/pillow.jpeg';
 
 export default function IntimacyCollections() {
   const collections = [
@@ -12,7 +16,7 @@ export default function IntimacyCollections() {
         { value: 'PLUSH', label: 'FEEL' },
         { value: '15 YRS', label: 'WARRANTY' }
       ],
-      image: 'https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=2057&auto=format&fit=crop', // Luxury bedroom
+      image: bedImg, // Luxury bedroom
       align: 'left' // Image on the right, text on the left
     },
     {
@@ -24,7 +28,7 @@ export default function IntimacyCollections() {
         { value: '5 ZONE', label: 'SUPPORT' },
         { value: 'POSTURE', label: 'CARE' }
       ],
-      image: 'https://images.unsplash.com/photo-1629141065715-0552b71ec911?q=80&w=2070&auto=format&fit=crop', // Ortho cross section
+      image: orthoImg, // Ortho cross section
       align: 'right' // Image on the left, text on the right
     },
     {
@@ -36,7 +40,7 @@ export default function IntimacyCollections() {
         { value: '100%', label: 'HYGIENIC' },
         { value: 'ALLERGY', label: 'FREE' }
       ],
-      image: 'https://images.unsplash.com/photo-1584100936595-c0654b55a2e6?q=80&w=2070&auto=format&fit=crop', // Clean white mattress
+      image: maImg, // Clean white mattress
       align: 'left' // Image on the right, text on the left
     },
     {
@@ -48,7 +52,7 @@ export default function IntimacyCollections() {
         { value: 'COOL', label: 'GEL TECH' },
         { value: 'HOTEL', label: 'GRADE' }
       ],
-      image: 'https://images.unsplash.com/photo-1620610360341-a1eefb598b9e?q=80&w=2070&auto=format&fit=crop', // Pillows on bed
+      image: pillowImg, // Pillows on bed
       align: 'right' // Image on the left, text on the right
     }
   ];
@@ -75,7 +79,7 @@ export default function IntimacyCollections() {
                 {collection.eyebrow}
               </span>
               
-              <h2 className="text-4xl md:text-5xl font-black font-heading text-[#081C3A] mb-8">
+              <h2 className="text-4xl md:text-5xl font-black font-heading text-[#0f172a] mb-8">
                 {collection.title}
               </h2>
               
@@ -96,8 +100,8 @@ export default function IntimacyCollections() {
               </div>
 
               {/* View Products Button */}
-              <Link to="/products">
-                <button className="bg-[#E63946] text-white font-bold py-4 px-8 rounded-lg hover:bg-[#D92C3A] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 uppercase tracking-wider text-xs shadow-md">
+              <Link to="/contact">
+                <button className="bg-[#E63946] text-white font-bold py-4 px-8 rounded-2xl hover:bg-[#D92C3A] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 transition-all duration-300 uppercase tracking-wider text-xs shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
                   View Collection
                 </button>
               </Link>

@@ -57,7 +57,7 @@ export default function ContactUs() {
               <h4 className="text-sm font-bold tracking-widest text-[#E63946] uppercase mb-4">
                 GET IN TOUCH
               </h4>
-              <h2 className="text-4xl md:text-5xl font-black font-heading text-[#081C3A] mb-12">
+              <h2 className="text-4xl md:text-5xl font-black font-heading text-[#0f172a] mb-12">
                 Our Offices
               </h2>
               
@@ -71,11 +71,11 @@ export default function ContactUs() {
                     363/288/1, Hasanganj, Campbell Rd, Lucknow, UP - 226017
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <a href="tel:+917525099861" className="flex-1 flex items-center justify-center gap-2 bg-[#F8FAFC] hover:bg-[#EEF5FF] text-[#081C3A] hover:text-[#C19B5E] px-4 py-3 rounded-lg transition-colors border border-[#E2E8F0] shadow-sm">
+                    <a href="tel:+917525099861" className="flex-1 flex items-center justify-center gap-2 bg-[#F8FAFC] hover:bg-[#EEF5FF] text-[#0f172a] hover:text-[#C19B5E] px-4 py-3 rounded-2xl transition-colors border border-[#E2E8F0] shadow-sm">
                       <Phone size={16} />
                       <span className="text-sm font-semibold">+91 7525099861</span>
                     </a>
-                    <a href="mailto:sales@shakshiproducts.com" className="flex-1 flex items-center justify-center gap-2 bg-[#F8FAFC] hover:bg-[#EEF5FF] text-[#081C3A] hover:text-[#C19B5E] px-4 py-3 rounded-lg transition-colors border border-[#E2E8F0] shadow-sm">
+                    <a href="mailto:sales@shakshiproducts.com" className="flex-1 flex items-center justify-center gap-2 bg-[#F8FAFC] hover:bg-[#EEF5FF] text-[#0f172a] hover:text-[#C19B5E] px-4 py-3 rounded-2xl transition-colors border border-[#E2E8F0] shadow-sm">
                       <Mail size={16} />
                       <span className="text-sm font-semibold">Email Sales</span>
                     </a>
@@ -84,18 +84,18 @@ export default function ContactUs() {
 
                 {/* Office 2 */}
                 <div className="bg-white p-8 rounded-2xl shadow-sm border border-[#E2E8F0]">
-                  <h4 className="text-sm font-bold tracking-widest text-[#081C3A] uppercase mb-4">
+                  <h4 className="text-sm font-bold tracking-widest text-[#0f172a] uppercase mb-4">
                     MANUFACTURING PLANT (KANPUR)
                   </h4>
                   <p className="text-[#6B7280] text-sm mb-6">
                     Plot No. 45, Industrial Estate, Fazalganj, Kanpur, UP - 208012
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <a href="tel:+917525099862" className="flex-1 flex items-center justify-center gap-2 bg-[#F8FAFC] hover:bg-[#EEF5FF] text-[#081C3A] hover:text-[#C19B5E] px-4 py-3 rounded-lg transition-colors border border-[#E2E8F0] shadow-sm">
+                    <a href="tel:+917525099862" className="flex-1 flex items-center justify-center gap-2 bg-[#F8FAFC] hover:bg-[#EEF5FF] text-[#0f172a] hover:text-[#C19B5E] px-4 py-3 rounded-2xl transition-colors border border-[#E2E8F0] shadow-sm">
                       <Phone size={16} />
                       <span className="text-sm font-semibold">+91 7525099862</span>
                     </a>
-                    <a href="mailto:b2b@shakshiproducts.com" className="flex-1 flex items-center justify-center gap-2 bg-[#F8FAFC] hover:bg-[#EEF5FF] text-[#081C3A] hover:text-[#C19B5E] px-4 py-3 rounded-lg transition-colors border border-[#E2E8F0] shadow-sm">
+                    <a href="mailto:b2b@shakshiproducts.com" className="flex-1 flex items-center justify-center gap-2 bg-[#F8FAFC] hover:bg-[#EEF5FF] text-[#0f172a] hover:text-[#C19B5E] px-4 py-3 rounded-2xl transition-colors border border-[#E2E8F0] shadow-sm">
                       <Mail size={16} />
                       <span className="text-sm font-semibold">Email B2B</span>
                     </a>
@@ -116,7 +116,7 @@ export default function ContactUs() {
                   : 'border-[#E2E8F0] shadow-sm'
               }`}
             >
-              <h3 className="text-2xl text-[#4B5563] mb-4 font-light">Send a Message</h3>
+              <h3 className="text-2xl text-[#64748b] mb-4 font-light">Send a Message</h3>
               <p className="text-[#6B7280] text-sm mb-10">
                 For general queries or feedback, please fill out the form below.
               </p>
@@ -126,14 +126,14 @@ export default function ContactUs() {
                 {/* Row 1 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="text-sm font-medium text-[#4B5563] mb-2 block">
+                    <label className="text-sm font-medium text-[#64748b] mb-2 block">
                       Nature of Your Business *
                     </label>
                     <select 
                       ref={selectRef}
                       value={businessType}
                       onChange={(e) => setBusinessType(e.target.value)}
-                      className={`w-full px-4 py-3 rounded-lg border text-[#4B5563] focus:outline-none focus:ring-2 focus:border-transparent transition-all ${
+                      className={`w-full px-4 py-3 rounded-2xl border text-[#64748b] focus:outline-none focus:ring-2 focus:border-transparent transition-all ${
                         highlightForm ? 'border-[#E63946] ring-2 ring-[#E63946]' : 'border-[#E5E7EB] focus:ring-[#D4AF37]'
                       }`}
                     >
@@ -146,86 +146,86 @@ export default function ContactUs() {
                     </select>
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-[#4B5563] mb-2 block">
+                    <label className="text-sm font-medium text-[#64748b] mb-2 block">
                       Company Name
                     </label>
-                    <input type="text" className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all" />
+                    <input type="text" className="w-full px-4 py-3 rounded-2xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all" />
                   </div>
                 </div>
 
                 {/* Row 2 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="text-sm font-medium text-[#4B5563] mb-2 block">
+                    <label className="text-sm font-medium text-[#64748b] mb-2 block">
                       Your Name *
                     </label>
-                    <input type="text" className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all" />
+                    <input type="text" className="w-full px-4 py-3 rounded-2xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all" />
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-[#4B5563] mb-2 block">
+                    <label className="text-sm font-medium text-[#64748b] mb-2 block">
                       Contact Number *
                     </label>
-                    <input type="text" className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all" />
+                    <input type="text" className="w-full px-4 py-3 rounded-2xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all" />
                   </div>
                 </div>
 
                 {/* Row 3 */}
                 <div>
-                  <label className="text-sm font-medium text-[#4B5563] mb-2 block">
+                  <label className="text-sm font-medium text-[#64748b] mb-2 block">
                     Email Address *
                   </label>
-                  <input type="email" className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all" />
+                  <input type="email" className="w-full px-4 py-3 rounded-2xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all" />
                 </div>
 
                 {/* Row 4 */}
                 <div>
-                  <label className="text-sm font-medium text-[#4B5563] mb-2 block">
+                  <label className="text-sm font-medium text-[#64748b] mb-2 block">
                     Address
                   </label>
-                  <input type="text" className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all" />
+                  <input type="text" className="w-full px-4 py-3 rounded-2xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all" />
                 </div>
 
                 {/* Row 5 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="text-sm font-medium text-[#4B5563] mb-2 block">
+                    <label className="text-sm font-medium text-[#64748b] mb-2 block">
                       Country
                     </label>
-                    <input type="text" className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all" />
+                    <input type="text" className="w-full px-4 py-3 rounded-2xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all" />
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-[#4B5563] mb-2 block">
+                    <label className="text-sm font-medium text-[#64748b] mb-2 block">
                       State
                     </label>
-                    <input type="text" className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all" />
+                    <input type="text" className="w-full px-4 py-3 rounded-2xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all" />
                   </div>
                 </div>
 
                 {/* Row 6 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="text-sm font-medium text-[#4B5563] mb-2 block">
+                    <label className="text-sm font-medium text-[#64748b] mb-2 block">
                       City *
                     </label>
-                    <input type="text" className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all" />
+                    <input type="text" className="w-full px-4 py-3 rounded-2xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all" />
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-[#4B5563] mb-2 block">
+                    <label className="text-sm font-medium text-[#64748b] mb-2 block">
                       Zip / Postal Code
                     </label>
-                    <input type="text" className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all" />
+                    <input type="text" className="w-full px-4 py-3 rounded-2xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all" />
                   </div>
                 </div>
 
                 {/* Row 7 */}
                 <div>
-                  <label className="text-sm font-medium text-[#4B5563] mb-2 block">
+                  <label className="text-sm font-medium text-[#64748b] mb-2 block">
                     Enquiry Details *
                   </label>
-                  <textarea rows={5} className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all resize-y"></textarea>
+                  <textarea rows={5} className="w-full px-4 py-3 rounded-2xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all resize-y"></textarea>
                 </div>
 
-                <button type="submit" className="w-full bg-[#C19B5E] text-white font-bold py-4 rounded-lg hover:bg-[#A88650] transition-colors shadow-md mt-4">
+                <button type="submit" className="w-full bg-[#C19B5E] text-white font-bold py-4 rounded-2xl hover:bg-[#A88650] transition-colors shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 mt-4">
                   Submit Enquiry
                 </button>
               </form>

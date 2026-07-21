@@ -15,7 +15,7 @@ export default function TrustedBrands() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="text-2xl font-heading font-bold text-center text-[#081C3A] grayscale hover:grayscale-0 hover:text-[#FF6B00] hover:scale-105 transition-all cursor-pointer duration-300"
+              className="text-2xl font-heading font-bold text-center text-[#0f172a] grayscale hover:grayscale-0 hover:text-[#D4AF37] hover:scale-105 transition-all cursor-pointer duration-300"
             >
               {brand}
             </motion.div>

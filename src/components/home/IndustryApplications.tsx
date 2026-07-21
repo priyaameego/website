@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import hImg from '../../assets/h.png';
-import healthImg from '../../assets/healthcare.png';
-import autoImg from '../../assets/automative.png';
+import healthImg from '../../assets/he.png';
+import autoImg from '../../assets/h1.png';
 import furImg from '../../assets/fur.png';
-import acousImg from '../../assets/Acoustics.png';
-import customImg from '../../assets/custome.png';
+import acousImg from '../../assets/au.png';
+import customImg from '../../assets/ss2.png';
 
 export default function IndustryApplications() {
   const industries = [
@@ -25,16 +26,16 @@ export default function IndustryApplications() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-block border border-[#FF6B00]/30 rounded-full px-6 py-2 bg-[#FF6B00]/5 mb-6"
+              className="inline-block border border-[#D4AF37]/30 rounded-full px-6 py-2 bg-[#D4AF37]/5 mb-6"
             >
-              <span className="text-[#FF6B00] font-bold tracking-widest uppercase text-xs">Foam For Industry</span>
+              <span className="text-[#D4AF37] font-bold tracking-widest uppercase text-xs">Foam For Industry</span>
             </motion.div>
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl font-bold text-[#081C3A] font-heading leading-tight"
+              className="text-4xl md:text-5xl font-bold text-[#0f172a] font-heading leading-tight"
             >
               Powering Global Sectors
             </motion.h2>
@@ -45,7 +46,7 @@ export default function IndustryApplications() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <a href="#industries" className="btn-outline text-sm">VIEW ALL INDUSTRIES</a>
+            <Link to="/industries" className="btn-outline text-sm w-full md:w-auto text-center">VIEW ALL INDUSTRIES</Link>
           </motion.div>
         </div>
 
@@ -57,7 +58,7 @@ export default function IndustryApplications() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="relative h-[250px] rounded-xl overflow-hidden group cursor-pointer"
+              className="relative h-[250px] rounded-2xl overflow-hidden group cursor-pointer"
             >
               <img 
                 src={ind.img} 

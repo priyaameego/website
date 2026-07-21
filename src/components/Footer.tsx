@@ -51,16 +51,16 @@ export default function Footer() {
             </p>
             
             <div className="flex gap-3 pt-4">
-              <a href="#" className="w-10 h-10 bg-white/5 hover:bg-[#FF6B00] text-gray-300 hover:text-white rounded-lg flex items-center justify-center transition-colors border border-white/10">
+              <a href="#" className="w-10 h-10 bg-white/5 hover:bg-[#D4AF37] text-gray-300 hover:text-white rounded-2xl flex items-center justify-center transition-colors border border-white/10">
                 <FacebookIcon />
               </a>
-              <a href="#" className="w-10 h-10 bg-white/5 hover:bg-[#FF6B00] text-gray-300 hover:text-white rounded-lg flex items-center justify-center transition-colors border border-white/10">
+              <a href="#" className="w-10 h-10 bg-white/5 hover:bg-[#D4AF37] text-gray-300 hover:text-white rounded-2xl flex items-center justify-center transition-colors border border-white/10">
                 <InstagramIcon />
               </a>
-              <a href="#" className="w-10 h-10 bg-white/5 hover:bg-[#FF6B00] text-gray-300 hover:text-white rounded-lg flex items-center justify-center transition-colors border border-white/10">
+              <a href="#" className="w-10 h-10 bg-white/5 hover:bg-[#D4AF37] text-gray-300 hover:text-white rounded-2xl flex items-center justify-center transition-colors border border-white/10">
                 <LinkedinIcon />
               </a>
-              <a href="#" className="w-10 h-10 bg-white/5 hover:bg-[#FF6B00] text-gray-300 hover:text-white rounded-lg flex items-center justify-center transition-colors border border-white/10">
+              <a href="#" className="w-10 h-10 bg-white/5 hover:bg-[#D4AF37] text-gray-300 hover:text-white rounded-2xl flex items-center justify-center transition-colors border border-white/10">
                 <MessageCircleIcon />
               </a>
             </div>

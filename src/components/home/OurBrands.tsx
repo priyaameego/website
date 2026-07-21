@@ -21,23 +21,23 @@ export default function OurBrands() {
             viewport={{ once: true }}
             className="inline-block border border-[#081C3A]/20 rounded-full px-6 py-2 bg-white mb-6"
           >
-            <span className="text-[#081C3A] font-bold tracking-widest uppercase text-xs">Our Brands</span>
+            <span className="text-[#0f172a] font-bold tracking-widest uppercase text-xs">Our Brands</span>
           </motion.div>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-bold text-[#081C3A] font-heading leading-tight mb-6"
+            className="text-4xl md:text-5xl font-bold text-[#0f172a] font-heading leading-tight mb-6"
           >
-            A Portfolio of <span className="text-[#FF6B00]">Excellence</span>
+            A Portfolio of <span className="text-[#D4AF37]">Excellence</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-[#4B5563]"
+            className="text-lg text-[#64748b]"
           >
             Discover our specialized child brands tailored to meet specific market demands—from robust industrial applications to luxurious comfort.
           </motion.p>
@@ -51,7 +51,7 @@ export default function OurBrands() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.15 }}
-              className="relative h-[400px] rounded-2xl overflow-hidden group shadow-md hover:shadow-premium transition-shadow duration-500"
+              className="relative h-[400px] rounded-2xl overflow-hidden group shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 hover:shadow-premium transition-shadow duration-500"
             >
               <Link to={brand.path} className="absolute inset-0 z-10 w-full h-full cursor-pointer">
                 <span className="sr-only">Visit {brand.name}</span>

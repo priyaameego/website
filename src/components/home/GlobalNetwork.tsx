@@ -10,7 +10,7 @@ export default function GlobalNetwork() {
           viewport={{ once: true }}
           className="inline-block border border-[#081C3A]/20 rounded-full px-6 py-2 bg-white mb-6"
         >
-          <span className="text-[#081C3A] font-bold tracking-widest uppercase text-xs">Global Supply Chain</span>
+          <span className="text-[#0f172a] font-bold tracking-widest uppercase text-xs">Global Supply Chain</span>
         </motion.div>
         
         <motion.h2 
@@ -18,9 +18,9 @@ export default function GlobalNetwork() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-4xl md:text-5xl font-bold text-[#081C3A] font-heading leading-tight mb-6"
+          className="text-4xl md:text-5xl font-bold text-[#0f172a] font-heading leading-tight mb-6"
         >
-          A Network Built on <span className="text-[#FF6B00]">Reliability</span>
+          A Network Built on <span className="text-[#D4AF37]">Reliability</span>
         </motion.h2>
         
         <motion.p 
@@ -28,7 +28,7 @@ export default function GlobalNetwork() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-lg text-[#4B5563] max-w-3xl mx-auto mb-16"
+          className="text-lg text-[#64748b] max-w-3xl mx-auto mb-16"
         >
           Our sophisticated logistics network and strategically located distribution centers ensure just-in-time delivery for OEM partners across 40+ countries.
         </motion.p>
@@ -38,7 +38,7 @@ export default function GlobalNetwork() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="relative w-full h-[400px] md:h-[600px] rounded-3xl overflow-hidden shadow-md bg-[#081C3A]"
+          className="relative w-full h-[400px] md:h-[600px] rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 bg-[#081C3A]"
         >
           <img 
             src="https://images.unsplash.com/photo-1586528116311-ad8ed7c50800?q=80&w=2070&auto=format&fit=crop" 

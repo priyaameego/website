@@ -21,9 +21,9 @@ export default function ResourcesMedia() {
             className="space-y-8"
           >
             <div className="inline-block border border-[#081C3A]/20 rounded-full px-6 py-2 bg-white">
-              <span className="text-[#081C3A] font-bold tracking-widest uppercase text-xs">Latest News & Insights</span>
+              <span className="text-[#0f172a] font-bold tracking-widest uppercase text-xs">Latest News & Insights</span>
             </div>
-            <h2 className="text-4xl font-bold font-heading text-[#081C3A]">Industry Updates</h2>
+            <h2 className="text-4xl font-bold font-heading text-[#0f172a]">Industry Updates</h2>
             
             <div className="space-y-6">
               {[
@@ -31,13 +31,13 @@ export default function ResourcesMedia() {
                 { date: 'JUNE 28, 2026', title: 'CertiPUR-US® Recertification Achieved Across All Major Foam Blends.' },
                 { date: 'MAY 15, 2026', title: 'Sustainability Report: Achieving 98% Scrap Recycling Milestone.' }
               ].map((news, idx) => (
-                <div key={idx} className="flex gap-4 p-6 rounded-2xl bg-[#F4F7FA] border border-[#E2E8F0] hover:shadow-md transition-shadow cursor-pointer">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0 text-[#FF6B00]">
+                <div key={idx} className="flex gap-4 p-6 rounded-2xl bg-[#F4F7FA] border border-[#E2E8F0] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 transition-shadow cursor-pointer">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
                     <Newspaper size={20} />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-[#FF6B00] mb-1">{news.date}</div>
-                    <h4 className="text-[#081C3A] font-bold leading-snug hover:text-[#FF6B00] transition-colors">{news.title}</h4>
+                    <div className="text-xs font-bold text-[#D4AF37] mb-1">{news.date}</div>
+                    <h4 className="text-[#0f172a] font-bold leading-snug hover:text-[#D4AF37] transition-colors">{news.title}</h4>
                   </div>
                 </div>
               ))}
@@ -58,7 +58,7 @@ export default function ResourcesMedia() {
             
             <div className="space-y-4 mb-8">
               {downloads.map((doc, idx) => (
-                <div key={idx} className="flex items-center justify-between p-5 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-colors cursor-pointer group">
+                <div key={idx} className="flex items-center justify-between p-5 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-colors cursor-pointer group">
                   <div className="flex items-center gap-4">
                     <FileText className="text-[#D4AF37]" size={24} />
                     <div>

@@ -1,6 +1,6 @@
 import PageLayout from '../../components/PageLayout';
 import AboutIntro from '../../components/about/AboutIntro';
-import AboutCore from '../../components/about/AboutCore';
+import OurJourney from '../../components/about/OurJourney';
 import PremiumCTA from '../../components/home/PremiumCTA';
 
 export default function Timeline() {
@@ -8,8 +8,7 @@ export default function Timeline() {
     <PageLayout>
       <div className="pt-24">
         <AboutIntro />
-        {/* We reuse AboutCore here to display the timeline/journey at the bottom */}
-        <AboutCore />
+        <OurJourney />
       </div>
       <PremiumCTA />
     </PageLayout>

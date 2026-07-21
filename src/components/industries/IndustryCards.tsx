@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import hImg from '../../assets/h.png';
-import healthImg from '../../assets/healthcare.png';
-import autoImg from '../../assets/automative.png';
+import healthImg from '../../assets/he.png';
+import autoImg from '../../assets/h1.png';
 import furImg from '../../assets/fur.png';
-import acousImg from '../../assets/Acoustics.png';
-import customImg from '../../assets/custome.png';
+import acousImg from '../../assets/au.png';
+import customImg from '../../assets/ss2.png';
 
 export default function IndustryCards() {
   const industries = [
@@ -56,7 +56,7 @@ export default function IndustryCards() {
           <span className="text-sm font-bold tracking-[0.2em] text-[#E63946] uppercase mb-4 block">
             FOAM APPLICATIONS
           </span>
-          <h2 className="text-4xl md:text-5xl font-black font-heading text-[#081C3A]">
+          <h2 className="text-4xl md:text-5xl font-black font-heading text-[#0f172a]">
             The Wide World of Foam
           </h2>
         </motion.div>
@@ -107,7 +107,7 @@ export default function IndustryCards() {
           viewport={{ once: true }}
         >
           <Link to="/contact">
-            <button className="bg-[#E63946] text-white font-bold py-4 px-10 rounded-lg hover:bg-[#D92C3A] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 uppercase tracking-wider text-sm inline-flex items-center group">
+            <button className="bg-[#E63946] text-white font-bold py-4 px-10 rounded-2xl hover:bg-[#D92C3A] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 transition-all duration-300 uppercase tracking-wider text-sm inline-flex items-center group">
               Enquire For Your Industry
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 

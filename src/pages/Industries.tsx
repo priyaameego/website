@@ -25,8 +25,8 @@ export default function Industries() {
       */}
       
       <div className="py-24 text-center">
-        <h2 className="text-3xl font-bold text-[#081C3A]">Premium Industries Experience Under Construction</h2>
-        <p className="text-[#4B5563] mt-4">We are currently building this Fortune 500 OEM experience. Stay tuned!</p>
+        <h2 className="text-3xl font-bold text-[#0f172a]">Premium Industries Experience Under Construction</h2>
+        <p className="text-[#64748b] mt-4">We are currently building this Fortune 500 OEM experience. Stay tuned!</p>
       </div>
     </div>
   );

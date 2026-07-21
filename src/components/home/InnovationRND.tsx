@@ -7,7 +7,7 @@ export default function InnovationRND() {
   return (
     <section className="py-24 bg-[#081C3A] text-white overflow-hidden relative">
       <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
-         <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover mix-blend-screen" alt="Tech Background"/>
+         <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 mix-blend-screen" alt="Tech Background"/>
       </div>
       
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
@@ -28,7 +28,7 @@ export default function InnovationRND() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl font-bold font-heading leading-tight mb-6"
+              className="text-4xl md:text-5xl font-bold font-heading leading-tight mb-6 text-white"
             >
               Our <span className="text-[#D4AF37]">Technology</span> DNA
             </motion.h2>
@@ -49,7 +49,7 @@ export default function InnovationRND() {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
               to="/about/manufacturing" 
-              className="inline-flex justify-center items-center px-8 py-4 bg-[#D4AF37] text-[#081C3A] rounded font-bold tracking-wide transition-all duration-300 hover:bg-[#F2C94C] text-sm w-full sm:w-auto text-center"
+              className="inline-flex justify-center items-center px-8 py-4 bg-[#D4AF37] text-[#0f172a] rounded font-bold tracking-wide transition-all duration-300 hover:bg-[#F2C94C] text-sm w-full sm:w-auto text-center"
             >
               EXPLORE OUR LABS
             </MotionLink>

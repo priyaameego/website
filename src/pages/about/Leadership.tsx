@@ -29,19 +29,19 @@ export default function Leadership() {
                 
                 {/* Social Actions (show on hover) */}
                 <div className="absolute top-4 right-4 translate-x-12 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 flex flex-col gap-2">
-                  <button className="w-10 h-10 bg-white/10 backdrop-blur rounded-full flex items-center justify-center text-[#081C3A] hover:bg-[#D4AF37] transition-colors">
+                  <button className="w-10 h-10 bg-white/10 backdrop-blur rounded-full flex items-center justify-center text-[#0f172a] hover:bg-[#D4AF37] transition-colors">
                     <Briefcase size={18} />
                   </button>
-                  <button className="w-10 h-10 bg-white/10 backdrop-blur rounded-full flex items-center justify-center text-[#081C3A] hover:bg-[#D4AF37] transition-colors">
+                  <button className="w-10 h-10 bg-white/10 backdrop-blur rounded-full flex items-center justify-center text-[#0f172a] hover:bg-[#D4AF37] transition-colors">
                     <Mail size={18} />
                   </button>
                 </div>
               </div>
               
               <div className="p-6 relative z-10 -mt-10 bg-gradient-to-t from-[#1a1d2d] to-transparent">
-                <h3 className="text-xl font-bold text-[#081C3A] mb-1">{leader.name}</h3>
+                <h3 className="text-xl font-bold text-[#0f172a] mb-1">{leader.name}</h3>
                 <p className="text-[#D4AF37] text-sm font-bold uppercase tracking-wider mb-3">{leader.role}</p>
-                <div className="text-[#4B5563] text-sm">{leader.exp}</div>
+                <div className="text-[#64748b] text-sm">{leader.exp}</div>
               </div>
             </div>
           ))}

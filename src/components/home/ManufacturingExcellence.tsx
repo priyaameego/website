@@ -48,7 +48,7 @@ export default function ManufacturingExcellence() {
                 <path d="M8 5v14l11-7z" />
               </svg>
             </div>
-            <span className="text-white font-medium tracking-wide drop-shadow-md">Watch Our Story</span>
+            <span className="text-white font-medium tracking-wide drop-shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2">Watch Our Story</span>
           </div>
 
         </motion.div>

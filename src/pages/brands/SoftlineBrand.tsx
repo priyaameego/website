@@ -12,10 +12,7 @@ export default function SoftlineBrand() {
       
       <SoftlineCollections />
       
-      <div className="py-24 text-center">
-        <h2 className="text-3xl font-bold text-[#081C3A]">Softline Flagship Page Under Construction</h2>
-        <p className="text-[#4B5563] mt-4">We are currently building this premium orthopedic brand experience. Stay tuned!</p>
-      </div>
+
     </div>
   );
 }

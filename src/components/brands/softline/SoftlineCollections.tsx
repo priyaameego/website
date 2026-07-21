@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import orthoImg from '../../../assets/ortho.png';
+import maImg from '../../../assets/matter.png';
+import foaImg from '../../../assets/foa.png';
 
 export default function SoftlineCollections() {
   const collections = [
@@ -12,7 +15,7 @@ export default function SoftlineCollections() {
         { value: 'FIRM', label: 'FEEL' },
         { value: '7 ZONE', label: 'SUPPORT' }
       ],
-      image: 'https://images.unsplash.com/photo-1629141065715-0552b71ec911?q=80&w=2070&auto=format&fit=crop', // Ortho cross section
+      image: orthoImg, // Ortho cross section
       align: 'left' // Image on the right, text on the left
     },
     {
@@ -24,7 +27,7 @@ export default function SoftlineCollections() {
         { value: '100+', label: 'CLINICS' },
         { value: 'TRUSTED', label: 'BY DOCTORS' }
       ],
-      image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop', // Healthcare aesthetic
+      image: maImg, // Healthcare aesthetic
       align: 'right' // Image on the left, text on the right
     },
     {
@@ -36,7 +39,7 @@ export default function SoftlineCollections() {
         { value: 'ANTI', label: 'BACTERIAL' },
         { value: 'HIGH', label: 'DENSITY' }
       ],
-      image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop', // Hospital beds/foam
+      image: foaImg, // Hospital beds/foam
       align: 'left' // Image on the right, text on the left
     },
     {
@@ -75,7 +78,7 @@ export default function SoftlineCollections() {
                 {collection.eyebrow}
               </span>
               
-              <h2 className="text-4xl md:text-5xl font-black font-heading text-[#081C3A] mb-8">
+              <h2 className="text-4xl md:text-5xl font-black font-heading text-[#0f172a] mb-8">
                 {collection.title}
               </h2>
               
@@ -96,8 +99,8 @@ export default function SoftlineCollections() {
               </div>
 
               {/* View Products Button */}
-              <Link to="/products">
-                <button className="bg-[#E63946] text-white font-bold py-4 px-8 rounded-lg hover:bg-[#D92C3A] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 uppercase tracking-wider text-xs shadow-md">
+              <Link to="/contact">
+                <button className="bg-[#E63946] text-white font-bold py-4 px-8 rounded-2xl hover:bg-[#D92C3A] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 transition-all duration-300 uppercase tracking-wider text-xs shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
                   View Collection
                 </button>
               </Link>

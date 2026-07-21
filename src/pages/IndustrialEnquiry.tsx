@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail } from 'lucide-react';
 import hImg from '../assets/h.png';
-import healthImg from '../assets/healthcare.png';
-import autoImg from '../assets/automative.png';
+import healthImg from '../assets/he.png';
+import autoImg from '../assets/h1.png';
 import furImg from '../assets/fur.png';
-import acousImg from '../assets/Acoustics.png';
-import customImg from '../assets/custome.png';
+import acousImg from '../assets/au.png';
+import customImg from '../assets/ss2.png';
 
 export default function IndustrialEnquiry() {
   const [formData, setFormData] = useState({
@@ -55,11 +55,11 @@ export default function IndustrialEnquiry() {
       {/* Contact Bar */}
       <div className="bg-[#1C2033] py-6 border-t border-white/5">
         <div className="max-w-[1200px] mx-auto px-6 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 text-[#D4AF37] font-bold text-sm">
-          <a href="tel:+917525099861" className="flex items-center justify-center gap-2 w-full sm:w-auto bg-white/5 hover:bg-white/10 px-6 py-3 rounded-lg transition-colors border border-white/10">
+          <a href="tel:+917525099861" className="flex items-center justify-center gap-2 w-full sm:w-auto bg-white/5 hover:bg-white/10 px-6 py-3 rounded-2xl transition-colors border border-white/10">
             <Phone size={18} className="text-[#E63946]" />
             <span className="tracking-wide">+91 7525099861</span>
           </a>
-          <a href="mailto:b2b@shakshiproducts.com" className="flex items-center justify-center gap-2 w-full sm:w-auto bg-white/5 hover:bg-white/10 px-6 py-3 rounded-lg transition-colors border border-white/10">
+          <a href="mailto:b2b@shakshiproducts.com" className="flex items-center justify-center gap-2 w-full sm:w-auto bg-white/5 hover:bg-white/10 px-6 py-3 rounded-2xl transition-colors border border-white/10">
             <Mail size={18} className="text-[#E63946]" />
             <span className="tracking-wide">b2b@shakshiproducts.com</span>
           </a>
@@ -73,7 +73,7 @@ export default function IndustrialEnquiry() {
             <span className="text-xs font-bold tracking-[0.3em] text-[#E63946] uppercase mb-4 block">
               APPLICATIONS
             </span>
-            <h2 className="text-3xl md:text-4xl font-black font-heading text-[#081C3A] mb-4">
+            <h2 className="text-3xl md:text-4xl font-black font-heading text-[#0f172a] mb-4">
               INDUSTRIAL SOLUTIONS
             </h2>
             <p className="text-[#6B7280] max-w-2xl mx-auto">
@@ -89,7 +89,7 @@ export default function IndustrialEnquiry() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="group rounded-[16px] overflow-hidden bg-[#121E36] flex flex-col shadow-md hover:shadow-xl transition-all duration-300"
+                className="group rounded-[16px] overflow-hidden bg-[#121E36] flex flex-col shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
               >
                 <div className="py-4 text-center border-b border-white/10">
                   <h3 className="text-white text-sm font-bold tracking-[0.2em]">{ind.title}</h3>
@@ -110,29 +110,29 @@ export default function IndustrialEnquiry() {
       {/* Enquiry Form */}
       <section className="py-24 px-6 bg-[#FAFAFA]">
         <div className="max-w-[800px] mx-auto bg-white rounded-2xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] p-8 md:p-12">
-          <h2 className="text-3xl font-bold font-heading text-[#081C3A] mb-2">
+          <h2 className="text-3xl font-bold font-heading text-[#0f172a] mb-2">
             Send Us Your Query
           </h2>
-          <p className="text-[#4B5563] mb-10">
+          <p className="text-[#64748b] mb-10">
             Our industrial team will respond within 24 hours.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
-              <label className="text-sm font-medium text-[#4B5563]">Name<span className="text-[#E63946]">*</span></label>
+              <label className="text-sm font-medium text-[#64748b]">Name<span className="text-[#E63946]">*</span></label>
               <input 
                 required
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all"
+                className="w-full px-4 py-3 rounded-2xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all"
               />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="text-sm font-medium text-[#4B5563]">Phone<span className="text-[#E63946]">*</span></label>
-                <div className="flex border border-[#E5E7EB] rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-[#D4AF37]">
+                <label className="text-sm font-medium text-[#64748b]">Phone<span className="text-[#E63946]">*</span></label>
+                <div className="flex border border-[#E5E7EB] rounded-2xl overflow-hidden focus-within:ring-2 focus-within:ring-[#D4AF37]">
                   <div className="bg-[#F9FAFB] px-4 flex items-center border-r border-[#E5E7EB]">
                     <span className="mr-2">🇮🇳</span> +91
                   </div>
@@ -146,56 +146,56 @@ export default function IndustrialEnquiry() {
                 </div>
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-medium text-[#4B5563]">Email<span className="text-[#E63946]">*</span></label>
+                <label className="text-sm font-medium text-[#64748b]">Email<span className="text-[#E63946]">*</span></label>
                 <input 
                   required
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-2xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all"
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="text-sm font-medium text-[#4B5563]">Company<span className="text-[#E63946]">*</span></label>
+                <label className="text-sm font-medium text-[#64748b]">Company<span className="text-[#E63946]">*</span></label>
                 <input 
                   required
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-2xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-medium text-[#4B5563]">City<span className="text-[#E63946]">*</span></label>
+                <label className="text-sm font-medium text-[#64748b]">City<span className="text-[#E63946]">*</span></label>
                 <input 
                   required
                   name="city"
                   value={formData.city}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-2xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all"
                 />
               </div>
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-medium text-[#4B5563]">Enquiry Details<span className="text-[#E63946]">*</span></label>
+              <label className="text-sm font-medium text-[#64748b]">Enquiry Details<span className="text-[#E63946]">*</span></label>
               <textarea 
                 required
                 name="details"
                 value={formData.details}
                 onChange={handleChange}
                 rows={5}
-                className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all resize-none"
+                className="w-full px-4 py-3 rounded-2xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all resize-none"
               ></textarea>
             </div>
 
             <button 
               type="submit" 
-              className="w-full bg-[#C19B5E] text-white font-bold py-4 rounded-lg hover:bg-[#A88650] transition-colors shadow-md"
+              className="w-full bg-[#C19B5E] text-white font-bold py-4 rounded-2xl hover:bg-[#A88650] transition-colors shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2"
             >
               Submit
             </button>

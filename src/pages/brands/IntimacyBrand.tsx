@@ -12,10 +12,7 @@ export default function IntimacyBrand() {
       
       <IntimacyCollections />
       
-      <div className="py-24 text-center">
-        <h2 className="text-3xl font-bold text-[#081C3A]">Intimacy Flagship Page Under Construction</h2>
-        <p className="text-[#4B5563] mt-4">We are currently building this luxury spinal comfort experience. Stay tuned!</p>
-      </div>
+
     </div>
   );
 }

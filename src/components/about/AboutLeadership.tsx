@@ -32,7 +32,7 @@ export default function AboutLeadership() {
             >
               <div className="aspect-[4/5] rounded-3xl overflow-hidden relative border border-white/10 shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32b7?q=80&w=1000&auto=format&fit=crop" 
+                  src="https://shakshigroup.com/cdn/shop/t/2/assets/sg-founder.png?v=51194021366701148041777563151" 
                   alt="Founder" 
                   className="w-full h-full object-cover"
                 />
@@ -76,9 +76,9 @@ export default function AboutLeadership() {
       <section id="leadership" className="py-24 bg-[#F4F7FA]">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-[#FF6B00] font-bold tracking-widest uppercase text-xs mb-4 block">Our People</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#081C3A] font-heading mb-6">Leadership Team</h2>
-            <p className="text-[#4B5563] text-lg">Guided by a team of industry veterans dedicated to operational excellence and sustainable growth.</p>
+            <span className="text-[#D4AF37] font-bold tracking-widest uppercase text-xs mb-4 block">Our People</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0f172a] font-heading mb-6">Leadership Team</h2>
+            <p className="text-[#64748b] text-lg">Guided by a team of industry veterans dedicated to operational excellence and sustainable growth.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -89,7 +89,7 @@ export default function AboutLeadership() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group relative overflow-hidden rounded-2xl bg-white shadow-lg"
+                className="group relative overflow-hidden rounded-2xl bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2"
               >
                 <div className="aspect-[3/4] overflow-hidden">
                   <img 

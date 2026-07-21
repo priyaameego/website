@@ -21,13 +21,13 @@ export default function Certifications() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 w-full py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {certs.map((cert, idx) => (
-            <div key={idx} className="bg-[#FFFFFF] p-8 rounded-xl border border-[#E2E8F0] flex items-start gap-6 hover:border-[#D4AF37]/30 transition-colors">
+            <div key={idx} className="bg-[#FFFFFF] p-8 rounded-2xl border border-[#E2E8F0] flex items-start gap-6 hover:border-[#D4AF37]/30 transition-colors">
               <div className="w-12 h-12 bg-[#D4AF37]/10 rounded-full flex items-center justify-center shrink-0">
                 <Award className="text-[#D4AF37]" size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-[#081C3A] mb-2">{cert.title}</h3>
-                <p className="text-[#4B5563] mb-4">{cert.desc}</p>
+                <h3 className="text-xl font-bold text-[#0f172a] mb-2">{cert.title}</h3>
+                <p className="text-[#64748b] mb-4">{cert.desc}</p>
                 <div className="flex items-center gap-2 text-[#D4AF37] text-sm font-semibold">
                   <CheckCircle size={16} /> Globally Recognized
                 </div>

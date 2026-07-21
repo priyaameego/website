@@ -41,7 +41,7 @@ export default function AboutBrands() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-black text-[#081C3A] font-heading mb-6"
+            className="text-4xl md:text-5xl font-black text-[#0f172a] font-heading mb-6"
           >
             Taking Comfort Home
           </motion.h2>
@@ -64,9 +64,9 @@ export default function AboutBrands() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 flex flex-col border border-gray-100"
+              className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 hover:shadow-xl transition-shadow p-8 flex flex-col border border-gray-100"
             >
-              <h3 className="text-2xl font-black text-[#081C3A] mb-4">{brand.name}</h3>
+              <h3 className="text-2xl font-black text-[#0f172a] mb-4">{brand.name}</h3>
               <p className="text-sm text-gray-500 leading-relaxed mb-8 flex-grow">
                 {brand.desc}
               </p>

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import bedImg from '../../../assets/bed.jpeg';
 
 export default function ProductCollections() {
   const collections = [
@@ -37,7 +38,7 @@ export default function ProductCollections() {
         { value: '5+', label: 'PRODUCTS' },
         { value: '100+', label: 'OUTLETS' }
       ],
-      image: 'https://images.unsplash.com/photo-1629141065715-0552b71ec911?q=80&w=2070&auto=format&fit=crop', // Orthopedic mattress cross section visualization
+      image: bedImg, // Orthopedic mattress cross section visualization
       align: 'left' // Image on the right, text on the left
     },
     {
@@ -77,7 +78,7 @@ export default function ProductCollections() {
                 {collection.eyebrow}
               </span>
               
-              <h2 className="text-4xl md:text-5xl font-black font-heading text-[#081C3A] mb-8">
+              <h2 className="text-4xl md:text-5xl font-black font-heading text-[#0f172a] mb-8">
                 {collection.title}
               </h2>
               
@@ -104,8 +105,8 @@ export default function ProductCollections() {
               </div>
 
               {/* View Products Button */}
-              <Link to="/products">
-                <button className="bg-[#E63946] text-white font-bold py-4 px-8 rounded-lg hover:bg-[#D92C3A] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 uppercase tracking-wider text-xs shadow-md">
+              <Link to={`/brands/${collection.id}`}>
+                <button className="bg-[#E63946] text-white font-bold py-4 px-8 rounded-2xl hover:bg-[#D92C3A] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 transition-all duration-300 uppercase tracking-wider text-xs shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
                   View Products
                 </button>
               </Link>
