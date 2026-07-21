@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -26,7 +27,9 @@ export default function Hero() {
       ),
       description: "Discover our comprehensive portfolio of foam and mattress brands designed for ultimate comfort and industrial excellence.",
       primaryBtn: "EXPLORE OUR SOLUTIONS",
-      secondaryBtn: "REQUEST A QUOTE"
+      primaryLink: "/brands/shakshi",
+      secondaryBtn: "REQUEST A QUOTE",
+      secondaryLink: "/contact-us"
     },
     {
       id: 2,
@@ -39,7 +42,9 @@ export default function Hero() {
       ),
       description: "Delivering world-class manufacturing solutions with advanced technology, uncompromised quality, and decades of engineering excellence.",
       primaryBtn: "VIEW CAPABILITIES",
-      secondaryBtn: "CONTACT US"
+      primaryLink: "/industries",
+      secondaryBtn: "CONTACT US",
+      secondaryLink: "/contact-us"
     },
     {
       id: 3,
@@ -52,7 +57,9 @@ export default function Hero() {
       ),
       description: "Pioneering advanced foam technologies that redefine standards across automotive, bedding, and industrial applications.",
       primaryBtn: "DISCOVER INNOVATION",
-      secondaryBtn: "OUR STORY"
+      primaryLink: "/about",
+      secondaryBtn: "OUR STORY",
+      secondaryLink: "/about"
     },
     {
       id: 4,
@@ -65,7 +72,9 @@ export default function Hero() {
       ),
       description: "Engineered for maximum resilience and comfort, delivering premium seating experiences for leading global automakers.",
       primaryBtn: "EXPLORE AUTOMOTIVE",
-      secondaryBtn: "LEARN MORE"
+      primaryLink: "/industries",
+      secondaryBtn: "LEARN MORE",
+      secondaryLink: "/industries"
     },
     {
       id: 5,
@@ -78,7 +87,9 @@ export default function Hero() {
       ),
       description: "High-density acoustic foam solutions designed to eliminate noise and optimize sound quality in industrial spaces.",
       primaryBtn: "VIEW ACOUSTICS",
-      secondaryBtn: "GET A QUOTE"
+      primaryLink: "/industries",
+      secondaryBtn: "GET A QUOTE",
+      secondaryLink: "/contact-us"
     }
   ];
 
@@ -98,7 +109,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative h-[90vh] min-h-[750px] flex items-center overflow-hidden bg-[#081C3A]" id="home">
+    <section className="relative h-[70vh] min-h-[750px] flex items-center overflow-hidden bg-[#081C3A]" id="home">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -152,18 +163,18 @@ export default function Hero() {
               
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto justify-center">
-                <a 
-                  href="#products" 
-                  className="inline-flex justify-center items-center px-10 py-4 bg-[#FF6B00] text-white rounded font-bold tracking-wide transition-all duration-300 hover:bg-[#E65A00] hover:shadow-[0_4px_20px_rgba(255,107,0,0.4)] text-sm"
+                <Link 
+                  to={slides[currentSlide].primaryLink}
+                  className="w-full sm:w-auto inline-flex justify-center items-center px-10 py-4 bg-[#FF6B00] text-white rounded font-bold tracking-wide transition-all duration-300 hover:bg-[#E65A00] hover:shadow-[0_4px_20px_rgba(255,107,0,0.4)] text-sm"
                 >
                   {slides[currentSlide].primaryBtn}
-                </a>
-                <a 
-                  href="#quote" 
-                  className="inline-flex justify-center items-center px-10 py-4 bg-transparent text-white border border-white/60 rounded font-bold tracking-wide transition-all duration-300 hover:bg-white/10 hover:border-white text-sm backdrop-blur-sm"
+                </Link>
+                <Link 
+                  to={slides[currentSlide].secondaryLink}
+                  className="w-full sm:w-auto inline-flex justify-center items-center px-10 py-4 bg-transparent text-white border border-white/60 rounded font-bold tracking-wide transition-all duration-300 hover:bg-white/10 hover:border-white text-sm backdrop-blur-sm"
                 >
                   {slides[currentSlide].secondaryBtn}
-                </a>
+                </Link>
               </div>
             </motion.div>
           </AnimatePresence>
