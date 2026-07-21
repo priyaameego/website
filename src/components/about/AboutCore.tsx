@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Target, Eye, Shield, Users, Zap, Heart } from 'lucide-react';
+import { Target, Shield, Users, Zap, Heart } from 'lucide-react';
 
 export default function AboutCore() {
   const values = [

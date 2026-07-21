@@ -1,4 +1,3 @@
-import React from 'react';
 import PageLayout from '../../components/PageLayout';
 import AboutIntro from '../../components/about/AboutIntro';
 import AboutCore from '../../components/about/AboutCore';

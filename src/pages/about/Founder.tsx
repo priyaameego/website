@@ -1,4 +1,3 @@
-import React from 'react';
 import PageLayout from '../../components/PageLayout';
 import AboutLeadership from '../../components/about/AboutLeadership';
 import PremiumCTA from '../../components/home/PremiumCTA';

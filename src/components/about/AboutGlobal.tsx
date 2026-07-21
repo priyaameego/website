@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Globe, Leaf, Award, CheckCircle, MapPin, ShieldCheck, HeartHandshake } from 'lucide-react';
+import { Globe, Leaf, CheckCircle, ShieldCheck, HeartHandshake } from 'lucide-react';
 
 export default function AboutGlobal() {
   return (
@@ -126,12 +126,12 @@ export default function AboutGlobal() {
         </div>
       </section>
 
-      {/* Awards & Certifications & Why Choose Us */}
+      {/* s & Certifications & Why Choose Us */}
       <section className="py-24 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             
-            {/* Awards & Certifications */}
+            {/* s & Certifications */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -139,7 +139,7 @@ export default function AboutGlobal() {
             >
               <h2 className="text-4xl font-bold text-[#081C3A] font-heading mb-8 flex items-center gap-4">
                 <ShieldCheck className="text-[#FF6B00]" size={40} />
-                Awards & Certifications
+                s & Certifications
               </h2>
               <p className="text-lg text-[#4B5563] mb-8">
                 Our relentless pursuit of perfection has earned us the highest industry accolades and global certifications.

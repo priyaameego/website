@@ -1,4 +1,3 @@
-import React from 'react';
 import AboutIntro from '../components/about/AboutIntro';
 import AboutLeadership from '../components/about/AboutLeadership';
 import AboutCore from '../components/about/AboutCore';

@@ -57,7 +57,7 @@ export default function IntimacyCollections() {
     <section className="py-24 bg-white overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 space-y-32">
         
-        {collections.map((collection, idx) => (
+        {collections.map((collection) => (
           <div 
             key={collection.id} 
             className={`flex flex-col ${collection.align === 'right' ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 lg:gap-24 items-center`}

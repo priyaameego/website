@@ -1,4 +1,3 @@
-import React from 'react';
 import PageLayout from '../../components/PageLayout';
 import PageHero from '../../components/PageHero';
 import { BookOpen, HeartPulse, TreePine } from 'lucide-react';

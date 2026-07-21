@@ -1,20 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Hero() {
-  const { scrollY } = useScroll();
-  const yStats = useTransform(scrollY, [0, 500], [0, -50]);
-  const [currentSlide, setCurrentSlide] = useState(0);
+      const [currentSlide, setCurrentSlide] = useState(0);
 
-  const stats = [
-    { label: 'Years Excellence', value: '45+' },
-    { label: 'Global Partners', value: '120+' },
-    { label: 'Modern CNCs', value: '500+' },
-    { label: 'Certifications', value: '100+' },
-  ];
-
+  
   const slides = [
     {
       id: 1,

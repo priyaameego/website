@@ -3,16 +3,19 @@ import { motion } from 'framer-motion';
 interface PageHeroProps {
   title: string;
   subtitle: string;
-  bgImage: string;
+  bgImage?: string;
+  backgroundImage?: string;
 }
 
-export default function PageHero({ title, subtitle, bgImage }: PageHeroProps) {
+export default function PageHero({ title, subtitle, bgImage, backgroundImage }: PageHeroProps) {
+  const imageSource = bgImage || backgroundImage;
+  
   return (
     <section className="relative h-[60vh] min-h-[500px] flex items-center overflow-hidden bg-[#081C3A]">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-[#081C3A]/95 via-[#081C3A]/80 to-[#081C3A]/40 z-10" />
         <img 
-          src={bgImage} 
+          src={imageSource} 
           alt={title} 
           className="w-full h-full object-cover"
         />

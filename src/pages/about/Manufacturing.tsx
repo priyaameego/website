@@ -1,4 +1,3 @@
-import React from 'react';
 import PageLayout from '../../components/PageLayout';
 import AboutOperations from '../../components/about/AboutOperations';
 import PremiumCTA from '../../components/home/PremiumCTA';
