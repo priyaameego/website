@@ -10,6 +10,12 @@ import OurBrands from '../components/home/OurBrands';
 import IndustryApplications from '../components/home/IndustryApplications';
 import QualitySustainability from '../components/home/QualitySustainability';
 import ResourcesMedia from '../components/home/ResourcesMedia';
+
+import TrustedDealerNetwork from '../components/home/TrustedDealerNetwork';
+import WhyPartnerWithUs from '../components/home/WhyPartnerWithUs';
+import ManufacturingHighlights from '../components/home/ManufacturingHighlights';
+import FinalPartnership from '../components/home/FinalPartnership';
+
 import PremiumCTA from '../components/home/PremiumCTA';
 
 export default function Home() {
@@ -27,6 +33,13 @@ export default function Home() {
       <IndustryApplications />
       <QualitySustainability />
       <ResourcesMedia />
+      
+      {/* New Premium Sections */}
+      <TrustedDealerNetwork />
+      <WhyPartnerWithUs />
+      <ManufacturingHighlights />
+      <FinalPartnership />
+
       <PremiumCTA />
     </div>
   );
