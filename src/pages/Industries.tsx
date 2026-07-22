@@ -1,6 +1,8 @@
 import PageHero from '../components/PageHero';
 import IndustryCards from '../components/industries/IndustryCards';
 
+import WhyChooseShakshi from '../components/industries/WhyChooseShakshi';
+
 export default function Industries() {
   return (
     <div className="bg-[#FFFFFF] overflow-hidden">
@@ -16,12 +18,10 @@ export default function Industries() {
       */}
       
       <IndustryCards />
+      <WhyChooseShakshi />
       
       {/*
         <OEMSolutions />
-        <WhyIndustriesChooseUs />
-        <IndustryProcessTimeline />
-        <IndustriesCTA />
       */}
       
       <div className="py-24 text-center">
