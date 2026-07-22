@@ -15,7 +15,17 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
+  type NavItem = {
+    name: string;
+    path: string;
+    dropdown?: {
+      name: string;
+      path: string;
+      desc?: string;
+    }[];
+  };
+
+  const navLinks: NavItem[] = [
     { name: 'Home', path: '/' },
     { 
       name: 'About', 

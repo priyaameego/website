@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Globe, Leaf, CheckCircle, ShieldCheck, HeartHandshake } from 'lucide-react';
+import { Globe, Leaf, CheckCircle, HeartHandshake } from 'lucide-react';
 import wImg from '../../assets/w.jpeg';
 import fImg from '../../assets/f.jpeg';
 

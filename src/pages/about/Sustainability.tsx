@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Leaf, Recycle, HeartHandshake, ArrowRight, TreePine } from 'lucide-react';
+import { Recycle, HeartHandshake, ArrowRight, TreePine } from 'lucide-react';
 import PageLayout from '../../components/PageLayout';
 import PageHero from '../../components/PageHero';
 
