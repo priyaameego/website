@@ -54,22 +54,20 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 flex flex-col">
-      {/* Alert Bar - Minimal Luxury Redesign */}
-      <div className={`relative bg-[#FAFAF8] text-[#667085] border-b border-[#E5E7EB] transition-all duration-500 overflow-hidden ${scrolled ? 'h-0 opacity-0' : 'h-10 opacity-100'}`}>
-        <div className="max-w-[1400px] mx-auto px-8 h-full flex items-center justify-between lg:justify-end gap-8 text-[11px] uppercase tracking-widest font-semibold">
-          <div className="flex items-center gap-8">
-            <a href="tel:+919876543210" className="group flex items-center gap-2 hover:text-[#081C3A] transition-colors duration-300">
-              <Phone size={12} strokeWidth={1.5} /> +91 98765 43210
+      {/* Alert Bar - Premium Corporate Utility Bar */}
+      <div className={`relative bg-[#0F2038] border-b border-[rgba(212,175,55,0.20)] transition-all duration-500 overflow-hidden ${scrolled ? 'h-0 opacity-0' : 'h-[44px] opacity-100'}`}>
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 h-full flex items-center justify-between lg:justify-end gap-6 md:gap-8 text-[#E8EDF5] text-[13px] font-medium tracking-[0.5px] uppercase leading-[1.4]">
+          <div className="flex items-center gap-6 md:gap-8">
+            <a href="tel:+919876543210" className="group flex items-center gap-2 hover:text-white transition-colors duration-300">
+              <Phone size={14} strokeWidth={1.5} className="text-[#D4AF37]" /> +91 98765 43210
             </a>
-            <a href="mailto:info@shakshigroup.com" className="group hidden sm:flex items-center gap-2 hover:text-[#081C3A] transition-colors duration-300">
-              <Mail size={12} strokeWidth={1.5} /> info@shakshigroup.com
+            <a href="mailto:info@shakshigroup.com" className="group hidden sm:flex items-center gap-2 hover:text-white transition-colors duration-300">
+              <Mail size={14} strokeWidth={1.5} className="text-[#D4AF37]" /> info@shakshigroup.com
             </a>
           </div>
-          <Link to="/contact" className="group flex items-center gap-2 hover:text-[#081C3A] transition-colors duration-300 sm:border-l sm:border-[#E5E7EB] sm:pl-8 relative">
-            <MapPin size={12} strokeWidth={1.5} className="text-[#D4AF37]" /> 
-            <span className="relative">
-              CONTACT US
-            </span>
+          <Link to="/contact" className="group flex items-center gap-2 hover:text-white transition-colors duration-300 sm:border-l sm:border-[rgba(255,255,255,0.12)] sm:pl-6 md:pl-8">
+            <MapPin size={14} strokeWidth={1.5} className="text-[#D4AF37]" /> 
+            <span>CONTACT US</span>
           </Link>
         </div>
       </div>
