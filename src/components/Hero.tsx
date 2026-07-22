@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-import hero1 from '../assets/f.jpeg';
-import hero2 from '../assets/bed.jpeg';
-import hero3 from '../assets/sci.jpeg';
-import hero4 from '../assets/foa.png';
+import hero1 from '../assets/foam.png';
+import hero2 from '../assets/matter.png';
+import hero3 from '../assets/pillow.jpeg';
+import hero4 from '../assets/f.jpeg';
 
 const slides = [
   {
