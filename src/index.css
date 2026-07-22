@@ -1,27 +1,27 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
 
 @theme {
-  --color-main-bg: #FFFFFF;
-  --color-alt-bg: #F7F8FA;
+  --color-main-bg: #FAFAF8;
+  --color-alt-bg: #FFFFFF;
   --color-deep-navy: #081C3A;
   --color-accent-gold: #D4AF37;
-  --color-cta-orange: #FF6B00;
+  --color-cta-orange: #C96A2D;
   
-  --color-neutral-light: #F7F8FA;
-  --color-neutral-border: #E7EBF0;
-  --color-neutral-text: #4B5563;
+  --color-neutral-light: #FAFAF8;
+  --color-neutral-border: #E5E7EB;
+  --color-neutral-text: #667085;
   
   --color-primary-heading: #1B2430;
-  --color-body-text: #4B5563;
+  --color-body-text: #667085;
   
   --font-heading: "Outfit", sans-serif;
   --font-body: "Inter", sans-serif;
   --font-stylish: "Playfair Display", serif;
 
-  --shadow-premium: 0 4px 20px rgb(0,0,0,0.03);
-  --shadow-premium-hover: 0 12px 30px rgb(0,0,0,0.06);
-  --shadow-cta: 0 8px 25px rgba(255, 107, 0, 0.25);
+  --shadow-premium: 0 10px 40px rgb(0,0,0,0.04);
+  --shadow-premium-hover: 0 20px 60px rgb(0,0,0,0.08);
+  --shadow-cta: 0 10px 30px rgba(201, 106, 45, 0.2);
 }
 
 @layer base {
@@ -43,24 +43,24 @@
   }
 
   p {
-    line-height: 1.7;
+    line-height: 1.8;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center px-10 py-3.5 bg-[#1B2430] text-white rounded-full font-body font-bold transition-all duration-300 hover:bg-[#374151] hover:-translate-y-[2px] tracking-wide text-[13px] uppercase shadow-lg;
+    @apply inline-flex items-center justify-center px-10 py-4 bg-[#C96A2D] text-white rounded-full font-body font-semibold transition-all duration-500 hover:bg-[#B35E28] hover:-translate-y-1 tracking-wider text-[13px] uppercase shadow-md hover:shadow-xl;
   }
   
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-10 py-3.5 bg-transparent text-[#1B2430] rounded-full font-body font-bold border border-[#1B2430] transition-all duration-300 hover:bg-[#1B2430] hover:text-white hover:-translate-y-[2px] tracking-wide text-[13px] uppercase;
+    @apply inline-flex items-center justify-center px-10 py-4 bg-transparent text-[#1B2430] rounded-full font-body font-semibold border border-[#1B2430]/20 transition-all duration-500 hover:border-[#1B2430] hover:text-[#1B2430] hover:-translate-y-1 tracking-wider text-[13px] uppercase hover:shadow-lg;
   }
 
   .premium-card {
-    @apply bg-white border border-[#E7EBF0] shadow-sm rounded-2xl hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-1;
+    @apply bg-[#FFFFFF] border border-[#1B2430]/5 shadow-sm rounded-3xl p-8 hover:shadow-[0_20px_60px_rgb(0,0,0,0.06)] transition-all duration-700 hover:-translate-y-2;
   }
   
   .editorial-img {
-    @apply object-cover shadow-premium rounded-2xl;
+    @apply object-cover shadow-[0_10px_40px_rgb(0,0,0,0.06)] rounded-3xl;
   }
 }

@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion';
-import foamImg from '../../assets/fo.png';
+import foamImg from '../../assets/foa.png';
+import mattressImg from '../../assets/matter.png';
+import pillowImg from '../../assets/pillow.jpeg';
+import custImg from '../../assets/cust.jpeg';
 
 export default function WhatWeDo() {
   const offerings = [
@@ -11,22 +14,22 @@ export default function WhatWeDo() {
     {
       title: 'Mattresses',
       desc: 'High-quality orthopedic, memory foam, and pocket spring mattresses.',
-      image: 'https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=2070&auto=format&fit=crop'
+      image: mattressImg
     },
     {
       title: 'Pillows',
       desc: 'Ergonomic and supportive pillows designed for optimal neck alignment.',
-      image: 'https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?q=80&w=2070&auto=format&fit=crop'
+      image: pillowImg
     },
     {
       title: 'Customisation',
       desc: 'Tailor-made dimensions and specifications for B2B and industrial needs.',
-      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop'
+      image: custImg
     }
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-[#F7F8FA]">
+    <section className="py-24 md:py-32 bg-[#FAFAF8]">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="text-center mb-20 flex flex-col items-center">
           <span className="text-[#1B2430] text-xs font-bold tracking-[0.2em] uppercase mb-4">Our Expertise</span>
