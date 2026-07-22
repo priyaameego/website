@@ -7,7 +7,7 @@ export default function EasylifeBrand() {
       <PageHero 
         title="Easylife" 
         subtitle="Affordable Premium Comfort for Every Home. Experience the joy of effortless comfort for the whole family."
-        backgroundImage="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1505693314120-0d443867891c?q=80&w=2070&auto=format&fit=crop"
       />
       
       <EasylifeCollections />

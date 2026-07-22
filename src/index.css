@@ -1,28 +1,27 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @theme {
-  --color-main-bg: #F8FAFC;
-  --color-alt-bg: #FFFFFF;
+  --color-main-bg: #FFFFFF;
+  --color-alt-bg: #F7F8FA;
   --color-deep-navy: #081C3A;
-  --color-light-accent: #EEF5FF;
-  
-  --color-card-bg: #FFFFFF;
-  --color-card-hover: #F1F5F9;
-  --color-border: #F1F5F9;
-  
-  --color-primary-heading: #0f172a;
-  --color-body-text: #64748b;
   --color-accent-gold: #D4AF37;
+  --color-cta-orange: #FF6B00;
   
-  --color-cta-primary: #081C3A;
-  --color-cta-hover: #D4AF37;
-
+  --color-neutral-light: #F7F8FA;
+  --color-neutral-border: #E7EBF0;
+  --color-neutral-text: #4B5563;
+  
+  --color-primary-heading: #1B2430;
+  --color-body-text: #4B5563;
+  
   --font-heading: "Outfit", sans-serif;
   --font-body: "Inter", sans-serif;
+  --font-stylish: "Playfair Display", serif;
 
-  --shadow-premium: 0 8px 30px rgb(0,0,0,0.04);
-  --shadow-premium-hover: 0 20px 40px rgb(0,0,0,0.08);
-  --shadow-glow: 0 4px 20px 0 rgba(212, 175, 55, 0.40);
+  --shadow-premium: 0 4px 20px rgb(0,0,0,0.03);
+  --shadow-premium-hover: 0 12px 30px rgb(0,0,0,0.06);
+  --shadow-cta: 0 8px 25px rgba(255, 107, 0, 0.25);
 }
 
 @layer base {
@@ -38,26 +37,30 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     color: var(--color-primary-heading);
-    font-weight: 900;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    line-height: 1.7;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-block px-10 py-5 bg-[#081C3A] text-white rounded-xl font-heading font-bold shadow-lg transition-all duration-500 hover:bg-[#D4AF37] hover:shadow-glow hover:-translate-y-1 uppercase tracking-widest text-xs;
+    @apply inline-flex items-center justify-center px-10 py-3.5 bg-[#1B2430] text-white rounded-full font-body font-bold transition-all duration-300 hover:bg-[#374151] hover:-translate-y-[2px] tracking-wide text-[13px] uppercase shadow-lg;
   }
   
-  .btn-outline {
-    @apply inline-block px-10 py-5 bg-transparent text-[#081C3A] rounded-xl font-heading font-bold border-2 border-[#081C3A] transition-all duration-500 hover:bg-[#081C3A] hover:text-white hover:shadow-lg hover:-translate-y-1 uppercase tracking-widest text-xs;
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-10 py-3.5 bg-transparent text-[#1B2430] rounded-full font-body font-bold border border-[#1B2430] transition-all duration-300 hover:bg-[#1B2430] hover:text-white hover:-translate-y-[2px] tracking-wide text-[13px] uppercase;
   }
 
-  .glass-card {
-    @apply bg-white border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-2xl hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2;
+  .premium-card {
+    @apply bg-white border border-[#E7EBF0] shadow-sm rounded-2xl hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-1;
   }
-
-  .glass-panel {
-    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-2xl;
+  
+  .editorial-img {
+    @apply object-cover shadow-premium rounded-2xl;
   }
 }

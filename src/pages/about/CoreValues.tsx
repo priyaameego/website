@@ -34,7 +34,7 @@ export default function CoreValues() {
       <PageHero 
         title="Our Foundation" 
         subtitle="Giving back to the community and building a better tomorrow through sustainable social initiatives."
-        bgImage="https://images.unsplash.com/photo-1593113565694-c6f33e5fc4cb?q=80&w=2070&auto=format&fit=crop" 
+        bgImage="https://images.unsplash.com/photo-1565626423194-e0c1f5413158?q=80&w=2070&auto=format&fit=crop" 
       />
       
       {/* Empowering Communities Section */}

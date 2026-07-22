@@ -5,22 +5,23 @@ const MotionLink = motion(Link);
 
 export default function InnovationRND() {
   return (
-    <section className="py-24 bg-[#081C3A] text-white overflow-hidden relative">
-      <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
-         <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 mix-blend-screen" alt="Tech Background"/>
+    <section className="py-24 md:py-32 bg-white text-[#1B2430] overflow-hidden relative">
+      <div className="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
+         <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover grayscale" alt="Tech Background"/>
       </div>
       
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 items-center">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
           
           <div className="w-full lg:w-5/12">
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="inline-block border border-[#D4AF37]/40 rounded-full px-6 py-2 bg-[#D4AF37]/10 mb-8"
+              className="inline-flex items-center gap-2 mb-6"
             >
-              <span className="text-[#D4AF37] font-bold tracking-widest uppercase text-xs">Innovation & R&D</span>
+              <span className="text-[#1B2430] font-bold tracking-[0.2em] uppercase text-[11px]">Innovation & R&D</span>
+              <div className="h-[1px] w-12 bg-[#D4AF37]"></div>
             </motion.div>
             
             <motion.h2 
@@ -28,9 +29,9 @@ export default function InnovationRND() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl font-bold font-heading leading-tight mb-6 text-white"
+              className="text-4xl md:text-5xl lg:text-6xl font-stylish font-bold leading-tight mb-6 text-[#1B2430]"
             >
-              Our <span className="text-[#D4AF37]">Technology</span> DNA
+              Our <span className="italic font-light">Technology</span> DNA
             </motion.h2>
             
             <motion.p 
@@ -38,7 +39,7 @@ export default function InnovationRND() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-lg text-gray-300 leading-relaxed mb-8"
+              className="text-lg text-[#4B5563] leading-relaxed mb-10"
             >
               We don't just manufacture foam; we engineer solutions. Our dedicated R&D laboratories continuously develop proprietary polymer blends designed to withstand extreme environments, improve thermal regulation, and enhance acoustic dampening.
             </motion.p>
@@ -49,7 +50,7 @@ export default function InnovationRND() {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
               to="/about/manufacturing" 
-              className="inline-flex justify-center items-center px-8 py-4 bg-[#D4AF37] text-[#0f172a] rounded font-bold tracking-wide transition-all duration-300 hover:bg-[#F2C94C] text-sm w-full sm:w-auto text-center"
+              className="btn-primary inline-flex"
             >
               EXPLORE OUR LABS
             </MotionLink>
@@ -69,10 +70,10 @@ export default function InnovationRND() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 + (idx * 0.1) }}
-                  className="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors"
+                  className="premium-card p-8 group"
                 >
-                  <h4 className="text-xl font-bold text-white mb-3">{item.title}</h4>
-                  <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                  <h4 className="text-xl font-bold text-[#1B2430] mb-3 group-hover:text-[#D4AF37] transition-colors">{item.title}</h4>
+                  <p className="text-[#4B5563] text-sm leading-relaxed">{item.desc}</p>
                 </motion.div>
               ))}
             </div>

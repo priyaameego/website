@@ -7,7 +7,7 @@ export default function ShakshiBrand() {
       <PageHero 
         title="Shakshi" 
         subtitle="The Custodian of Comfort. Experience premium luxury and advanced foam technology engineered for perfect sleep."
-        backgroundImage="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=2070&auto=format&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1505693314120-0d443867891c?q=80&w=2070&auto=format&fit=crop"
       />
       
       {/* 

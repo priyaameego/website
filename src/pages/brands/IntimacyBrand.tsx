@@ -7,7 +7,7 @@ export default function IntimacyBrand() {
       <PageHero 
         title="Intimacy" 
         subtitle="Advanced Spinal Comfort. Engineered with precision for perfect sleep and ultimate back support."
-        backgroundImage="https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=2057&auto=format&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1505693314120-0d443867891c?q=80&w=2070&auto=format&fit=crop"
       />
       
       <IntimacyCollections />

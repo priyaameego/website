@@ -3,31 +3,32 @@ import { Leaf, CheckCircle2 } from 'lucide-react';
 
 export default function QualitySustainability() {
   return (
-    <section className="py-24 bg-[#081C3A] text-white">
+    <section className="py-24 md:py-32 bg-[#F7F8FA] text-[#1B2430]">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-12"
+            className="space-y-10"
           >
             <div>
-              <div className="inline-block border border-[#D4AF37]/40 rounded-full px-6 py-2 bg-[#D4AF37]/10 mb-6">
-                <span className="text-[#D4AF37] font-bold tracking-widest uppercase text-xs">Quality & Certifications</span>
+              <div className="inline-flex items-center gap-2 mb-6">
+                <span className="text-[#1B2430] font-bold tracking-[0.2em] uppercase text-[11px]">Quality & Certifications</span>
+                <div className="h-[1px] w-12 bg-[#D4AF37]"></div>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold font-heading leading-tight mb-6 text-white">
-                Engineered to <span className="text-[#D4AF37]">Perfection</span>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-stylish font-bold leading-tight mb-8">
+                Engineered to <span className="italic font-light">Perfection</span>
               </h2>
-              <p className="text-lg text-gray-300 leading-relaxed mb-6">
+              <p className="text-lg text-[#4B5563] leading-relaxed mb-8">
                 Our ISO-certified laboratories conduct over 20 unique stress, thermal, and density tests on every batch. We ensure 100% compliance with international OEM specifications, maintaining a zero-defect tolerance.
               </p>
-              <ul className="space-y-4">
+              <ul className="space-y-5">
                 {['ISO 9001:2015 Certified', 'IATF 16949 Automotive Standards', 'RoHS & REACH Compliant', 'CertiPUR-US® Approved'].map((cert, idx) => (
-                  <li key={idx} className="flex items-center gap-3 text-gray-200">
-                    <CheckCircle2 className="text-[#D4AF37]" size={20} />
-                    <span className="font-medium">{cert}</span>
+                  <li key={idx} className="flex items-center gap-4 text-[#1B2430]">
+                    <CheckCircle2 className="text-[#1B2430]" size={24} strokeWidth={1.5} />
+                    <span className="font-semibold">{cert}</span>
                   </li>
                 ))}
               </ul>
@@ -38,29 +39,29 @@ export default function QualitySustainability() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-[#FFFFFF] p-10 md:p-12 rounded-3xl text-[#0f172a] shadow-2xl relative overflow-hidden"
+            className="premium-card p-10 md:p-14 relative overflow-hidden group"
           >
-            <div className="absolute -top-20 -right-20 text-[#EEF5FF] opacity-50 pointer-events-none">
-              <Leaf size={300} />
+            <div className="absolute -top-20 -right-20 text-[#F7F8FA] opacity-50 pointer-events-none group-hover:scale-110 transition-transform duration-1000">
+              <Leaf size={300} strokeWidth={0.5} />
             </div>
             
             <div className="relative z-10">
-              <div className="w-16 h-16 bg-[#EEF5FF] text-[#0f172a] rounded-2xl flex items-center justify-center mb-8">
+              <div className="w-16 h-16 bg-[#F7F8FA] text-[#1B2430] rounded-2xl flex items-center justify-center mb-10 group-hover:bg-[#1B2430] group-hover:text-white transition-colors duration-500">
                 <Leaf size={32} />
               </div>
-              <h3 className="text-3xl font-bold font-heading mb-6">Sustainable Manufacturing</h3>
-              <p className="text-[#64748b] text-lg leading-relaxed mb-8">
+              <h3 className="text-3xl lg:text-4xl font-stylish font-bold mb-6">Sustainable Manufacturing</h3>
+              <p className="text-[#4B5563] text-lg leading-relaxed mb-10">
                 We are committed to a greener future. Our closed-loop manufacturing processes recycle 98% of foam offcuts. We are continuously reducing our carbon footprint through solar-powered facilities and eco-friendly chemical formulations.
               </p>
               
-              <div className="grid grid-cols-2 gap-6 pt-6 border-t border-[#E2E8F0]">
+              <div className="grid grid-cols-2 gap-8 pt-8 border-t border-[#E7EBF0]">
                 <div>
-                  <div className="text-4xl font-bold font-heading text-[#0f172a] mb-2">Zero</div>
-                  <div className="text-sm font-bold text-[#D4AF37] uppercase tracking-wider">Ozone Depletion</div>
+                  <div className="text-4xl font-stylish font-bold text-[#1B2430] mb-2">Zero</div>
+                  <div className="text-[11px] font-bold text-[#4B5563] uppercase tracking-widest">Ozone Depletion</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold font-heading text-[#0f172a] mb-2">100%</div>
-                  <div className="text-sm font-bold text-[#D4AF37] uppercase tracking-wider">Recyclable Scrap</div>
+                  <div className="text-4xl font-stylish font-bold text-[#1B2430] mb-2">100%</div>
+                  <div className="text-[11px] font-bold text-[#4B5563] uppercase tracking-widest">Recyclable Scrap</div>
                 </div>
               </div>
             </div>

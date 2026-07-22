@@ -5,7 +5,7 @@ export default function OurCapabilities() {
     {
       title: 'Foaming',
       desc: 'Advanced foam production',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=2070&auto=format&fit=crop'
     },
     {
       title: 'Mattress',
@@ -35,19 +35,21 @@ export default function OurCapabilities() {
   ];
 
   return (
-    <section className="py-24 bg-[#FAFAFA] relative overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10">
+    <section className="py-24 md:py-32 bg-[#F7F8FA] relative overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16 max-w-3xl mx-auto"
+          className="text-center mb-20 max-w-3xl mx-auto flex flex-col items-center"
         >
-          <h2 className="text-4xl md:text-5xl font-black font-heading text-[#0f172a] mb-6">
+          <span className="text-[#1B2430] text-xs font-bold tracking-[0.2em] uppercase mb-4">Excellence Delivered</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-stylish font-bold text-[#1B2430] mb-6">
             Our Capabilities
           </h2>
-          <p className="text-[#6B7280] text-lg">
+          <div className="w-12 h-[2px] bg-[#1B2430] mx-auto mb-8"></div>
+          <p className="text-[#4B5563] text-lg leading-relaxed">
             As a premier Fortune 500 OEM manufacturer, Shakshi Group delivers excellence across the entire production spectrum. From raw materials to final delivery, our state-of-the-art facilities ensure unmatched quality and scale.
           </p>
         </motion.div>
@@ -60,9 +62,9 @@ export default function OurCapabilities() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.6 }}
-              className="bg-white border border-[#E5E7EB] rounded-[20px] p-6 flex flex-col md:flex-row items-center gap-6 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_40px_-15px_rgba(8,28,58,0.15)] hover:-translate-y-2 transition-all duration-300 cursor-pointer group"
+              className="premium-card p-6 flex flex-col md:flex-row items-center gap-6 cursor-pointer group"
             >
-              <div className="w-24 h-24 rounded-[16px] overflow-hidden flex-shrink-0 relative shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2">
+              <div className="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0 relative">
                 <img 
                   src={cap.image} 
                   alt={cap.title} 
@@ -70,10 +72,10 @@ export default function OurCapabilities() {
                 />
               </div>
               <div className="text-center md:text-left">
-                <h3 className="text-[#0f172a] font-bold text-xl mb-1 group-hover:text-[#E63946] transition-colors">
+                <h3 className="text-[#1B2430] font-bold text-xl mb-1 group-hover:text-[#D4AF37] transition-colors">
                   {cap.title}
                 </h3>
-                <p className="text-[#6B7280] text-sm font-medium">
+                <p className="text-[#4B5563] text-sm">
                   {cap.desc}
                 </p>
               </div>

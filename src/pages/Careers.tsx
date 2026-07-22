@@ -9,7 +9,7 @@ export default function Careers() {
       <PageHero 
         title="Careers at Shakshi Group" 
         subtitle="Join the leading force in OEM manufacturing. We are building the future of industrial production, and we want you to be a part of it."
-        backgroundImage="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop"
       />
       <WhyJoin />
       <CompanyStats />

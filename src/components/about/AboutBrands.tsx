@@ -34,29 +34,33 @@ export default function AboutBrands() {
   ];
 
   return (
-    <section className="py-24 bg-[#FAFAFA]">
+    <section className="py-24 md:py-32 bg-[#F7F8FA]">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <div className="text-center mb-20 max-w-3xl mx-auto flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 mb-6">
+            <span className="text-[#1B2430] font-bold tracking-[0.2em] uppercase text-[11px]">Our Portfolio</span>
+            <div className="h-[1px] w-12 bg-[#D4AF37]"></div>
+          </div>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-black text-[#0f172a] font-heading mb-6"
+            className="text-4xl md:text-5xl font-bold text-[#1B2430] font-stylish mb-6"
           >
-            Taking Comfort Home
+            Taking Comfort <span className="italic font-light">Home</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-gray-500 leading-relaxed"
+            className="text-lg text-[#4B5563] leading-relaxed"
           >
             Our brands serve the comfort needs of millions across India with a network of 500+ dealer touchpoints. Quality and innovation define every product.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {brands.map((brand, idx) => (
             <motion.div
               key={idx}
@@ -64,29 +68,29 @@ export default function AboutBrands() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 hover:shadow-xl transition-shadow p-8 flex flex-col border border-gray-100"
+              className="premium-card bg-white p-8 flex flex-col group"
             >
-              <h3 className="text-2xl font-black text-[#0f172a] mb-4">{brand.name}</h3>
-              <p className="text-sm text-gray-500 leading-relaxed mb-8 flex-grow">
+              <h3 className="text-2xl font-bold font-stylish text-[#1B2430] mb-4 group-hover:text-[#D4AF37] transition-colors">{brand.name}</h3>
+              <p className="text-[15px] text-[#4B5563] leading-relaxed mb-10 flex-grow">
                 {brand.desc}
               </p>
               
-              <div className="border-t border-gray-100 pt-6 mb-8 flex gap-8">
+              <div className="border-t border-[#E7EBF0] pt-6 mb-8 flex gap-8">
                 <div>
-                  <div className="text-xl font-black text-[#E63946] mb-1">{brand.products}</div>
-                  <div className="text-[10px] text-gray-400 font-bold tracking-widest uppercase">Products</div>
+                  <div className="text-2xl font-bold font-stylish text-[#1B2430] mb-1">{brand.products}</div>
+                  <div className="text-[10px] text-[#4B5563] font-bold tracking-[0.2em] uppercase">Products</div>
                 </div>
                 <div>
-                  <div className="text-xl font-black text-[#E63946] mb-1">{brand.dealers}</div>
-                  <div className="text-[10px] text-gray-400 font-bold tracking-widest uppercase">Dealers</div>
+                  <div className="text-2xl font-bold font-stylish text-[#1B2430] mb-1">{brand.dealers}</div>
+                  <div className="text-[10px] text-[#4B5563] font-bold tracking-[0.2em] uppercase">Dealers</div>
                 </div>
               </div>
 
               <Link 
                 to={brand.path}
-                className="w-full text-center bg-[#171a29] hover:bg-[#282d43] text-white text-xs font-bold tracking-widest uppercase py-4 rounded transition-colors"
+                className="w-full btn-primary text-center px-0 py-3"
               >
-                Explore {brand.name}
+                EXPLORE {brand.name}
               </Link>
             </motion.div>
           ))}

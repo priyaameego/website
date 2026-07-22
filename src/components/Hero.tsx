@@ -1,212 +1,132 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const slides = [
+  {
+    id: 1,
+    subtitle: 'Industrial Foam, Mattresses And More',
+    title: 'Precision Engineered,<br />Built for Excellence',
+    image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=2080&auto=format&fit=crop'
+  },
+  {
+    id: 2,
+    subtitle: 'Premium Mattresses',
+    title: 'Ultimate Sleep<br />Comfort',
+    image: 'https://images.unsplash.com/photo-1505693314120-0d443867891c?q=80&w=2070&auto=format&fit=crop'
+  },
+  {
+    id: 3,
+    subtitle: 'Orthopedic Support',
+    title: 'Advanced Ergonomics<br />For Your Back',
+    image: 'https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?q=80&w=2070&auto=format&fit=crop'
+  },
+  {
+    id: 4,
+    subtitle: 'Advanced Manufacturing',
+    title: 'Premium Foam<br />Technology',
+    image: 'https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=2070&auto=format&fit=crop'
+  }
+];
 
 export default function Hero() {
-      const [currentSlide, setCurrentSlide] = useState(0);
-
-  
-  const slides = [
-    {
-      id: 1,
-      image: "https://images.unsplash.com/photo-1541123437800-1413158c30c5?q=80&w=2070&auto=format&fit=crop", 
-      tag: "SHAKSHI GROUP",
-      title: (
-        <>
-          <span className="text-[#D4AF37]">Premium Brands</span> for Every Need
-        </>
-      ),
-      description: "Discover our comprehensive portfolio of foam and mattress brands designed for ultimate comfort and industrial excellence.",
-      primaryBtn: "EXPLORE OUR SOLUTIONS",
-      primaryLink: "/brands/shakshi",
-      secondaryBtn: "REQUEST A QUOTE",
-      secondaryLink: "/contact-us"
-    },
-    {
-      id: 2,
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop", 
-      tag: "INDUSTRIAL LEADER",
-      title: (
-        <>
-          Precision Engineering for <br/> Global OEM Manufacturing
-        </>
-      ),
-      description: "Delivering world-class manufacturing solutions with advanced technology, uncompromised quality, and decades of engineering excellence.",
-      primaryBtn: "VIEW CAPABILITIES",
-      primaryLink: "/industries",
-      secondaryBtn: "CONTACT US",
-      secondaryLink: "/contact-us"
-    },
-    {
-      id: 3,
-      image: "https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=2070&auto=format&fit=crop", 
-      tag: "INNOVATIVE SOLUTIONS",
-      title: (
-        <>
-          <span className="text-[#D4AF37]">Next-Gen</span> Comfort & Durability
-        </>
-      ),
-      description: "Pioneering advanced foam technologies that redefine standards across automotive, bedding, and industrial applications.",
-      primaryBtn: "DISCOVER INNOVATION",
-      primaryLink: "/about",
-      secondaryBtn: "OUR STORY",
-      secondaryLink: "/about"
-    },
-    {
-      id: 4,
-      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop", 
-      tag: "AUTOMOTIVE SEATING",
-      title: (
-        <>
-          <span className="text-[#D4AF37]">Advanced Foam</span> for Automotive
-        </>
-      ),
-      description: "Engineered for maximum resilience and comfort, delivering premium seating experiences for leading global automakers.",
-      primaryBtn: "EXPLORE AUTOMOTIVE",
-      primaryLink: "/industries",
-      secondaryBtn: "LEARN MORE",
-      secondaryLink: "/industries"
-    },
-    {
-      id: 5,
-      image: "https://images.unsplash.com/photo-1510074377623-8cf13fb86c08?q=80&w=2072&auto=format&fit=crop", 
-      tag: "ACOUSTICS & INSULATION",
-      title: (
-        <>
-          <span className="text-[#D4AF37]">Superior</span> Soundproofing
-        </>
-      ),
-      description: "High-density acoustic foam solutions designed to eliminate noise and optimize sound quality in industrial spaces.",
-      primaryBtn: "VIEW ACOUSTICS",
-      primaryLink: "/industries",
-      secondaryBtn: "GET A QUOTE",
-      secondaryLink: "/contact-us"
-    }
-  ];
+  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 6000);
+      setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    }, 5000);
     return () => clearInterval(timer);
-  }, [slides.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+  }, []);
 
   return (
-    <section className="relative h-[70vh] min-h-[750px] flex items-center overflow-hidden bg-[#081C3A]" id="home">
-      <AnimatePresence mode="wait">
+    <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden bg-[#081C3A]" id="home">
+      
+      <AnimatePresence initial={false} mode="wait">
         <motion.div
-          key={currentSlide}
+          key={current}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
-          className="absolute inset-0 z-0 overflow-hidden"
+          transition={{ duration: 1.5 }}
+          className="absolute inset-0 z-0"
         >
-          {/* Dark gradient overlay similar to reference image */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#081C3A]/95 via-[#081C3A]/50 to-transparent z-20" />
-          <div className="absolute inset-0 bg-[#081C3A]/30 z-20 mix-blend-multiply" />
+          {/* Background Image with Ken Burns Effect */}
           <motion.img 
             initial={{ scale: 1 }}
             animate={{ scale: 1.15 }}
-            transition={{ duration: 10, ease: "linear" }}
-            src={slides[currentSlide].image} 
-            alt="Hero Background" 
-            className="absolute inset-0 w-full h-full object-cover z-10 origin-center"
+            transition={{ duration: 25, ease: "linear" }}
+            src={slides[current].image} 
+            alt="Shakshi Group Hero" 
+            className="w-full h-full object-cover"
           />
+          {/* Subtle dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/40 z-10" />
         </motion.div>
       </AnimatePresence>
 
-      <div className="relative z-20 max-w-[1400px] mx-auto px-6 md:px-12 w-full mt-20">
-        <div className="max-w-4xl text-center flex flex-col items-center mx-auto">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`content-${currentSlide}`}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -30 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-col items-center"
-            >
-              {/* Tag / Pill */}
-              <div className="inline-block border border-[#D4AF37]/40 rounded-full px-6 py-2 mb-8 backdrop-blur-sm bg-black/20">
-                <span className="text-[#D4AF37] font-bold tracking-[0.2em] uppercase text-xs">
-                  {slides[currentSlide].tag}
-                </span>
-              </div>
-              
-              {/* Main Heading */}
-              <h1 className="text-5xl md:text-6xl lg:text-[76px] font-bold text-white leading-[1.1] mb-6 font-heading tracking-tight text-center">
-                {slides[currentSlide].title}
-              </h1>
-              
-              {/* Subheading */}
-              <p className="text-lg md:text-xl text-gray-200 max-w-3xl mb-12 leading-relaxed text-center font-body">
-                {slides[currentSlide].description}
-              </p>
-              
-              {/* Buttons */}
-              <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto justify-center">
-                <Link 
-                  to={slides[currentSlide].primaryLink}
-                  className="w-full sm:w-auto inline-flex justify-center items-center px-10 py-4 bg-[#D4AF37] text-white rounded font-bold tracking-wide transition-all duration-300 hover:bg-[#B08D2D] hover:shadow-[0_4px_20px_rgba(255,107,0,0.4)] text-sm"
-                >
-                  {slides[currentSlide].primaryBtn}
-                </Link>
-                <Link 
-                  to={slides[currentSlide].secondaryLink}
-                  className="w-full sm:w-auto inline-flex justify-center items-center px-10 py-4 bg-transparent text-white border border-white/60 rounded font-bold tracking-wide transition-all duration-300 hover:bg-white/10 hover:border-white text-sm backdrop-blur-sm"
-                >
-                  {slides[currentSlide].secondaryBtn}
-                </Link>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
+      {/* Content */}
+      <div className="relative z-20 max-w-[1200px] mx-auto px-6 flex flex-col items-center text-center pt-20">
+        
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={current}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col items-center"
+          >
+            <p className="text-white/90 text-sm md:text-lg lg:text-xl font-medium tracking-wide mb-4 uppercase">
+              {slides[current].subtitle}
+            </p>
+            
+            <h1 
+              className="text-4xl sm:text-5xl md:text-7xl lg:text-[84px] font-stylish font-bold text-white leading-[1.1] mb-10 md:mb-12 tracking-tight"
+              dangerouslySetInnerHTML={{ __html: slides[current].title }}
+            />
+          </motion.div>
+        </AnimatePresence>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="w-full sm:w-auto"
+        >
+          <Link 
+            to="/industries"
+            className="flex sm:inline-flex justify-center items-center px-6 py-3 sm:px-10 sm:py-4 bg-white text-[#1B2430] rounded-full font-bold text-sm sm:text-base transition-all duration-300 hover:bg-white/90 hover:scale-105 shadow-xl w-full sm:w-auto"
+          >
+            Explore Our Solutions
+          </Link>
+        </motion.div>
+        
       </div>
 
-      {/* Slider Controls */}
-      <div className="absolute bottom-[20%] left-0 w-full z-30">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex justify-between items-center opacity-70 hover:opacity-100 transition-opacity">
-          <div className="flex gap-4 items-center">
-            <button 
-              onClick={prevSlide}
-              className="w-12 h-12 flex items-center justify-center rounded-full border border-white/30 text-white hover:bg-white/10 transition-colors backdrop-blur-md"
-            >
-              <ChevronLeft size={24} />
-            </button>
-            <button 
-              onClick={nextSlide}
-              className="w-12 h-12 flex items-center justify-center rounded-full border border-white/30 text-white hover:bg-white/10 transition-colors backdrop-blur-md"
-            >
-              <ChevronRight size={24} />
-            </button>
-          </div>
-
-          <div className="flex gap-3 hidden md:flex">
-            {slides.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrentSlide(idx)}
-                className={`transition-all duration-300 rounded-full ${
-                  currentSlide === idx 
-                    ? 'w-12 h-2 bg-[#D4AF37]' 
-                    : 'w-2 h-2 bg-white/40 hover:bg-white/60'
-                }`}
-                aria-label={`Go to slide ${idx + 1}`}
-              />
-            ))}
-          </div>
-        </div>
+      {/* Carousel Dots */}
+      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+        {slides.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrent(idx)}
+            className={`transition-all duration-500 rounded-full ${
+              current === idx ? 'w-10 h-2 bg-white' : 'w-2 h-2 bg-white/50 hover:bg-white/80'
+            }`}
+            aria-label={`Go to slide ${idx + 1}`}
+          />
+        ))}
       </div>
+
+      {/* Scroll Down Indicator */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 1 }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center text-white/70"
+      >
+        <span className="text-2xl font-light animate-bounce">↓</span>
+      </motion.div>
 
     </section>
   );

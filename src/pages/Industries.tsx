@@ -7,7 +7,7 @@ export default function Industries() {
       <PageHero 
         title="Industries We Serve" 
         subtitle="Delivering advanced OEM manufacturing and specialized foam solutions across global industrial sectors."
-        backgroundImage="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=2070&auto=format&fit=crop"
       />
       
       {/* 

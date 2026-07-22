@@ -39,11 +39,10 @@ export default function IndustryCards() {
       image: customImg,
       desc: 'Foam specific to your requirement. Our custom team will work with you to design and develop foam for any industrial application.'
     }
-    // Note: The remaining 10 new industries from the plan can be added to this array.
   ];
 
   return (
-    <section className="py-24 bg-[#F8FAFC]">
+    <section className="py-24 md:py-32 bg-[#F7F8FA]">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 text-center">
         
         {/* Header */}
@@ -51,18 +50,19 @@ export default function IndustryCards() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-16 flex flex-col items-center"
         >
-          <span className="text-sm font-bold tracking-[0.2em] text-[#E63946] uppercase mb-4 block">
-            FOAM APPLICATIONS
-          </span>
-          <h2 className="text-4xl md:text-5xl font-black font-heading text-[#0f172a]">
-            The Wide World of Foam
+          <div className="inline-flex items-center gap-2 mb-6">
+            <span className="text-[#1B2430] font-bold tracking-[0.2em] uppercase text-[11px]">Foam Applications</span>
+            <div className="h-[1px] w-12 bg-[#D4AF37]"></div>
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-stylish text-[#1B2430]">
+            The Wide World of <span className="italic font-light">Foam</span>
           </h2>
         </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-left mb-20">
           {industries.map((industry, idx) => (
             <motion.div 
               key={idx}
@@ -70,29 +70,23 @@ export default function IndustryCards() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="group bg-white rounded-[20px] overflow-hidden shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(8,28,58,0.15)] hover:-translate-y-2 transition-all duration-500 border border-[#E2E8F0] flex flex-col"
+              className="premium-card group bg-white flex flex-col"
             >
-              {/* Dark Navy Header */}
-              <div className="bg-[#081C3A] py-5 px-6 text-center z-10 relative">
-                <h3 className="text-white text-sm font-bold tracking-[0.2em] uppercase">
-                  {industry.title}
-                </h3>
-              </div>
-              
               {/* Image Container */}
-              <div className="relative h-64 overflow-hidden bg-gray-100">
+              <div className="relative h-64 overflow-hidden rounded-t-2xl bg-[#E7EBF0]">
                 <img 
                   src={industry.image} 
                   alt={industry.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
-                {/* Subtle dark gradient overlay to make it look premium */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent mix-blend-overlay"></div>
               </div>
               
               {/* Text Description */}
-              <div className="p-8 flex-grow bg-white">
-                <p className="text-[#6B7280] text-sm leading-relaxed">
+              <div className="p-8 flex-grow">
+                <h3 className="text-[#1B2430] text-lg font-bold font-stylish uppercase tracking-widest mb-4 group-hover:text-[#D4AF37] transition-colors">
+                  {industry.title}
+                </h3>
+                <p className="text-[#4B5563] text-[15px] leading-relaxed">
                   {industry.desc}
                 </p>
               </div>
@@ -107,11 +101,11 @@ export default function IndustryCards() {
           viewport={{ once: true }}
         >
           <Link to="/contact">
-            <button className="bg-[#E63946] text-white font-bold py-4 px-10 rounded-2xl hover:bg-[#D92C3A] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 transition-all duration-300 uppercase tracking-wider text-sm inline-flex items-center group">
-              Enquire For Your Industry
+            <button className="btn-primary inline-flex items-center gap-3">
+              ENQUIRE FOR YOUR INDUSTRY
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
-                className="h-4 w-4 ml-3 group-hover:translate-x-1 transition-transform duration-300" 
+                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" 
                 fill="none" 
                 viewBox="0 0 24 24" 
                 stroke="currentColor" 
