@@ -2,6 +2,7 @@ import PageHero from '../components/PageHero';
 import WhyJoin from '../components/careers/WhyJoin';
 import CompanyStats from '../components/careers/CompanyStats';
 import CareersCTA from '../components/careers/CareersCTA';
+import CareersExtended from '../components/careers/CareersExtended';
 
 export default function Careers() {
   return (
@@ -15,6 +16,7 @@ export default function Careers() {
       <CompanyStats />
       
       <CareersCTA />
+      <CareersExtended />
     </div>
   );
 }
