@@ -23,12 +23,12 @@ import packImg from '../../assets/e.jpeg';
 import warehouseImg from '../../assets/w.jpeg';
 
 // Industry Images
-import hospImg from '../../assets/h1.png';
-import healthImg from '../../assets/healthcare.png';
-import furnImg from '../../assets/fur.png';
-import autoImg from '../../assets/automative.png';
-import packIndImg from '../../assets/easy.png';
-import custImg from '../../assets/cust.jpeg';
+import hImg from '../../assets/h.png';
+import healthImg from '../../assets/he.png';
+import autoImg from '../../assets/h1.png';
+import furImg from '../../assets/fur.png';
+import acousImg from '../../assets/au.png';
+import customImg from '../../assets/ss2.png';
 
 export default function ManufacturingContent() {
   const processSteps = [
@@ -61,12 +61,12 @@ export default function ManufacturingContent() {
   ];
 
   const industries = [
-    { img: hospImg, title: 'Hospitality', desc: 'Durable, premium mattresses for hotels and resorts.' },
-    { img: healthImg, title: 'Healthcare', desc: 'Medical-grade foam and supportive mattress solutions.' },
-    { img: furnImg, title: 'Furniture & Bedding', desc: 'High-resilience seating and cushioning foams.' },
-    { img: autoImg, title: 'Automotive', desc: 'Acoustic and seating foam components for vehicles.' },
-    { img: packIndImg, title: 'Packaging', desc: 'Protective foam packaging for sensitive equipment.' },
-    { img: custImg, title: 'Custom OEM Solutions', desc: 'Tailor-made foam products for specialized industries.' }
+    { img: hImg, title: 'HOSPITALITY', desc: 'Premium mattresses and foam solutions for hotels, resorts, and hospitality chains. Custom sizes and firmness levels for luxury guest experiences.' },
+    { img: healthImg, title: 'HEALTHCARE', desc: 'Medical-grade foam products for hospitals, clinics, and care facilities. Pressure-relief mattresses designed for patient comfort and recovery.' },
+    { img: autoImg, title: 'AUTOMOTIVE', desc: 'Specialised seat cushioning and insulation foams for the automotive industry. Comfort for daily commuters and long-distance travellers.' },
+    { img: furImg, title: 'FURNITURE', desc: 'Cushioning foams for sofas, chairs, and office furniture. Our special foams extend the promise of comfort beyond the bed.' },
+    { img: acousImg, title: 'SOUND INSULATION', desc: 'Acoustic foam panels for studios, theatres, and industrial settings. Designed to absorb unwanted sound and improve environments.' },
+    { img: customImg, title: 'CUSTOM SOLUTIONS', desc: 'Foam specific to your requirement. Our custom team will work with you to design and develop foam for any industrial application.' }
   ];
 
   const processRef = useRef(null);

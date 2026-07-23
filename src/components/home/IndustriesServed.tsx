@@ -1,21 +1,23 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import bedImg from '../../assets/bed.jpeg';
-import sciImg from '../../assets/sci.jpeg';
-import fImg from '../../assets/f.jpeg';
-import eImg from '../../assets/e.jpeg';
+import hImg from '../../assets/h.png';
+import healthImg from '../../assets/he.png';
+import autoImg from '../../assets/h1.png';
+import furImg from '../../assets/fur.png';
+import acousImg from '../../assets/au.png';
+import customImg from '../../assets/ss2.png';
 
 export default function IndustriesServed() {
   const [active, setActive] = useState(0);
 
   const industries = [
-    { title: 'Hospitality', desc: 'Premium sleep solutions for world-class luxury hotels and resorts.', img: bedImg },
-    { title: 'Healthcare', desc: 'Orthopedic and medical-grade foams meeting strict sanitation standards.', img: sciImg },
-    { title: 'Furniture', desc: 'High-resilience foam blocks and sheets for luxury upholstery.', img: fImg },
-    { title: 'Automotive', desc: 'Acoustic and seating foams engineered for durability and vibration dampening.', img: eImg },
-    { title: 'Packaging', desc: 'Custom die-cut foam solutions for sensitive electronics and luxury goods.', img: fImg },
-    { title: 'Acoustics', desc: 'Sound-absorbing foam panels for studios and commercial spaces.', img: sciImg },
+    { title: 'HOSPITALITY', desc: 'Premium mattresses and foam solutions for hotels, resorts, and hospitality chains. Custom sizes and firmness levels for luxury guest experiences.', img: hImg },
+    { title: 'HEALTHCARE', desc: 'Medical-grade foam products for hospitals, clinics, and care facilities. Pressure-relief mattresses designed for patient comfort and recovery.', img: healthImg },
+    { title: 'AUTOMOTIVE', desc: 'Specialised seat cushioning and insulation foams for the automotive industry. Comfort for daily commuters and long-distance travellers.', img: autoImg },
+    { title: 'FURNITURE', desc: 'Cushioning foams for sofas, chairs, and office furniture. Our special foams extend the promise of comfort beyond the bed.', img: furImg },
+    { title: 'SOUND INSULATION', desc: 'Acoustic foam panels for studios, theatres, and industrial settings. Designed to absorb unwanted sound and improve environments.', img: acousImg },
+    { title: 'CUSTOM SOLUTIONS', desc: 'Foam specific to your requirement. Our custom team will work with you to design and develop foam for any industrial application.', img: customImg }
   ];
 
   return (

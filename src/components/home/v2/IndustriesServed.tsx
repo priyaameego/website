@@ -1,11 +1,20 @@
 import { motion } from 'framer-motion';
 
+import hImg from '../../../assets/h.png';
+import healthImg from '../../../assets/he.png';
+import autoImg from '../../../assets/h1.png';
+import furImg from '../../../assets/fur.png';
+import acousImg from '../../../assets/au.png';
+import customImg from '../../../assets/ss2.png';
+
 export default function IndustriesServed() {
   const industries = [
-    { name: "Healthcare", img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2070&auto=format&fit=crop" },
-    { name: "Hospitality", img: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=2070&auto=format&fit=crop" },
-    { name: "Automotive", img: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=2070&auto=format&fit=crop" },
-    { name: "Acoustics", img: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop" }
+    { name: 'HOSPITALITY', img: hImg, desc: 'Premium mattresses and foam solutions for hotels, resorts, and hospitality chains. Custom sizes and firmness levels for luxury guest experiences.' },
+    { name: 'HEALTHCARE', img: healthImg, desc: 'Medical-grade foam products for hospitals, clinics, and care facilities. Pressure-relief mattresses designed for patient comfort and recovery.' },
+    { name: 'AUTOMOTIVE', img: autoImg, desc: 'Specialised seat cushioning and insulation foams for the automotive industry. Comfort for daily commuters and long-distance travellers.' },
+    { name: 'FURNITURE', img: furImg, desc: 'Cushioning foams for sofas, chairs, and office furniture. Our special foams extend the promise of comfort beyond the bed.' },
+    { name: 'SOUND INSULATION', img: acousImg, desc: 'Acoustic foam panels for studios, theatres, and industrial settings. Designed to absorb unwanted sound and improve environments.' },
+    { name: 'CUSTOM SOLUTIONS', img: customImg, desc: 'Foam specific to your requirement. Our custom team will work with you to design and develop foam for any industrial application.' }
   ];
 
   return (
