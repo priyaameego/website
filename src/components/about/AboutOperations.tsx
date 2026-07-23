@@ -68,12 +68,12 @@ export default function AboutOperations() {
       {/* Research & Innovation */}
       <section className="py-24 md:py-32 bg-[#F7F8FA] relative overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-stretch">
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="order-2 lg:order-1 relative group rounded-2xl overflow-hidden shadow-premium h-[500px]"
+              className="order-2 lg:order-1 relative group rounded-2xl overflow-hidden shadow-premium h-full min-h-[400px]"
             >
               <img src={rdImg} alt="R&D Lab" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
             </motion.div>
@@ -81,7 +81,7 @@ export default function AboutOperations() {
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="order-1 lg:order-2"
+              className="order-1 lg:order-2 flex flex-col justify-center py-4"
             >
               <div className="inline-flex items-center gap-2 mb-6">
                 <span className="text-[#1B2430] font-bold tracking-[0.2em] uppercase text-[11px]">Innovation</span>
@@ -91,12 +91,12 @@ export default function AboutOperations() {
               <p className="text-lg text-[#4B5563] leading-relaxed mb-10">
                 Innovation is our DNA. Our dedicated R&D laboratories are staffed by expert polymer scientists and engineers constantly developing next-generation foams.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                <div className="premium-card p-8 group">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 items-stretch">
+                <div className="premium-card p-8 group h-full">
                   <h4 className="font-bold font-stylish text-[#1B2430] mb-3 text-2xl group-hover:text-[#D4AF37] transition-colors">Thermal Tech</h4>
                   <p className="text-sm text-[#4B5563] leading-relaxed">Advanced temperature regulating phase-change materials.</p>
                 </div>
-                <div className="premium-card p-8 group">
+                <div className="premium-card p-8 group h-full">
                   <h4 className="font-bold font-stylish text-[#1B2430] mb-3 text-2xl group-hover:text-[#D4AF37] transition-colors">Acoustic Dampening</h4>
                   <p className="text-sm text-[#4B5563] leading-relaxed">Specialized foams for heavy industry noise reduction.</p>
                 </div>
