@@ -40,26 +40,6 @@ export default function IndustryCards() {
       title: 'CUSTOM SOLUTIONS',
       image: customImg,
       desc: 'Foam specific to your requirement. Our custom team will work with you to design and develop foam for any industrial application.'
-    },
-    {
-      title: 'BEDDING & SLEEP',
-      image: hImg, 
-      desc: 'Premium foam solutions for mattresses, pillows, mattress toppers, and sleep accessories designed for comfort, durability, and long-lasting performance.'
-    },
-    {
-      title: 'PACKAGING',
-      image: customImg,
-      desc: 'Custom protective foam inserts for electronics, appliances, furniture, and fragile industrial products, ensuring safe storage and transportation.'
-    },
-    {
-      title: 'INSTITUTIONAL',
-      image: healthImg, 
-      desc: 'Foam mattresses and bedding solutions for hostels, schools, universities, dormitories, training centers, and institutional housing.'
-    },
-    {
-      title: 'DEALER NETWORK',
-      image: autoImg, 
-      desc: 'Supporting dealers, distributors, furniture retailers, mattress showrooms, and sleep solution partners with high-quality products.'
     }
   ];
 
