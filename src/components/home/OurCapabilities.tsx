@@ -1,38 +1,21 @@
 import { motion } from 'framer-motion';
 import Glass3DCard from '../ui/Glass3DCard';
 
+import hImg from '../../assets/h.png';
+import healthImg from '../../assets/he.png';
+import autoImg from '../../assets/h1.png';
+import furImg from '../../assets/fur.png';
+import acousImg from '../../assets/au.png';
+import customImg from '../../assets/ss2.png';
+
 export default function OurCapabilities() {
   const capabilities = [
-    {
-      title: 'Polyurethane Foam Manufacturing',
-      desc: 'High-density precision production',
-      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop'
-    },
-    {
-      title: 'Premium Mattress Engineering',
-      desc: 'Multi-layer comfort design',
-      image: 'https://images.unsplash.com/photo-1505693314120-0d443867891c?q=80&w=2070&auto=format&fit=crop'
-    },
-    {
-      title: 'Orthopedic Sleep Solutions',
-      desc: 'Spinal alignment technology',
-      image: 'https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=2070&auto=format&fit=crop'
-    },
-    {
-      title: 'OEM & Private Label Manufacturing',
-      desc: 'Scalable B2B production lines',
-      image: 'https://images.unsplash.com/photo-1581092335397-9583eb92d232?q=80&w=2070&auto=format&fit=crop'
-    },
-    {
-      title: 'Precision Quality Testing',
-      desc: 'Rigorous lab diagnostics',
-      image: 'https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?q=80&w=2070&auto=format&fit=crop'
-    },
-    {
-      title: 'Nationwide Distribution',
-      desc: 'Robust logistics network',
-      image: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=2070&auto=format&fit=crop'
-    }
+    { title: 'HOSPITALITY', desc: 'Premium mattresses and foam solutions for hotels, resorts, and hospitality chains. Custom sizes and firmness levels for luxury guest experiences.', image: hImg },
+    { title: 'HEALTHCARE', desc: 'Medical-grade foam products for hospitals, clinics, and care facilities. Pressure-relief mattresses designed for patient comfort and recovery.', image: healthImg },
+    { title: 'AUTOMOTIVE', desc: 'Specialised seat cushioning and insulation foams for the automotive industry. Comfort for daily commuters and long-distance travellers.', image: autoImg },
+    { title: 'FURNITURE', desc: 'Cushioning foams for sofas, chairs, and office furniture. Our special foams extend the promise of comfort beyond the bed.', image: furImg },
+    { title: 'SOUND INSULATION', desc: 'Acoustic foam panels for studios, theatres, and industrial settings. Designed to absorb unwanted sound and improve environments.', image: acousImg },
+    { title: 'CUSTOM SOLUTIONS', desc: 'Foam specific to your requirement. Our custom team will work with you to design and develop foam for any industrial application.', image: customImg }
   ];
 
   return (
