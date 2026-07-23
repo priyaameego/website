@@ -2,10 +2,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle2, ChevronRight, Briefcase, GraduationCap, Award, HeartHandshake, Zap, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-import fImg from '../../assets/f.jpeg';
 import sciImg from '../../assets/sci.jpeg';
-import bedImg from '../../assets/bed.jpeg';
-import eImg from '../../assets/e.jpeg';
 import Glass3DCard from '../ui/Glass3DCard';
 
 export default function CareersExtended() {
