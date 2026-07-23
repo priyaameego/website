@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import Glass3DCard from '../ui/Glass3DCard';
+
 import hImg from '../../assets/h.png';
 import healthImg from '../../assets/he.png';
 import autoImg from '../../assets/h1.png';
@@ -40,88 +42,109 @@ export default function IndustryCards() {
       desc: 'Foam specific to your requirement. Our custom team will work with you to design and develop foam for any industrial application.'
     },
     {
-      title: 'BEDDING & SLEEP PRODUCTS',
-      image: hImg, // reusing hospitality image
+      title: 'BEDDING & SLEEP',
+      image: hImg, 
       desc: 'Premium foam solutions for mattresses, pillows, mattress toppers, and sleep accessories designed for comfort, durability, and long-lasting performance.'
     },
     {
-      title: 'PACKAGING & PROTECTIVE FOAM',
-      image: customImg, // reusing custom image
+      title: 'PACKAGING',
+      image: customImg,
       desc: 'Custom protective foam inserts for electronics, appliances, furniture, and fragile industrial products, ensuring safe storage and transportation.'
     },
     {
-      title: 'EDUCATIONAL & INSTITUTIONAL',
-      image: healthImg, // reusing healthcare image
+      title: 'INSTITUTIONAL',
+      image: healthImg, 
       desc: 'Foam mattresses and bedding solutions for hostels, schools, universities, dormitories, training centers, and institutional housing.'
     },
     {
-      title: 'RETAIL & DEALER NETWORK',
-      image: autoImg, // reusing auto image or some other image
-      desc: 'Supporting dealers, distributors, furniture retailers, mattress showrooms, and sleep solution partners with high-quality products and reliable supply.'
+      title: 'DEALER NETWORK',
+      image: autoImg, 
+      desc: 'Supporting dealers, distributors, furniture retailers, mattress showrooms, and sleep solution partners with high-quality products.'
     }
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-[#F7F8FA]">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 text-center">
+    <section className="py-32 bg-[#0A101D] relative overflow-hidden">
+      
+      {/* 3D Background Particles/Orbs */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+        <motion.div 
+          animate={{ rotate: 360 }}
+          transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
+          className="absolute top-[-20%] left-[-10%] w-[50vw] h-[50vw] bg-gradient-to-br from-[#D4AF37]/5 to-transparent rounded-full blur-[100px] opacity-40"
+        />
+        <motion.div 
+          animate={{ rotate: -360 }}
+          transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
+          className="absolute bottom-[-20%] right-[-10%] w-[60vw] h-[60vw] bg-gradient-to-tl from-[#2E5B99]/5 to-transparent rounded-full blur-[120px] opacity-50"
+        />
+      </div>
+
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 text-center relative z-10">
         
         {/* Header */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-16 flex flex-col items-center"
+          viewport={{ once: true, margin: "-100px" }}
+          className="mb-24 flex flex-col items-center"
         >
-          <div className="inline-flex items-center gap-2 mb-6">
-            <span className="text-[#1B2430] font-bold tracking-[0.2em] uppercase text-[11px]">Foam Applications</span>
-            <div className="h-[1px] w-12 bg-[#D4AF37]"></div>
+          <div className="inline-flex items-center gap-4 mb-8">
+            <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#D4AF37]"></div>
+            <span className="text-[#D4AF37] font-bold tracking-[0.3em] uppercase text-[11px]">Foam Applications</span>
+            <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#D4AF37]"></div>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-stylish text-[#1B2430]">
-            The Wide World of <span className="italic font-light">Foam</span>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold font-stylish text-white drop-shadow-sm">
+            The Wide World of <span className="text-[#D4AF37] italic font-light">Foam</span>
           </h2>
         </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-left mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12 text-left mb-24">
           {industries.map((industry, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="premium-card group bg-white flex flex-col"
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ delay: (idx % 3) * 0.1, duration: 0.8 }}
+              className="h-[450px]"
             >
-              {/* Image Container */}
-              <div className="relative h-64 overflow-hidden rounded-t-2xl bg-[#E7EBF0]">
-                <img 
-                  src={industry.image} 
-                  alt={industry.title} 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                />
-              </div>
-              
-              {/* Text Description */}
-              <div className="p-8 flex-grow">
-                <h3 className="text-[#1B2430] text-lg font-bold font-stylish uppercase tracking-widest mb-4 group-hover:text-[#D4AF37] transition-colors">
-                  {industry.title}
-                </h3>
-                <p className="text-[#4B5563] text-[15px] leading-relaxed">
-                  {industry.desc}
-                </p>
-              </div>
+              <Glass3DCard tiltIntensity={10} className="h-full">
+                {/* Image Container */}
+                <div className="relative h-56 overflow-hidden rounded-t-2xl">
+                  <img 
+                    src={industry.image} 
+                    alt={industry.title} 
+                    className="w-full h-[120%] -translate-y-4 object-cover transition-transform duration-1000 group-hover:translate-y-0 group-hover:scale-110 opacity-70 group-hover:opacity-100 grayscale group-hover:grayscale-0"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A101D] to-transparent"></div>
+                </div>
+                
+                {/* Text Description */}
+                <div className="p-8 flex flex-col flex-grow bg-[#0A101D]/80">
+                  <h3 className="text-white text-2xl font-bold font-stylish tracking-wide mb-4 group-hover:text-[#D4AF37] transition-colors">
+                    {industry.title}
+                  </h3>
+                  <p className="text-white/60 text-sm leading-relaxed font-light">
+                    {industry.desc}
+                  </p>
+                </div>
+              </Glass3DCard>
             </motion.div>
           ))}
         </div>
 
         {/* CTA Button */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
+          whileHover={{ scale: 1.05 }}
+          className="inline-block"
         >
           <Link to="/contact">
-            <button className="btn-primary inline-flex items-center gap-3">
+            <button className="bg-[#D4AF37] text-[#0A101D] px-10 py-5 rounded-sm font-bold tracking-widest text-sm hover:bg-white transition-colors duration-300 inline-flex items-center gap-3 shadow-[0_0_40px_rgba(212,175,55,0.3)]">
               ENQUIRE FOR YOUR INDUSTRY
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 

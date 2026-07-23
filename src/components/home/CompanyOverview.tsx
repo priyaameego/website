@@ -1,18 +1,23 @@
 import { motion } from 'framer-motion';
-import { ShieldCheck, Award, Factory, Globe2 } from 'lucide-react';
+import { Microscope, PackageCheck, ClipboardCheck, Truck } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Glass3DCard from '../ui/Glass3DCard';
 
 export default function CompanyOverview() {
   const features = [
-    { icon: <Factory size={28} />, title: 'Advanced Facilities', desc: 'Over 500,000 sq.ft of automated production space.' },
-    { icon: <Globe2 size={28} />, title: 'Global Reach', desc: 'Exporting to 40+ countries with robust logistics.' },
-    { icon: <ShieldCheck size={28} />, title: 'Uncompromised Quality', desc: 'ISO 9001 certified with rigorous testing.' },
-    { icon: <Award size={28} />, title: '45+ Years Legacy', desc: 'Decades of pioneering foam manufacturing.' }
+    { icon: <Microscope size={28} />, title: 'Advanced Foam Technology', desc: 'Engineered for consistent density, resilience, and long-lasting performance.' },
+    { icon: <PackageCheck size={28} />, title: 'OEM Manufacturing Excellence', desc: 'Scalable private-label production with strict quality control.' },
+    { icon: <ClipboardCheck size={28} />, title: 'Quality Assurance', desc: 'Every product undergoes rigorous durability and comfort testing.' },
+    { icon: <Truck size={28} />, title: 'Pan-India Distribution', desc: 'Reliable manufacturing and delivery network serving partners across India.' }
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-white">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+    <section className="py-24 md:py-32 bg-[#0A101D] relative overflow-hidden">
+      
+      {/* Background Orbs */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#D4AF37]/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
           
           <motion.div 
@@ -23,24 +28,28 @@ export default function CompanyOverview() {
             className="w-full lg:w-1/2 flex flex-col items-start"
           >
             <div className="inline-flex items-center gap-2 mb-6">
-              <span className="text-[#1B2430] font-bold tracking-[0.2em] uppercase text-[11px]">
-                Company Overview
+              <span className="text-[#D4AF37] font-bold tracking-[0.3em] uppercase text-[11px] border border-[#D4AF37]/30 px-6 py-2 rounded-full">
+                Built on Engineering
               </span>
-              <div className="h-[1px] w-12 bg-[#D4AF37]"></div>
             </div>
             
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-stylish font-bold text-[#1B2430] leading-tight mb-8">
-              Pioneering <span className="italic font-light">Excellence</span> for the World
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-stylish font-bold text-white leading-[1.1] mb-8">
+              Built on Engineering. Trusted for <span className="italic font-light text-[#D4AF37]">Comfort.</span>
             </h2>
             
-            <p className="text-lg text-[#4B5563] leading-relaxed mb-6">
-              Shakshi Group is a premier global OEM manufacturer specializing in advanced foam solutions and precision engineering. We empower industries worldwide by delivering unparalleled quality, scale, and technological innovation.
-            </p>
-            <p className="text-lg text-[#4B5563] leading-relaxed mb-10">
-              From automotive seating to industrial acoustics and luxury bedding, our vertically integrated facilities ensure strict compliance with global standards, making us the trusted partner for Fortune 500 companies.
+            <p className="text-lg text-white/70 font-light leading-relaxed mb-10">
+              For decades, Shakshi Group has combined innovation, manufacturing excellence, and uncompromising quality to create premium foam and mattress solutions trusted by businesses and consumers alike.
             </p>
             
-            <Link to="/about" className="btn-primary">DISCOVER OUR LEGACY</Link>
+            <Link 
+              to="/about" 
+              className="inline-flex items-center gap-4 text-white text-[13px] font-bold tracking-[0.2em] uppercase group"
+            >
+              <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] transition-all duration-300 shadow-[0_10px_20px_rgba(0,0,0,0.2)] group-hover:shadow-[0_10px_30px_rgba(212,175,55,0.3)]">
+                <span className="group-hover:text-[#0A101D] transition-colors duration-300">→</span>
+              </div>
+              <span>DISCOVER OUR LEGACY</span>
+            </Link>
           </motion.div>
 
           <motion.div 
@@ -52,12 +61,16 @@ export default function CompanyOverview() {
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {features.map((feat, idx) => (
-                <div key={idx} className="premium-card p-8 group">
-                  <div className="w-14 h-14 bg-[#F7F8FA] text-[#1B2430] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#1B2430] group-hover:text-white transition-colors duration-500">
-                    {feat.icon}
-                  </div>
-                  <h4 className="text-xl font-bold text-[#1B2430] mb-3 group-hover:text-[#D4AF37] transition-colors">{feat.title}</h4>
-                  <p className="text-[#4B5563] text-sm leading-relaxed">{feat.desc}</p>
+                <div key={idx} className="h-[220px]">
+                  <Glass3DCard tiltIntensity={10} className="p-8 group h-full flex flex-col justify-between">
+                    <div className="w-14 h-14 bg-gradient-to-br from-white/10 to-transparent border border-white/20 text-white rounded-[16px] flex items-center justify-center mb-6 group-hover:from-[#D4AF37] group-hover:to-[#b38f29] group-hover:text-[#0A101D] group-hover:border-[#D4AF37] transition-all duration-500 shadow-[inset_0_2px_10px_rgba(255,255,255,0.1)] group-hover:shadow-[inset_0_2px_10px_rgba(255,255,255,0.5)]">
+                      {feat.icon}
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold font-stylish text-white mb-3 group-hover:text-[#D4AF37] transition-colors leading-tight">{feat.title}</h4>
+                      <p className="text-white/60 text-sm font-light leading-relaxed">{feat.desc}</p>
+                    </div>
+                  </Glass3DCard>
                 </div>
               ))}
             </div>

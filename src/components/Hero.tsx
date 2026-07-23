@@ -1,152 +1,166 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
-import hero1 from '../assets/f.jpeg';
-import hero2 from '../assets/bed.jpeg';
-import hero3 from '../assets/sci.jpeg';
-import hero4 from '../assets/foa.png';
-
-const slides = [
-  {
-    id: 1,
-    subtitle: 'Industrial Foam & OEM Solutions',
-    title: 'Precision Engineered.<br />Built for Excellence.',
-    image: hero1
-  },
-  {
-    id: 2,
-    subtitle: 'Luxury Sleep Systems',
-    title: 'Ultimate Sleep<br />Comfort.',
-    image: hero2
-  },
-  {
-    id: 3,
-    subtitle: 'Research & Innovation',
-    title: 'Advanced Ergonomics<br />For Your Back.',
-    image: hero3
-  },
-  {
-    id: 4,
-    subtitle: 'Advanced Manufacturing',
-    title: 'Premium Foam<br />Technology.',
-    image: hero4
-  }
-];
+import bannerVideo from '../assets/banner.mp4';
 
 export default function Hero() {
-  const [current, setCurrent] = useState(0);
+  const containerRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    }, 6000); // Slower, more elegant transition
-    return () => clearInterval(timer);
-  }, []);
+  // Scroll Effects for Parallax & Cinematic Zoom
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+
+  const backgroundScale = useTransform(scrollYProgress, [0, 1], [1, 1.3]);
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, 300]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+
+  // Mouse 3D Tilt Effect
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  
+  const springConfig = { stiffness: 70, damping: 20, bounce: 0 };
+  const springX = useSpring(mouseX, springConfig);
+  const springY = useSpring(mouseY, springConfig);
+  
+  const rotateX = useTransform(springY, [-0.5, 0.5], [8, -8]);
+  const rotateY = useTransform(springX, [-0.5, 0.5], [-8, 8]);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    mouseX.set(x);
+    mouseY.set(y);
+  };
+
+  const handleMouseLeave = () => {
+    mouseX.set(0);
+    mouseY.set(0);
+  };
 
   return (
-    <section className="relative h-[100vh] min-h-[800px] flex items-center justify-center overflow-hidden bg-[#FAFAF8]" id="home">
+    <section 
+      ref={containerRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="relative h-[100vh] min-h-[800px] flex items-center justify-center overflow-hidden bg-[#0A1428] [perspective:1500px]" 
+      id="home"
+    >
       
-      <AnimatePresence initial={false} mode="wait">
-        <motion.div
-          key={current}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1.8, ease: "easeInOut" }}
-          className="absolute inset-0 z-0"
+      {/* Seamless Cinematic Video Background with Parallax */}
+      <motion.div
+        style={{ scale: backgroundScale }}
+        className="absolute inset-0 z-0 origin-center bg-[#0A1428]"
+      >
+        {/* Cinematic Ken Burns animation applied to the container itself */}
+        <motion.div 
+          animate={{ scale: [1, 1.1] }} 
+          transition={{ duration: 20, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
+          className="absolute inset-0 w-full h-full"
         >
-          {/* Background Image with Slow Ken Burns Effect */}
-          <motion.img 
-            initial={{ scale: 1 }}
-            animate={{ scale: 1.1 }}
-            transition={{ duration: 30, ease: "linear" }}
-            src={slides[current].image} 
-            alt="Shakshi Group Hero" 
-            className="w-full h-full object-cover"
-          />
-          {/* Subtle gradient overlay for luxury commercial feel instead of harsh black */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1B2430]/60 via-[#1B2430]/20 to-[#1B2430]/40 z-10" />
-        </motion.div>
-      </AnimatePresence>
-
-      {/* Content */}
-      <div className="relative z-20 w-full max-w-[1400px] mx-auto px-8 flex flex-col pt-[100px]">
-        
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={current}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="max-w-[900px]"
+          {/* Cinematic Video Background */}
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover z-10 opacity-90 mix-blend-screen"
           >
-            <div className="flex items-center gap-4 mb-8">
-              <div className="h-[1px] w-12 bg-[#D4AF37]"></div>
-              <p className="text-white text-[11px] md:text-[13px] font-semibold tracking-[0.2em] uppercase">
-                {slides[current].subtitle}
-              </p>
-            </div>
-            
-            <h1 
-              className="text-[40px] sm:text-[56px] md:text-[80px] lg:text-[100px] font-stylish font-bold text-white leading-[1.05] mb-12 tracking-tight"
-              dangerouslySetInnerHTML={{ __html: slides[current].title }}
-            />
-          </motion.div>
-        </AnimatePresence>
+            <source src={bannerVideo} type="video/mp4" />
+          </video>
+        </motion.div>
+        
+        {/* Deep Navy Overlay with Champagne Gold tint for luxury aesthetic */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0A101D] via-[#0A101D]/60 to-[#0A101D]/30 z-20 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-[#D4AF37]/5 z-20 mix-blend-overlay" />
+      </motion.div>
+
+      {/* Floating 3D Particles */}
+      <div className="absolute inset-0 z-20 pointer-events-none overflow-hidden">
+        {[...Array(15)].map((_, i) => (
+          <motion.div
+            key={i}
+            animate={{
+              y: [0, -200, 0],
+              x: [0, Math.random() * 50 - 25, 0],
+              opacity: [0, 0.5, 0],
+            }}
+            transition={{
+              duration: 10 + Math.random() * 10,
+              repeat: Infinity,
+              delay: Math.random() * 5,
+              ease: "linear"
+            }}
+            className="absolute w-1 h-1 bg-white rounded-full blur-[1px]"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              scale: Math.random() * 1.5 + 0.5,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Content with 3D Tilt and Scroll Parallax */}
+      <motion.div 
+        style={{ 
+          y: contentY, 
+          opacity: contentOpacity,
+          rotateX,
+          rotateY,
+          transformStyle: "preserve-3d"
+        }}
+        className="relative z-30 w-full max-w-[1400px] mx-auto px-8 flex flex-col pt-[100px]"
+      >
         
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="flex flex-wrap gap-6"
+          initial={{ opacity: 0, y: 30, translateZ: 100 }}
+          animate={{ opacity: 1, y: 0, translateZ: 100 }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          className="max-w-[1000px]"
+        >
+          <div className="flex items-center gap-4 mb-8">
+            <div className="h-[1px] w-16 bg-gradient-to-r from-transparent to-[#D4AF37]"></div>
+            <p className="text-[#D4AF37] text-[11px] md:text-[13px] font-bold tracking-[0.3em] uppercase">
+              Industrial Foam & OEM Solutions
+            </p>
+          </div>
+          
+          <h1 
+            className="text-[44px] sm:text-[60px] md:text-[90px] lg:text-[110px] font-stylish font-bold text-white leading-[1.02] mb-12 tracking-tight drop-shadow-2xl"
+          >
+            Precision Engineered.<br />Built for Excellence.
+          </h1>
+        </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20, translateZ: 50 }}
+          animate={{ opacity: 1, y: 0, translateZ: 50 }}
+          transition={{ duration: 1.2, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-wrap gap-8 items-center"
         >
           <Link 
             to="/industries"
-            className="btn-primary bg-[#D4AF37] hover:bg-[#B8962D] text-[#1B2430]"
+            className="relative overflow-hidden group px-8 py-4 bg-white/5 backdrop-blur-md text-white border border-white/20 rounded-full font-bold text-[12px] tracking-widest uppercase hover:border-[#D4AF37] transition-all duration-500 shadow-[0_10px_30px_rgba(0,0,0,0.2)]"
           >
-            Explore Solutions
+            <span className="relative z-10 group-hover:text-[#0A101D] transition-colors duration-500 delay-100">Explore Solutions</span>
+            <div className="absolute inset-0 bg-[#D4AF37] -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] z-0"></div>
           </Link>
           <Link 
             to="/about"
-            className="btn-secondary text-white border-white/30 hover:border-white hover:bg-white hover:text-[#1B2430]"
+            className="group flex items-center gap-3 text-white font-bold text-[12px] tracking-widest uppercase hover:text-[#D4AF37] transition-colors"
           >
+            <div className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center group-hover:border-[#D4AF37] group-hover:scale-110 transition-all duration-500">
+              <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+            </div>
             Our Heritage
           </Link>
         </motion.div>
         
-      </div>
-
-      {/* Luxury Carousel Indicators */}
-      <div className="absolute bottom-12 left-8 md:left-auto md:right-12 z-20 flex gap-4 items-center">
-        {slides.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => setCurrent(idx)}
-            className={`transition-all duration-700 relative flex items-center justify-center ${
-              current === idx ? 'w-12 h-12' : 'w-8 h-8'
-            }`}
-            aria-label={`Go to slide ${idx + 1}`}
-          >
-            <span className={`absolute bg-white transition-all duration-700 rounded-full ${current === idx ? 'w-2 h-2' : 'w-1.5 h-1.5 opacity-50'}`}></span>
-            {current === idx && (
-              <motion.svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                <motion.circle 
-                  cx="50" cy="50" r="48" 
-                  fill="none" 
-                  stroke="rgba(255,255,255,0.4)" 
-                  strokeWidth="2"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  transition={{ duration: 6, ease: "linear" }}
-                  className="origin-center -rotate-90"
-                />
-              </motion.svg>
-            )}
-          </button>
-        ))}
-      </div>
+      </motion.div>
 
     </section>
   );

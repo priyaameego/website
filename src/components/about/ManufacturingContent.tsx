@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import Glass3DCard from '../ui/Glass3DCard';
 import { 
   Factory, 
   Bed, 
@@ -67,35 +69,47 @@ export default function ManufacturingContent() {
     { img: custImg, title: 'Custom OEM Solutions', desc: 'Tailor-made foam products for specialized industries.' }
   ];
 
+  const processRef = useRef(null);
+
   return (
     <>
       {/* 1. Manufacturing Process */}
-      <section className="py-24 bg-[#1B2430]">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-stylish font-bold text-white mb-6">Manufacturing Process</h2>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto">From premium raw materials to rapid distribution, experience our streamlined production lifecycle.</p>
+      <section ref={processRef} className="relative py-32 bg-[#0A101D] overflow-hidden">
+        {/* Background Gradients */}
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#D4AF37]/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-[#2E5B99]/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-12">
+          <div className="text-center mb-24">
+            <h2 className="text-5xl md:text-7xl font-stylish font-bold text-white mb-6">Manufacturing <span className="text-[#D4AF37] italic">Process</span></h2>
+            <p className="text-xl text-white/60 max-w-2xl mx-auto font-light">From premium raw materials to rapid distribution, experience our streamlined production lifecycle.</p>
           </div>
           
           <div className="relative">
-            {/* Connecting Line (Desktop) */}
-            <div className="hidden lg:block absolute top-1/2 left-0 w-full h-[2px] bg-[#D4AF37]/30 -translate-y-1/2 z-0"></div>
+            {/* Animated Connecting Line (Desktop) */}
+            <div className="hidden lg:block absolute top-8 left-[6%] right-[6%] h-[2px] bg-white/10 z-0 overflow-hidden">
+              <motion.div 
+                className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#D4AF37]/0 via-[#D4AF37] to-[#D4AF37]/0 w-1/3"
+                animate={{ x: ["-100%", "300%"] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+              />
+            </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 relative z-10">
               {processSteps.map((step, i) => (
                 <motion.div 
                   key={i}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ delay: i * 0.1, type: "spring", stiffness: 100 }}
                   className="flex flex-col items-center text-center group cursor-default"
                 >
-                  <div className="w-16 h-16 rounded-full bg-[#1B2430] border-2 border-[#D4AF37] flex items-center justify-center text-[#D4AF37] mb-4 group-hover:bg-[#D4AF37] group-hover:text-[#1B2430] transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+                  <div className="w-16 h-16 rounded-full bg-[#0A101D] border border-white/20 backdrop-blur-md flex items-center justify-center text-white/70 mb-6 group-hover:bg-[#D4AF37] group-hover:text-[#0A101D] group-hover:scale-110 group-hover:border-[#D4AF37] transition-all duration-500 shadow-[0_0_30px_rgba(212,175,55,0)] group-hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] relative z-10">
                     {step.icon}
                   </div>
-                  <h4 className="text-white font-semibold text-sm mb-2">{step.title}</h4>
-                  <p className="text-white/60 text-xs">{step.desc}</p>
+                  <h4 className="text-white font-bold text-[13px] tracking-wide mb-2 group-hover:text-[#D4AF37] transition-colors">{step.title}</h4>
+                  <p className="text-white/50 text-[11px] uppercase tracking-wider">{step.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -104,62 +118,70 @@ export default function ManufacturingContent() {
       </section>
 
       {/* 2. Manufacturing Capabilities */}
-      <section className="py-24 bg-[#F7F8FA]">
+      <section className="py-32 bg-[#05080f]">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 mb-6">
-              <span className="text-[#1B2430] font-bold tracking-[0.2em] uppercase text-[11px]">Core Competencies</span>
+          <div className="text-center mb-24">
+            <div className="inline-flex items-center gap-4 mb-6">
+              <div className="h-[1px] w-12 bg-[#D4AF37]"></div>
+              <span className="text-[#D4AF37] font-bold tracking-[0.3em] uppercase text-[11px]">Core Competencies</span>
               <div className="h-[1px] w-12 bg-[#D4AF37]"></div>
             </div>
-            <h2 className="text-4xl md:text-5xl font-stylish font-bold text-[#1B2430]">Manufacturing Capabilities</h2>
+            <h2 className="text-5xl md:text-7xl font-stylish font-bold text-white">Manufacturing Capabilities</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {capabilities.map((cap, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white p-10 rounded-2xl border border-[#E7EBF0] hover:border-[#D4AF37] hover:shadow-premium transition-all duration-300 group"
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ delay: i * 0.1, duration: 0.8, ease: "easeOut" }}
               >
-                <div className="w-14 h-14 rounded-xl bg-[#F7F8FA] flex items-center justify-center text-[#1B2430] mb-6 group-hover:bg-[#1B2430] group-hover:text-[#D4AF37] transition-colors">
-                  {cap.icon}
-                </div>
-                <h3 className="text-2xl font-stylish font-bold text-[#1B2430] mb-4">{cap.title}</h3>
-                <p className="text-[#4B5563] leading-relaxed">{cap.desc}</p>
+                <Glass3DCard className="h-full">
+                  <div className="p-10 flex flex-col h-full">
+                    <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#D4AF37] mb-8 group-hover:scale-110 transition-transform duration-500">
+                      {cap.icon}
+                    </div>
+                    <h3 className="text-2xl font-stylish font-bold text-white mb-4 group-hover:text-[#D4AF37] transition-colors duration-500">{cap.title}</h3>
+                    <p className="text-white/60 leading-relaxed font-light mt-auto">{cap.desc}</p>
+                  </div>
+                </Glass3DCard>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 3. Factory Gallery */}
-      <section className="py-24 bg-white">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 mb-6">
-              <span className="text-[#1B2430] font-bold tracking-[0.2em] uppercase text-[11px]">Inside Our Facilities</span>
-              <div className="h-[1px] w-12 bg-[#D4AF37]"></div>
+      {/* 3. Factory Gallery (Parallax Showcase) */}
+      <section className="py-32 bg-[#0A101D] relative overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
+          <div className="mb-24 flex flex-col md:flex-row justify-between items-end gap-8">
+            <div>
+              <div className="inline-flex items-center gap-4 mb-6">
+                <span className="text-[#D4AF37] font-bold tracking-[0.3em] uppercase text-[11px]">Inside Our Facilities</span>
+                <div className="h-[1px] w-12 bg-[#D4AF37]"></div>
+              </div>
+              <h2 className="text-5xl md:text-7xl font-stylish font-bold text-white">Factory <span className="text-[#D4AF37] italic">Gallery</span></h2>
             </div>
-            <h2 className="text-4xl md:text-5xl font-stylish font-bold text-[#1B2430]">Factory Gallery</h2>
+            <p className="text-white/50 max-w-md font-light text-right">Step inside our world-class manufacturing facilities where precision meets scale.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {gallery.map((img, i) => (
               <motion.div 
                 key={i}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ delay: i * 0.1 }}
-                className="relative group rounded-xl overflow-hidden aspect-[4/3] bg-gray-100"
               >
-                <img src={img.img} alt={img.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1B2430]/90 via-[#1B2430]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <h4 className="text-white font-semibold text-lg">{img.title}</h4>
-                </div>
+                <Glass3DCard tiltIntensity={5} className="aspect-[4/3]">
+                  <img src={img.img} alt={img.title} className="absolute inset-0 w-full h-[120%] object-cover -translate-y-[10%] group-hover:translate-y-0 transition-transform duration-1000 grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A101D] via-[#0A101D]/20 to-transparent flex items-end p-8">
+                    <h4 className="text-white font-bold text-xl font-stylish translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">{img.title}</h4>
+                  </div>
+                </Glass3DCard>
               </motion.div>
             ))}
           </div>
@@ -167,32 +189,33 @@ export default function ManufacturingContent() {
       </section>
 
       {/* 4. OEM Industries Served */}
-      <section className="py-24 bg-[#1B2430]">
+      <section className="py-32 bg-[#05080f]">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 mb-6">
-              <span className="text-white font-bold tracking-[0.2em] uppercase text-[11px]">Global Reach</span>
+          <div className="text-center mb-24">
+            <div className="inline-flex items-center gap-4 mb-6">
+              <span className="text-[#D4AF37] font-bold tracking-[0.3em] uppercase text-[11px]">Global Reach</span>
               <div className="h-[1px] w-12 bg-[#D4AF37]"></div>
             </div>
-            <h2 className="text-4xl md:text-5xl font-stylish font-bold text-white mb-6">OEM Industries Served</h2>
-            <p className="text-lg text-white/70 max-w-2xl mx-auto">Providing specialized manufacturing solutions tailored to the strict demands of diverse sectors.</p>
+            <h2 className="text-5xl md:text-7xl font-stylish font-bold text-white mb-6">OEM Industries Served</h2>
+            <p className="text-xl text-white/60 max-w-2xl mx-auto font-light">Providing specialized manufacturing solutions tailored to the strict demands of diverse sectors.</p>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((ind, i) => (
               <motion.div 
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ delay: i * 0.1 }}
-                className="group relative rounded-2xl overflow-hidden h-80"
               >
-                <img src={ind.img} alt={ind.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1B2430] via-[#1B2430]/60 to-transparent flex flex-col justify-end p-8">
-                  <h3 className="text-2xl font-stylish font-bold text-white mb-2">{ind.title}</h3>
-                  <p className="text-white/80 text-sm transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">{ind.desc}</p>
-                </div>
+                <Glass3DCard tiltIntensity={8} className="h-96">
+                  <img src={ind.img} alt={ind.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-60 group-hover:opacity-100" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A101D] via-[#0A101D]/60 to-transparent flex flex-col justify-end p-10 border border-white/10 rounded-2xl">
+                    <h3 className="text-3xl font-stylish font-bold text-white mb-3 group-hover:text-[#D4AF37] transition-colors">{ind.title}</h3>
+                    <p className="text-white/70 font-light transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">{ind.desc}</p>
+                  </div>
+                </Glass3DCard>
               </motion.div>
             ))}
           </div>

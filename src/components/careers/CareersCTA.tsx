@@ -1,123 +1,58 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
-const ArrowIcon = () => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    width="20" 
-    height="20" 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round"
-    className="ml-2 group-hover:translate-x-1 transition-transform duration-300"
-  >
-    <line x1="5" y1="12" x2="19" y2="12"></line>
-    <polyline points="12 5 19 12 12 19"></polyline>
-  </svg>
-);
-
-
-
-const MailIcon = () => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    width="20" 
-    height="20" 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round"
-    className="mr-2"
-  >
-    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-    <polyline points="22,6 12,13 2,6"></polyline>
-  </svg>
-);
+import { ArrowRight, Mail } from 'lucide-react';
+import Glass3DCard from '../ui/Glass3DCard';
 
 export default function CareersCTA() {
   return (
-    <section className="relative bg-[#081C3A] text-white py-24 overflow-hidden">
-      {/* Animated Divider */}
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#FF6B00]/50 to-transparent opacity-50">
-        <motion.div
-          animate={{ x: ['-100%', '100%'] }}
-          transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
-          className="w-1/4 h-full bg-[#D4AF37]"
-        />
-      </div>
-
-      {/* Background Image with Dark Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop" 
-          alt="Modern Manufacturing Facility" 
-          className="w-full h-full object-cover opacity-30"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#081C3A] via-[#081C3A]/80 to-[#081C3A]/50"></div>
-      </div>
+    <section className="relative py-32 overflow-hidden bg-[#05080f]">
+      {/* Background Gradients */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#D4AF37]/10 rounded-full blur-[150px] pointer-events-none"></div>
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-          
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-block border border-[#D4AF37]/30 rounded-full px-6 py-2 bg-[#D4AF37]/10 mb-8 backdrop-blur-sm"
-          >
-            <span className="text-[#D4AF37] font-bold tracking-widest uppercase text-xs">
-              Interested in joining us?
-            </span>
-          </motion.div>
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <Glass3DCard tiltIntensity={5} glowColor="rgba(212, 175, 55, 0.2)">
+            <div className="relative overflow-hidden rounded-3xl group">
+              <div className="absolute inset-0 z-0">
+                <img 
+                  src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop" 
+                  alt="Modern Manufacturing Facility" 
+                  className="w-full h-[120%] -translate-y-10 object-cover opacity-20 group-hover:opacity-40 transition-opacity duration-1000 grayscale group-hover:grayscale-0"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A101D] via-[#0A101D]/80 to-[#0A101D]/50"></div>
+              </div>
 
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-bold font-heading leading-tight mb-6 text-white"
-          >
-            Ready to Build Your Career with Shakshi Group?
-          </motion.h2>
+              <div className="relative z-10 p-12 md:p-24 flex flex-col items-center text-center max-w-4xl mx-auto">
+                <div className="inline-flex items-center gap-4 mb-8">
+                  <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#D4AF37]"></div>
+                  <span className="text-[#D4AF37] font-bold tracking-[0.3em] uppercase text-[11px]">Interested in joining us?</span>
+                  <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#D4AF37]"></div>
+                </div>
 
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-lg text-gray-300 leading-relaxed mb-12"
-          >
-            Join our growing team and become part of an innovative OEM manufacturing company where talent, learning, and excellence drive success.
-          </motion.p>
+                <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold font-stylish leading-[1.1] mb-8 text-white tracking-tight">
+                  Ready to Build Your Career with <span className="text-[#D4AF37] italic font-light">Shakshi Group?</span>
+                </h2>
 
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto"
-          >
-            <Link to="/contact" state={{ fromCareers: true }} className="w-full sm:w-auto">
-              <motion.button 
-                whileHover={{ scale: 1.05, boxShadow: "0px 10px 30px rgba(255, 107, 0, 0.4)" }}
-                whileTap={{ scale: 0.95 }}
-                className="group flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-[#D4AF37] text-white rounded-[14px] font-bold tracking-wide transition-colors hover:bg-[#B08D2D]"
-              >
-                <MailIcon />
-                View Contact Page
-                <ArrowIcon />
-              </motion.button>
-            </Link>
+                <p className="text-lg text-white/60 leading-relaxed mb-12 font-light">
+                  Join our growing team and become part of an innovative OEM manufacturing company where talent, learning, and excellence drive success.
+                </p>
 
-
-          </motion.div>
-
-        </div>
+                <Link to="/contact" state={{ fromCareers: true }} className="inline-block group/btn relative">
+                  <div className="absolute inset-0 bg-[#D4AF37] blur-md opacity-30 group-hover/btn:opacity-60 transition-opacity duration-300"></div>
+                  <button className="relative bg-[#0A101D] border border-[#D4AF37]/50 text-white px-10 py-5 rounded-sm font-bold tracking-widest text-sm hover:bg-[#D4AF37] hover:text-[#0A101D] transition-all duration-300 inline-flex items-center gap-4">
+                    <Mail size={18} />
+                    VIEW CONTACT PAGE
+                    <ArrowRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </Glass3DCard>
+        </motion.div>
       </div>
     </section>
   );

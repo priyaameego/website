@@ -6,7 +6,7 @@ import CareersExtended from '../components/careers/CareersExtended';
 
 export default function Careers() {
   return (
-    <div className="bg-[#FFFFFF] overflow-hidden">
+    <div className="bg-[#0A101D] overflow-hidden">
       <PageHero 
         title="Careers at Shakshi Group" 
         subtitle="Join the leading force in OEM manufacturing. We are building the future of industrial production, and we want you to be a part of it."
@@ -15,8 +15,8 @@ export default function Careers() {
       <WhyJoin />
       <CompanyStats />
       
-      <CareersCTA />
       <CareersExtended />
+      <CareersCTA />
     </div>
   );
 }

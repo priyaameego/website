@@ -6,6 +6,7 @@ import fImg from '../../assets/f.jpeg';
 import sciImg from '../../assets/sci.jpeg';
 import bedImg from '../../assets/bed.jpeg';
 import eImg from '../../assets/e.jpeg';
+import Glass3DCard from '../ui/Glass3DCard';
 
 export default function CareersExtended() {
   const lifeCards = [
@@ -65,18 +66,20 @@ export default function CareersExtended() {
   ];
 
   return (
-    <div className="bg-[#FFFFFF] overflow-hidden">
+    <div className="bg-[#0A101D] overflow-hidden">
       
       {/* 1. LIFE AT SHAKSHI GROUP */}
-      <section className="py-24 md:py-32 bg-[#FAFAF8]">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 text-center">
-          <div className="inline-flex items-center justify-center gap-2 mb-6">
-            <div className="h-[1px] w-8 bg-[#D4AF37]"></div>
-            <span className="text-[#1B2430] font-bold tracking-[0.2em] uppercase text-[11px]">Our Culture</span>
-            <div className="h-[1px] w-8 bg-[#D4AF37]"></div>
+      <section className="py-32 relative">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#D4AF37]/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 text-center relative z-10">
+          <div className="inline-flex items-center gap-4 mb-8">
+            <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#D4AF37]"></div>
+            <span className="text-[#D4AF37] font-bold tracking-[0.3em] uppercase text-[11px]">OUR CULTURE</span>
+            <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#D4AF37]"></div>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#1B2430] font-stylish font-bold mb-16 leading-tight">
-            Life at Shakshi Group
+          <h2 className="text-5xl md:text-6xl font-stylish font-bold mb-16 leading-tight text-white">
+            Life at <span className="italic font-light text-[#D4AF37]">Shakshi Group</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
@@ -85,18 +88,21 @@ export default function CareersExtended() {
                 key={idx}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: idx * 0.1 }}
-                className="premium-card group p-0 overflow-hidden flex flex-col"
+                className="h-full"
               >
-                <div className="h-56 overflow-hidden relative">
-                  <img src={card.image} alt={card.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
-                </div>
-                <div className="p-8 flex flex-col flex-grow bg-white">
-                  <h3 className="text-[#1B2430] text-xl font-bold font-stylish mb-4">{card.title}</h3>
-                  <p className="text-[#667085] text-[15px] leading-relaxed">{card.desc}</p>
-                </div>
+                <Glass3DCard tiltIntensity={5} glowColor="rgba(212, 175, 55, 0.2)" className="h-full flex flex-col">
+                  <div className="h-56 overflow-hidden relative rounded-t-3xl group">
+                    <img src={card.image} alt={card.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+                    <div className="absolute inset-0 bg-[#0A101D]/60 group-hover:bg-[#0A101D]/20 transition-colors duration-500"></div>
+                  </div>
+                  <div className="p-8 flex flex-col flex-grow relative">
+                    <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent"></div>
+                    <h3 className="text-white text-xl font-bold font-stylish mb-4 tracking-wide">{card.title}</h3>
+                    <p className="text-white/60 text-[15px] leading-relaxed font-light">{card.desc}</p>
+                  </div>
+                </Glass3DCard>
               </motion.div>
             ))}
           </div>
@@ -104,31 +110,33 @@ export default function CareersExtended() {
       </section>
 
       {/* 2. CAREER JOURNEY */}
-      <section className="py-24 md:py-32 bg-[#0B1626] text-white">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-stylish font-bold mb-6">Career Journey</h2>
-            <div className="h-[1px] w-16 bg-[#D4AF37] mx-auto"></div>
+      <section className="py-32 bg-[#05080f] text-white relative">
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/10 to-transparent"></div>
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
+          <div className="text-center mb-24">
+            <h2 className="text-5xl md:text-6xl font-stylish font-bold mb-6">
+              Career <span className="italic font-light text-[#D4AF37]">Journey</span>
+            </h2>
           </div>
 
-          <div className="relative flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12 lg:gap-4">
+          <div className="relative flex flex-col lg:flex-row justify-between items-center lg:items-start gap-16 lg:gap-4">
             {/* Horizontal Line for Desktop */}
-            <div className="hidden lg:block absolute top-[40px] left-[10%] right-[10%] h-[1px] bg-[rgba(212,175,55,0.3)]"></div>
+            <div className="hidden lg:block absolute top-[40px] left-[10%] right-[10%] h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent"></div>
             
             {journeySteps.map((step, idx) => (
               <motion.div 
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: idx * 0.15 }}
-                className="relative z-10 flex flex-col items-center text-center w-full lg:w-1/4"
+                className="relative z-10 flex flex-col items-center text-center w-full lg:w-1/4 group"
               >
-                <div className="w-20 h-20 rounded-full bg-[#08111E] border border-[rgba(212,175,55,0.4)] flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(212,175,55,0.1)]">
-                  <span className="text-[#D4AF37] font-bold text-lg">{idx + 1}</span>
+                <div className="w-20 h-20 rounded-full bg-[#0A101D] border border-white/10 flex items-center justify-center mb-8 group-hover:border-[#D4AF37] group-hover:shadow-[0_0_30px_rgba(212,175,55,0.2)] transition-all duration-500">
+                  <span className="text-[#D4AF37] font-bold text-xl group-hover:scale-110 transition-transform duration-300">{idx + 1}</span>
                 </div>
-                <span className="text-[#D4AF37] text-[11px] font-bold tracking-[0.2em] uppercase mb-2">{step.step}</span>
-                <h3 className="text-xl font-semibold text-[#E8EDF5]">{step.title}</h3>
+                <span className="text-[#D4AF37] text-[11px] font-bold tracking-[0.3em] uppercase mb-3">{step.step}</span>
+                <h3 className="text-xl font-bold font-stylish text-white tracking-wide group-hover:text-[#D4AF37] transition-colors duration-300">{step.title}</h3>
               </motion.div>
             ))}
           </div>
@@ -136,10 +144,10 @@ export default function CareersExtended() {
       </section>
 
       {/* 3. WHY WORK WITH SHAKSHI GROUP */}
-      <section className="py-24 md:py-32 bg-[#FFFFFF]">
+      <section className="py-32 relative">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 text-center">
-          <h2 className="text-4xl md:text-5xl font-stylish font-bold text-[#1B2430] mb-16">
-            Why Work With Shakshi Group
+          <h2 className="text-5xl md:text-6xl font-stylish font-bold text-white mb-20">
+            Why Work With <span className="text-[#D4AF37] italic font-light">Shakshi Group</span>
           </h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -148,14 +156,20 @@ export default function CareersExtended() {
                 key={idx}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: idx * 0.1 }}
-                className="p-8 rounded-[24px] border border-[#E5E7EB] bg-[#FAFAF8] flex items-center gap-6 hover:shadow-[0_10px_30px_rgb(0,0,0,0.04)] transition-shadow duration-500"
+                className="h-full"
               >
-                <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-sm flex-shrink-0">
-                  {item.icon}
-                </div>
-                <h3 className="text-[#1B2430] font-semibold text-[17px] text-left">{item.title}</h3>
+                <Glass3DCard tiltIntensity={10} glowColor="rgba(212, 175, 55, 0.1)" className="h-full">
+                  <div className="p-8 flex items-center gap-6 group h-full">
+                    <div className="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shadow-sm flex-shrink-0 group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] transition-all duration-500">
+                      <div className="group-hover:brightness-0 group-hover:scale-110 transition-all duration-500">
+                        {item.icon}
+                      </div>
+                    </div>
+                    <h3 className="text-white font-bold font-stylish text-[18px] text-left group-hover:text-[#D4AF37] transition-colors duration-300 tracking-wide">{item.title}</h3>
+                  </div>
+                </Glass3DCard>
               </motion.div>
             ))}
           </div>
@@ -163,33 +177,38 @@ export default function CareersExtended() {
       </section>
 
       {/* 4. CURRENT OPPORTUNITIES */}
-      <section className="py-24 md:py-32 bg-[#FAFAF8]">
+      <section className="py-32 bg-[#05080f] relative">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-stylish font-bold text-[#1B2430] mb-6">Current Opportunities</h2>
-            <div className="h-[1px] w-16 bg-[#C96A2D] mx-auto"></div>
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-stylish font-bold text-white mb-8">
+              Current <span className="italic font-light text-[#D4AF37]">Opportunities</span>
+            </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {opportunities.map((job, idx) => (
               <motion.div 
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: idx * 0.1 }}
-                className="premium-card flex flex-col justify-between"
+                className="h-full"
               >
-                <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <Briefcase size={20} className="text-[#D4AF37]" />
-                    <span className="text-[#667085] text-xs font-bold uppercase tracking-widest">Full Time</span>
+                <Glass3DCard tiltIntensity={5} glowColor="rgba(212, 175, 55, 0.2)" className="h-full">
+                  <div className="p-10 flex flex-col justify-between h-full group">
+                    <div>
+                      <div className="flex items-center gap-3 mb-6">
+                        <Briefcase size={20} className="text-[#D4AF37]" />
+                        <span className="text-white/50 text-xs font-bold uppercase tracking-[0.2em]">Full Time</span>
+                      </div>
+                      <h3 className="text-2xl font-bold font-stylish text-white mb-8 group-hover:text-[#D4AF37] transition-colors duration-300 tracking-wide">{job}</h3>
+                    </div>
+                    <Link to="/contact" className="inline-flex items-center text-white/70 font-bold text-[13px] uppercase tracking-[0.2em] group-hover:text-white transition-colors">
+                      Apply Now <ChevronRight size={18} className="ml-2 group-hover:translate-x-2 transition-transform duration-300 text-[#D4AF37]" />
+                    </Link>
                   </div>
-                  <h3 className="text-xl font-bold text-[#1B2430] mb-6">{job}</h3>
-                </div>
-                <Link to="/contact" className="inline-flex items-center text-[#C96A2D] font-semibold text-[14px] uppercase tracking-wider group-hover:text-[#A85825] transition-colors">
-                  Apply Now <ChevronRight size={18} className="ml-1" />
-                </Link>
+                </Glass3DCard>
               </motion.div>
             ))}
           </div>
@@ -197,64 +216,50 @@ export default function CareersExtended() {
       </section>
 
       {/* 5. LEARNING & DEVELOPMENT */}
-      <section className="py-24 md:py-32 bg-[#FFFFFF]">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center gap-16">
+      <section className="py-32 relative">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="w-full lg:w-1/2 relative"
           >
-            <div className="absolute inset-0 bg-[#FAFAF8] shadow-sm rounded-[24px] -z-10 translate-x-4 translate-y-4"></div>
-            <img src={sciImg} alt="Learning & Development" className="w-full h-[500px] object-cover rounded-[24px] shadow-lg grayscale" />
+            <Glass3DCard tiltIntensity={5} glowColor="rgba(212, 175, 55, 0.2)">
+              <div className="p-2">
+                <div className="relative rounded-[20px] overflow-hidden group">
+                  <div className="absolute inset-0 bg-[#D4AF37]/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  <img src={sciImg} alt="Learning & Development" className="w-full h-[600px] object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" />
+                </div>
+              </div>
+            </Glass3DCard>
           </motion.div>
           
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="w-full lg:w-1/2"
           >
-            <h2 className="text-4xl md:text-5xl font-stylish font-bold text-[#1B2430] mb-8">
-              Learning & Development
+            <div className="inline-flex items-center gap-4 mb-8">
+              <span className="text-[#D4AF37] font-bold tracking-[0.3em] uppercase text-[11px]">GROWTH</span>
+              <div className="h-[1px] w-12 bg-gradient-to-r from-[#D4AF37] to-transparent"></div>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-stylish font-bold text-white mb-10 leading-[1.1]">
+              Learning & <span className="italic font-light text-[#D4AF37]">Development</span>
             </h2>
-            <p className="text-lg text-[#667085] mb-10 leading-relaxed">
+            <p className="text-lg text-white/60 mb-12 leading-relaxed font-light">
               We believe in the continuous growth of our employees. Our development programs ensure you stay ahead in the manufacturing industry.
             </p>
-            <ul className="space-y-5">
+            <ul className="space-y-6">
               {learning.map((item, idx) => (
-                <li key={idx} className="flex items-center gap-4">
-                  <CheckCircle2 size={22} className="text-[#D4AF37]" strokeWidth={2} />
-                  <span className="text-[#1B2430] font-semibold text-[16px]">{item}</span>
+                <li key={idx} className="flex items-center gap-5 group">
+                  <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] transition-all duration-300">
+                    <CheckCircle2 size={20} className="text-[#D4AF37] group-hover:text-[#0A101D] transition-colors duration-300" strokeWidth={2} />
+                  </div>
+                  <span className="text-white font-bold tracking-wide text-[16px] group-hover:text-[#D4AF37] transition-colors duration-300">{item}</span>
                 </li>
               ))}
             </ul>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* 6. FINAL CTA */}
-      <section className="py-24 md:py-32 bg-gradient-to-br from-[#0F2038] to-[#08111E] text-center">
-        <div className="max-w-[800px] mx-auto px-6 md:px-12">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-stylish font-bold text-white mb-8 leading-tight">
-              Build the Future of Comfort with Shakshi Group
-            </h2>
-            <p className="text-lg text-[#C7D0D9] mb-12 leading-relaxed">
-              Become part of a team committed to manufacturing excellence, innovation, quality, and customer satisfaction. Help us create premium foam and mattress solutions trusted by industries and households across India.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link to="/contact" className="btn-primary w-full sm:w-auto">
-                Apply Now
-              </Link>
-              <Link to="/contact" className="btn-secondary text-white border-white/30 hover:border-white hover:text-white w-full sm:w-auto">
-                Contact HR
-              </Link>
-            </div>
           </motion.div>
         </div>
       </section>
