@@ -62,13 +62,15 @@ export default function CompanyOverview() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {features.map((feat, idx) => (
                 <div key={idx} className="h-full min-h-[240px]">
-                  <Glass3DCard tiltIntensity={10} className="p-8 group h-full flex flex-col justify-start">
-                    <div className="w-14 h-14 bg-gradient-to-br from-white/10 to-transparent border border-white/20 text-white rounded-[16px] flex shrink-0 items-center justify-center mb-6 group-hover:from-[#D4AF37] group-hover:to-[#b38f29] group-hover:text-[#0A101D] group-hover:border-[#D4AF37] transition-all duration-500 shadow-[inset_0_2px_10px_rgba(255,255,255,0.1)] group-hover:shadow-[inset_0_2px_10px_rgba(255,255,255,0.5)]">
-                      {feat.icon}
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-lg font-bold font-stylish text-white mb-3 group-hover:text-[#D4AF37] transition-colors leading-tight">{feat.title}</h4>
-                      <p className="text-white/60 text-sm font-light leading-relaxed">{feat.desc}</p>
+                  <Glass3DCard tiltIntensity={10} className="group h-full">
+                    <div className="p-8 h-full flex flex-col justify-start">
+                      <div className="w-14 h-14 bg-gradient-to-br from-white/10 to-transparent border border-white/20 text-white rounded-[16px] flex shrink-0 items-center justify-center mb-6 group-hover:from-[#D4AF37] group-hover:to-[#b38f29] group-hover:text-[#0A101D] group-hover:border-[#D4AF37] transition-all duration-500 shadow-[inset_0_2px_10px_rgba(255,255,255,0.1)] group-hover:shadow-[inset_0_2px_10px_rgba(255,255,255,0.5)]">
+                        {feat.icon}
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-lg font-bold font-stylish text-white mb-3 group-hover:text-[#D4AF37] transition-colors leading-tight">{feat.title}</h4>
+                        <p className="text-white/60 text-sm font-light leading-relaxed">{feat.desc}</p>
+                      </div>
                     </div>
                   </Glass3DCard>
                 </div>
