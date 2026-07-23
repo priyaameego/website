@@ -5,17 +5,17 @@ export default function AboutLeadership() {
     {
       name: 'Ramesh Gupta',
       role: 'Chief Executive Officer',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop'
+      image: 'https://ui-avatars.com/api/?name=Ramesh+Gupta&background=1B2430&color=D4AF37&size=800&font-size=0.3'
     },
     {
       name: 'Priya Sharma',
       role: 'Chief Operations Officer',
-      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop'
+      image: 'https://ui-avatars.com/api/?name=Priya+Sharma&background=1B2430&color=D4AF37&size=800&font-size=0.3'
     },
     {
       name: 'Vikram Singh',
       role: 'Head of R&D',
-      image: 'https://images.unsplash.com/photo-1552058544-f2b08422138a?q=80&w=800&auto=format&fit=crop'
+      image: 'https://ui-avatars.com/api/?name=Vikram+Singh&background=1B2430&color=D4AF37&size=800&font-size=0.3'
     }
   ];
 
