@@ -4,6 +4,7 @@ import { Recycle, HeartHandshake, ArrowRight, TreePine, Leaf, Sun, Droplets } fr
 import PageLayout from '../../components/PageLayout';
 import PageHero from '../../components/PageHero';
 import Glass3DCard from '../../components/ui/Glass3DCard';
+import bioImg from '../../assets/bio.png';
 
 export default function Sustainability() {
   const initiatives = [
@@ -237,7 +238,7 @@ export default function Sustainability() {
               >
                 <Glass3DCard tiltIntensity={5} glowColor="rgba(74, 222, 128, 0.15)">
                   <div className="relative w-full h-[600px]">
-                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2070&auto=format&fit=crop" alt="R&D" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70" />
+                    <img src={bioImg} alt="R&D" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0A101D] via-[#0A101D]/60 to-transparent flex flex-col justify-end p-12 border border-white/10 rounded-2xl">
                       <span className="text-[#4ade80] font-bold tracking-[0.3em] uppercase text-[11px] mb-4">Research & Development</span>
                       <h4 className="text-4xl font-stylish font-bold text-white mb-6">Biodegradable Foams</h4>
