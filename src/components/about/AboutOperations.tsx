@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import rdImg from '../../assets/e.jpeg';
+import pImg from '../../assets/p.png';
 
 export default function AboutOperations() {
   return (
@@ -75,7 +75,7 @@ export default function AboutOperations() {
               viewport={{ once: true }}
               className="order-2 lg:order-1 relative group rounded-2xl overflow-hidden shadow-premium h-full min-h-[400px]"
             >
-              <img src={rdImg} alt="R&D Lab" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+              <img src={pImg} alt="R&D Lab" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, x: 40 }}
