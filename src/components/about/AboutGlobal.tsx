@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Globe, Leaf, CheckCircle, HeartHandshake } from 'lucide-react';
 import golImg from '../../assets/gol.png';
-import fImg from '../../assets/f.jpeg';
+import susImg from '../../assets/sus.png';
 
 export default function AboutGlobal() {
   return (
@@ -68,7 +68,7 @@ export default function AboutGlobal() {
             >
               <div className="absolute inset-0 bg-white rounded-3xl shadow-sm -z-10 transition-transform duration-500 translate-x-4 translate-y-4 group-hover:translate-x-6 group-hover:translate-y-6"></div>
               <img 
-                src={fImg} 
+                src={susImg} 
                 alt="Sustainability" 
                 className="relative z-10 w-full h-[600px] object-cover rounded-3xl shadow-premium hover:scale-105 transition-transform duration-1000"
               />
