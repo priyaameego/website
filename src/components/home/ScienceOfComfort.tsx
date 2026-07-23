@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Glass3DCard from '../ui/Glass3DCard';
+import reImg from '../../assets/re.png';
 
 export default function ScienceOfComfort() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -62,7 +63,7 @@ export default function ScienceOfComfort() {
               <div className="w-full h-full rounded-2xl overflow-hidden relative">
                 <motion.img 
                   style={{ y: imageY, scale: 1.1 }}
-                  src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=2070&auto=format&fit=crop" 
+                  src={reImg} 
                   alt="Polyurethane foam production and inspection" 
                   className="w-full h-full object-cover grayscale opacity-80 mix-blend-luminosity hover:grayscale-0 hover:opacity-100 transition-all duration-1000"
                 />
