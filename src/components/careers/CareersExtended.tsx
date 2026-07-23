@@ -13,22 +13,22 @@ export default function CareersExtended() {
     {
       title: 'Manufacturing Excellence',
       desc: 'Work with advanced foam and mattress manufacturing technologies in a modern production environment.',
-      image: fImg
+      image: "https://images.unsplash.com/photo-1558222218-b7b54eede3f3?q=80&w=2000&auto=format&fit=crop"
     },
     {
       title: 'Research & Innovation',
       desc: 'Collaborate with engineers and product specialists to develop innovative foam and comfort solutions.',
-      image: sciImg
+      image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2000&auto=format&fit=crop"
     },
     {
       title: 'Sales & Distribution',
       desc: 'Support a growing dealer and distributor network delivering premium products across India.',
-      image: bedImg
+      image: "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2000&auto=format&fit=crop"
     },
     {
       title: 'Corporate Team',
       desc: 'Join professionals in operations, marketing, finance, customer support, and business development.',
-      image: eImg
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2000&auto=format&fit=crop"
     }
   ];
 
