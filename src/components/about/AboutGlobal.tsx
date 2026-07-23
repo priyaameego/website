@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Globe, Leaf, CheckCircle, HeartHandshake } from 'lucide-react';
-import wImg from '../../assets/w.jpeg';
+import golImg from '../../assets/gol.png';
 import fImg from '../../assets/f.jpeg';
 
 export default function AboutGlobal() {
@@ -23,7 +23,7 @@ export default function AboutGlobal() {
             >
               <div className="absolute inset-0 bg-[#F7F8FA] rounded-2xl shadow-sm -z-10 transition-transform duration-500 translate-x-4 translate-y-4 group-hover:translate-x-6 group-hover:translate-y-6"></div>
               <img 
-                src={wImg} 
+                src={golImg} 
                 alt="Distribution Network" 
                 className="w-full h-[550px] object-cover rounded-2xl shadow-premium hover:scale-105 transition-transform duration-1000 relative z-10"
               />
