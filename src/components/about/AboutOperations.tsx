@@ -59,7 +59,7 @@ export default function AboutOperations() {
               viewport={{ once: true }}
               className="relative group rounded-2xl overflow-hidden shadow-premium h-[500px]"
             >
-              <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=1200&auto=format&fit=crop" alt="OEM Manufacturing" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+              <img src={pImg} alt="OEM Manufacturing" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
             </motion.div>
           </div>
         </div>
