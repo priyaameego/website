@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import chaImg from '../../assets/cha.png';
 
 export default function AboutIntro() {
   return (
@@ -78,7 +79,7 @@ export default function AboutIntro() {
             >
               <div className="absolute inset-0 bg-white rounded-3xl shadow-sm -z-10 transition-transform duration-500 translate-x-4 translate-y-4 group-hover:translate-x-6 group-hover:translate-y-6"></div>
               <img 
-                src="https://images.unsplash.com/photo-1558222218-b7b54eede3f3?q=80&w=2000&auto=format&fit=crop" 
+                src={chaImg} 
                 alt="Precision Engineering" 
                 className="relative z-10 w-full h-[600px] object-cover rounded-3xl shadow-premium"
               />
