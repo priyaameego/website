@@ -77,11 +77,11 @@ export default function InnovationRND() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 + (idx * 0.1) }}
-                  className="h-[180px]"
+                  className="h-full min-h-[220px]"
                 >
                   <Glass3DCard tiltIntensity={10} className="p-8 group h-full flex flex-col justify-center">
                     <h4 className="text-xl font-bold font-stylish text-white mb-3 group-hover:text-[#D4AF37] transition-colors">{item.title}</h4>
-                    <p className="text-white/50 text-sm font-light leading-relaxed">{item.desc}</p>
+                    <p className="text-white/50 text-sm font-light leading-relaxed flex-1">{item.desc}</p>
                   </Glass3DCard>
                 </motion.div>
               ))}

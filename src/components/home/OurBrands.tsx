@@ -74,7 +74,7 @@ export default function OurBrands() {
       name: 'SHAKSHI', 
       type: 'Industrial Foam', 
       desc: 'Engineered for resilience and precision. Shakshi delivers advanced foam solutions tailored for automotive, packaging, and high-performance industrial applications.',
-      img: 'https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=2070&auto=format&fit=crop', 
+      img: 'https://images.unsplash.com/photo-1581092335397-9583eb92d232?q=80&w=2070&auto=format&fit=crop', 
       path: '/brands/shakshi' 
     },
     { 
