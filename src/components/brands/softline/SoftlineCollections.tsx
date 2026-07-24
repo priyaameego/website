@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import orthoImg from '../../../assets/ortho.png';
 import fImg from '../../../assets/f.png';
-import foaImg from '../../../assets/foa.png';
 import health1Img from '../../../assets/health1.png';
 
 export default function SoftlineCollections() {
