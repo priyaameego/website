@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { Recycle, HeartHandshake, ArrowRight, TreePine, Leaf, Sun, Droplets } from 'lucide-react';
+import { Recycle, HeartHandshake, ArrowRight, Leaf, Sun, Droplets } from 'lucide-react';
 import PageLayout from '../../components/PageLayout';
 import PageHero from '../../components/PageHero';
 import Glass3DCard from '../../components/ui/Glass3DCard';
