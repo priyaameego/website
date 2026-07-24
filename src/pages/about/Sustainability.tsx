@@ -10,18 +10,18 @@ export default function Sustainability() {
   const initiatives = [
     {
       icon: <Recycle size={32} />,
-      title: "Circular Economy",
-      desc: "We reclaim manufacturing byproducts and integrate recycled materials to systematically reduce our environmental footprint."
+      title: "Recycling",
+      desc: "We recycle foam manufacturing waste and use recycled materials wherever possible to minimize environmental impact."
     },
     {
-      icon: <TreePine size={32} />,
-      title: "Clean Production",
-      desc: "Our facilities are optimized for maximum energy efficiency, drastically lowering industrial emissions year over year."
+      icon: <Leaf size={32} />,
+      title: "Green Manufacturing",
+      desc: "Our foam production processes are optimized for energy efficiency and minimal emissions."
     },
     {
       icon: <HeartHandshake size={32} />,
-      title: "Social Impact",
-      desc: "We actively invest in local communities, driving positive social change through strategic employment and development programs."
+      title: "Community",
+      desc: "We engage with local communities to create positive social impact through employment and development initiatives."
     }
   ];
 
