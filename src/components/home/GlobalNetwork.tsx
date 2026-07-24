@@ -45,7 +45,7 @@ export default function GlobalNetwork() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="relative w-full h-[500px] md:h-[600px] overflow-hidden"
+            className="relative w-full h-[300px] md:h-[400px] overflow-hidden"
           >
             <img 
               src="https://images.unsplash.com/photo-1586528116311-ad8ed7c50800?q=80&w=2070&auto=format&fit=crop" 

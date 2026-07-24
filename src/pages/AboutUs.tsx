@@ -6,9 +6,11 @@ import AboutGlobal from '../components/about/AboutGlobal';
 import AboutBrands from '../components/about/AboutBrands';
 import PremiumCTA from '../components/home/PremiumCTA';
 
+
 export default function AboutUs() {
   return (
     <div className="bg-[#FFFFFF] overflow-hidden">
+
       <AboutIntro />
       <AboutCore />
       <AboutLeadership />

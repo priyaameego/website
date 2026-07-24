@@ -60,7 +60,7 @@ export default function ManufacturingExcellence() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="w-full lg:w-1/2 relative h-[500px] md:h-[600px]"
+          className="w-full lg:w-1/2 relative h-[300px] md:h-[400px]"
         >
           <Glass3DCard tiltIntensity={5} className="w-full h-full p-2 group">
             <div className="relative w-full h-full overflow-hidden rounded-[20px]">

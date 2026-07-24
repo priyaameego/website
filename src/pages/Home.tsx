@@ -9,7 +9,7 @@ import InnovationRND from '../components/home/InnovationRND';
 import OurBrands from '../components/home/OurBrands';
 import IndustryApplications from '../components/home/IndustryApplications';
 import QualitySustainability from '../components/home/QualitySustainability';
-import ResourcesMedia from '../components/home/ResourcesMedia';
+
 
 import TrustedDealerNetwork from '../components/home/TrustedDealerNetwork';
 import WhyPartnerWithUs from '../components/home/WhyPartnerWithUs';
@@ -32,7 +32,7 @@ export default function Home() {
       <OurBrands />
       <IndustryApplications />
       <QualitySustainability />
-      <ResourcesMedia />
+
       
       {/* New Premium Sections */}
       <TrustedDealerNetwork />

@@ -53,7 +53,7 @@ export default function QualitySustainability() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative h-[480px] md:h-[520px]"
+            className="relative h-auto min-h-[550px]"
           >
             <Glass3DCard tiltIntensity={5} className="h-full w-full p-2 group">
               <div className="w-full h-full relative overflow-hidden rounded-[20px] bg-[#0A101D]/80 backdrop-blur-md p-10 md:p-14 border border-white/10 flex flex-col justify-center">

@@ -24,7 +24,7 @@ function BrandRow({ brand, idx }: { brand: any, idx: number }) {
       {/* Image Side with Parallax & Glass3DCard */}
       <motion.div 
         style={{ y: imgY }}
-        className="w-full lg:w-[55%] relative z-10 h-[400px] md:h-[550px]"
+        className="w-full lg:w-[55%] relative z-10 h-[300px] md:h-[400px]"
       >
         <Glass3DCard tiltIntensity={5} className="w-full h-full group p-2">
           <div className="w-full h-full relative overflow-hidden rounded-[20px]">
