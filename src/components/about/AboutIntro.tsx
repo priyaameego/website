@@ -81,7 +81,7 @@ export default function AboutIntro() {
               <img 
                 src={chaImg} 
                 alt="Precision Engineering" 
-                className="relative z-10 w-full h-[600px] object-cover rounded-3xl shadow-premium"
+                className="relative z-10 w-full h-[400px] object-cover rounded-3xl shadow-premium"
               />
             </motion.div>
           </div>

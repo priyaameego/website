@@ -70,7 +70,7 @@ export default function AboutGlobal() {
               <img 
                 src={susImg} 
                 alt="Sustainability" 
-                className="relative z-10 w-full h-[600px] object-cover rounded-3xl shadow-premium hover:scale-105 transition-transform duration-1000"
+                className="relative z-10 w-full h-[400px] object-cover rounded-3xl shadow-premium hover:scale-105 transition-transform duration-1000"
               />
               <div className="absolute -bottom-8 -right-8 bg-white p-8 rounded-2xl z-20 shadow-xl border border-[#E7EBF0] hidden md:block group-hover:-translate-y-2 transition-transform duration-500">
                 <Leaf size={48} className="text-[#1B2430] mb-4" strokeWidth={1.5} />

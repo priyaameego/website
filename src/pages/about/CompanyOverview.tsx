@@ -100,7 +100,7 @@ export default function CompanyOverview() {
             >
               <motion.div
                 style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-                className="relative w-full h-[600px] md:h-[700px] rounded-3xl overflow-hidden group"
+                className="relative w-full h-[300px] md:h-[400px] rounded-3xl overflow-hidden group"
               >
                 {/* Image Parallax (moves opposite to container scroll) */}
                 <motion.img 

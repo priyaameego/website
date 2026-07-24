@@ -2,8 +2,9 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import orthoImg from '../../../assets/ortho.png';
-import maImg from '../../../assets/matter.png';
+import fImg from '../../../assets/f.png';
 import foaImg from '../../../assets/foa.png';
+import health1Img from '../../../assets/health1.png';
 
 export default function SoftlineCollections() {
   const collections = [
@@ -28,7 +29,7 @@ export default function SoftlineCollections() {
         { value: '100+', label: 'CLINICS' },
         { value: 'TRUSTED', label: 'BY DOCTORS' }
       ],
-      image: maImg,
+      image: fImg,
       align: 'right'
     },
     {
@@ -40,7 +41,7 @@ export default function SoftlineCollections() {
         { value: 'ANTI', label: 'BACTERIAL' },
         { value: 'HIGH', label: 'DENSITY' }
       ],
-      image: foaImg,
+      image: health1Img,
       align: 'left'
     },
     {
@@ -120,7 +121,7 @@ export default function SoftlineCollections() {
                 <img 
                   src={collection.image} 
                   alt={collection.title} 
-                  className="w-full h-[500px] md:h-[600px] object-cover transition-transform duration-1000 group-hover:scale-105"
+                  className="w-full h-[300px] md:h-[400px] object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
               </div>
             </motion.div>

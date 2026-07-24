@@ -102,7 +102,7 @@ export default function Sustainability() {
             className="w-full lg:w-1/2 relative group"
           >
             <Glass3DCard tiltIntensity={5} glowColor="rgba(74, 222, 128, 0.15)">
-              <div className="relative w-full h-[600px]">
+              <div className="relative w-full h-[400px]">
                 <img 
                   src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=2072&auto=format&fit=crop" 
                   alt="Eco-Manufacturing Facility" 
@@ -237,7 +237,7 @@ export default function Sustainability() {
                 transition={{ duration: 0.8 }}
               >
                 <Glass3DCard tiltIntensity={5} glowColor="rgba(74, 222, 128, 0.15)">
-                  <div className="relative w-full h-[600px]">
+                  <div className="relative w-full h-[400px]">
                     <img src={bioImg} alt="R&D" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0A101D] via-[#0A101D]/60 to-transparent flex flex-col justify-end p-12 border border-white/10 rounded-2xl">
                       <span className="text-[#4ade80] font-bold tracking-[0.3em] uppercase text-[11px] mb-4">Research & Development</span>

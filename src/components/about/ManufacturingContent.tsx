@@ -14,21 +14,15 @@ import {
   Truck
 } from 'lucide-react';
 
-// Gallery Images
-import foamImg from '../../assets/foa.png';
-import mattressImg from '../../assets/matter.png';
-import labImg from '../../assets/sci.jpeg';
-import cutImg from '../../assets/f.jpeg';
-import packImg from '../../assets/e.jpeg';
-import warehouseImg from '../../assets/w.jpeg';
+
 
 // Industry Images
-import hImg from '../../assets/h.png';
-import healthImg from '../../assets/he.png';
-import autoImg from '../../assets/h1.png';
+import hImg from '../../assets/hos.png';
+import healthImg from '../../assets/care.png';
+import autoImg from '../../assets/a.png';
 import furImg from '../../assets/fur.png';
-import acousImg from '../../assets/au.png';
-import customImg from '../../assets/ss2.png';
+import acousImg from '../../assets/sound.png';
+import customImg from '../../assets/c.png';
 
 export default function ManufacturingContent() {
   const processSteps = [
@@ -51,14 +45,7 @@ export default function ManufacturingContent() {
     { icon: <Package size={32} />, title: 'Bulk Production', desc: 'Scalable manufacturing capacity to meet high-volume demands without quality compromise.' }
   ];
 
-  const gallery = [
-    { img: foamImg, title: 'Foam Production Line' },
-    { img: mattressImg, title: 'Mattress Manufacturing' },
-    { img: labImg, title: 'Quality Testing Laboratory' },
-    { img: cutImg, title: 'Automated Cutting Machines' },
-    { img: packImg, title: 'Packaging Area' },
-    { img: warehouseImg, title: 'Warehouse & Logistics' }
-  ];
+
 
   const industries = [
     { img: hImg, title: 'HOSPITALITY', desc: 'Premium mattresses and foam solutions for hotels, resorts, and hospitality chains. Custom sizes and firmness levels for luxury guest experiences.' },
@@ -153,40 +140,7 @@ export default function ManufacturingContent() {
         </div>
       </section>
 
-      {/* 3. Factory Gallery (Parallax Showcase) */}
-      <section className="py-32 bg-[#0A101D] relative overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
-          <div className="mb-24 flex flex-col md:flex-row justify-between items-end gap-8">
-            <div>
-              <div className="inline-flex items-center gap-4 mb-6">
-                <span className="text-[#D4AF37] font-bold tracking-[0.3em] uppercase text-[11px]">Inside Our Facilities</span>
-                <div className="h-[1px] w-12 bg-[#D4AF37]"></div>
-              </div>
-              <h2 className="text-5xl md:text-7xl font-stylish font-bold text-white">Factory <span className="text-[#D4AF37] italic">Gallery</span></h2>
-            </div>
-            <p className="text-white/50 max-w-md font-light text-right">Step inside our world-class manufacturing facilities where precision meets scale.</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {gallery.map((img, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ delay: i * 0.1 }}
-              >
-                <Glass3DCard tiltIntensity={5} className="aspect-[4/3]">
-                  <img src={img.img} alt={img.title} className="absolute inset-0 w-full h-[120%] object-cover -translate-y-[10%] group-hover:translate-y-0 transition-transform duration-1000 grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A101D] via-[#0A101D]/20 to-transparent flex items-end p-8">
-                    <h4 className="text-white font-bold text-xl font-stylish translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">{img.title}</h4>
-                  </div>
-                </Glass3DCard>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* 4. OEM Industries Served */}
       <section className="py-32 bg-[#05080f]">

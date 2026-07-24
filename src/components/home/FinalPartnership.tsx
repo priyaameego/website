@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import readyImg from '../../assets/ready.png';
 
 export default function FinalPartnership() {
   return (
@@ -11,7 +12,7 @@ export default function FinalPartnership() {
           {/* Background Image */}
           <div className="absolute inset-0">
             <img 
-              src="https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=2070&auto=format&fit=crop" 
+              src={readyImg} 
               alt="Business Partnership" 
               className="w-full h-full object-cover"
             />

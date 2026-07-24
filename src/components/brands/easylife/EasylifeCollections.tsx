@@ -119,7 +119,7 @@ export default function EasylifeCollections() {
                 <img 
                   src={collection.image} 
                   alt={collection.title} 
-                  className="w-full h-[500px] md:h-[600px] object-cover transition-transform duration-1000 group-hover:scale-105"
+                  className="w-full h-[300px] md:h-[400px] object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
               </div>
             </motion.div>

@@ -58,7 +58,7 @@ export default function AboutOperations() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="relative group rounded-2xl overflow-hidden shadow-premium h-[500px]"
+              className="relative group rounded-2xl overflow-hidden shadow-premium h-[400px]"
             >
               <img src={pImg} alt="OEM Manufacturing" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
             </motion.div>

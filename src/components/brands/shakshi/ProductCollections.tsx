@@ -138,7 +138,7 @@ export default function ProductCollections() {
               className="w-full lg:w-1/2 relative group"
             >
               <Glass3DCard tiltIntensity={5} className="w-full">
-                <div className="relative overflow-hidden rounded-2xl h-[500px] md:h-[600px] group">
+                <div className="relative overflow-hidden rounded-2xl h-[300px] md:h-[400px] group">
                   <img 
                     src={collection.image} 
                     alt={collection.title} 

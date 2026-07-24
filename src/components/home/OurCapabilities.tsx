@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
 import Glass3DCard from '../ui/Glass3DCard';
 
-import hImg from '../../assets/h.png';
-import healthImg from '../../assets/he.png';
-import autoImg from '../../assets/h1.png';
+import hImg from '../../assets/hos.png';
+import healthImg from '../../assets/care.png';
+import autoImg from '../../assets/a.png';
 import furImg from '../../assets/fur.png';
-import acousImg from '../../assets/au.png';
-import customImg from '../../assets/ss2.png';
+import acousImg from '../../assets/sound.png';
+import customImg from '../../assets/c.png';
 
 export default function OurCapabilities() {
   const capabilities = [
